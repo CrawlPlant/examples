@@ -1,0 +1,18 @@
+{
+  "title": "Export recent completed player matches",
+  "process": "export",
+  "steps": [
+    {
+      "name": "history",
+      "actor": "tennis-match-history",
+      "input": {
+        "maxItems": 50,
+        "playerUrls": [
+          "${PLAYER}"
+        ],
+        "status": "finished"
+      }
+    }
+  ],
+  "note": ""
+}

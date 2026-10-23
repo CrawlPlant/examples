@@ -1,0 +1,151 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Bulk domain authority from open data",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "editor": "select",
+      "description": "profiles = one row per domain with every metric (Open Authority score, Common Crawl ranks, referring-domain count, Majestic links, Chrome traffic bucket); history = one row per domain per Common Crawl graph release (back to 2018), plus Tranco daily ranks when Tranco is a source; referrers = the domains that link to each of your domains, strongest first, one row per linking domain. linkGap = domains that link to your competitors (in \"domains\") but not to your site (\"yourDomain\"), most competitors first. similar = sites like each domain (the same websites link to them); outlinks = the domains each domain links to; changes = referring domains gained and lost since the previous monthly graph.",
+      "enum": [
+        "profiles",
+        "history",
+        "referrers",
+        "linkGap",
+        "similar",
+        "outlinks",
+        "changes"
+      ],
+      "enumTitles": [
+        "Domain profiles (one row per domain)",
+        "Rank history (one row per domain and date)",
+        "Referring domains (one row per linking domain)",
+        "Link gap (sites linking to competitors, not to you)",
+        "Similar sites (competitor discovery)",
+        "Outgoing links (domains it links to)",
+        "Referring domains gained and lost since last month"
+      ],
+      "default": "profiles"
+    },
+    "domains": {
+      "title": "Domains",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Domains, URLs or e-mail addresses, one per line. Each is reduced to its registrable domain: https://www.bbc.co.uk/news -> bbc.co.uk, info@scrapy.org -> scrapy.org. Duplicates are merged. In linkGap mode: your competitors (up to 20).",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "apify.com",
+        "github.com",
+        "wikipedia.org"
+      ]
+    },
+    "yourDomain": {
+      "title": "Your domain (link gap)",
+      "type": "string",
+      "editor": "textfield",
+      "description": "linkGap mode: your site. Its referring domains are left out, so you get the sites that link to your competitors and not to you."
+    },
+    "excludeHubs": {
+      "title": "Leave out hubs (link gap)",
+      "type": "boolean",
+      "editor": "checkbox",
+      "description": "linkGap mode: leave out infrastructure (CDNs, hosts of user content, link shorteners) and sites that link to more than 30,000 domains, such as the biggest platforms. They link to everyone, so they are rarely outreach prospects.",
+      "default": true
+    },
+    "sources": {
+      "title": "Data sources",
+      "type": "array",
+      "editor": "select",
+      "description": "commoncrawl = link-graph ranks of 133M domains and the Open Authority score; majestic = Majestic Million rank and referring subnets / IPs (top 1M); crux = Chrome UX Report traffic bucket (top 1M sites by real Chrome visits); tranco = Tranco research ranking (top 1M) and its daily history in history mode.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "commoncrawl",
+          "majestic",
+          "crux",
+          "tranco"
+        ],
+        "enumTitles": [
+          "Common Crawl web graph",
+          "Majestic Million",
+          "Chrome UX Report",
+          "Tranco"
+        ]
+      },
+      "default": [
+        "commoncrawl",
+        "majestic",
+        "crux"
+      ]
+    },
+    "graphScanDepth": {
+      "title": "Common Crawl search depth (top N domains)",
+      "type": "integer",
+      "editor": "number",
+      "description": "How many of the best-ranked domains of the Common Crawl ranks file to search when it is read directly: in history mode, for an older graphRelease, or if our link index can't be reached (profiles normally get an exact rank for every domain from it). 10,000,000 (default) covers every domain with an Open Authority of 26 or more; domains below it get openAuthorityMax instead of a score. 0 = the whole graph (133M domains, 2.5 GB, a few minutes).",
+      "minimum": 0,
+      "maximum": 1000000000,
+      "default": 10000000
+    },
+    "graphRelease": {
+      "title": "Common Crawl graph release",
+      "type": "string",
+      "editor": "textfield",
+      "description": "A web graph release id, e.g. cc-main-2026-jun-jul-aug (list: https://index.commoncrawl.org/graphinfo.json). Empty = the newest. In history mode, the history starts here and goes back."
+    },
+    "minAuthority": {
+      "title": "Minimum Open Authority",
+      "type": "integer",
+      "editor": "number",
+      "description": "Profiles: return only domains scoring at least this (0-100); 1 drops domains without a score, so you don't pay for them. Link modes (referrers, linkGap, similar, outlinks, changes): return only the listed domains scoring at least this. 0 = everything.",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 0
+    },
+    "sortBy": {
+      "title": "Sort by",
+      "type": "string",
+      "editor": "select",
+      "description": "Profiles mode: input = your order; authority = highest Open Authority first (domains without a score last).",
+      "enum": [
+        "input",
+        "authority"
+      ],
+      "enumTitles": [
+        "Input order",
+        "Open Authority, highest first"
+      ],
+      "default": "input"
+    },
+    "historyReleases": {
+      "title": "History: graph releases",
+      "type": "integer",
+      "editor": "number",
+      "description": "History mode: how many Common Crawl graph releases to read, newest first (a new release covers the last three monthly crawls). 6 is about half a year of recent releases; the archive goes back to early 2018 (about 50 releases).",
+      "minimum": 1,
+      "maximum": 60,
+      "default": 6
+    },
+    "maxReferrersPerDomain": {
+      "title": "Rows per domain (link modes)",
+      "type": "integer",
+      "editor": "number",
+      "description": "How many rows per domain in referrers, similar, outlinks and changes (changes: gained and lost each), strongest first. A well-known site can have millions of referring domains; most small sites have a handful. linkGap mode: how many of each competitor's strongest referring domains to compare (up to 100,000).",
+      "minimum": 1,
+      "maximum": 1000000,
+      "default": 100
+    },
+    "maxItems": {
+      "title": "Max rows",
+      "type": "integer",
+      "editor": "number",
+      "description": "Maximum rows to return (and pay for).",
+      "minimum": 1,
+      "default": 10000
+    }
+  }
+}

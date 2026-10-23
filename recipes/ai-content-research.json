@@ -1,0 +1,20 @@
+{
+  "title": "Prepare a video-topic research packet",
+  "process": "evidence",
+  "steps": [
+    {
+      "name": "videos",
+      "actor": "bilibili-trending-history",
+      "input": {
+        "maxItems": 10,
+        "mode": "ranking",
+        "rankingCategories": [
+          "tech"
+        ],
+        "trackHistory": false
+      }
+    }
+  ],
+  "note": "",
+  "goal": "Select videos for editorial topic research. Cite source records, dates and visible metrics. Do not claim growth or causation from a single ranking snapshot."
+}

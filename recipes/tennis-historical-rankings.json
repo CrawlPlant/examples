@@ -1,0 +1,19 @@
+{
+  "title": "Retrieve a dated ranking list",
+  "process": "export",
+  "steps": [
+    {
+      "name": "data",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 20,
+        "mode": "rankings",
+        "rankingLists": [
+          "atp"
+        ],
+        "rankingDate": "2024-07-15"
+      }
+    }
+  ],
+  "note": ""
+}

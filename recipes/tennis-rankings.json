@@ -1,0 +1,19 @@
+{
+  "title": "Export a bounded ATP/WTA ranking snapshot",
+  "process": "export",
+  "steps": [
+    {
+      "name": "data",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 20,
+        "mode": "rankings",
+        "rankingLists": [
+          "atp",
+          "wta"
+        ]
+      }
+    }
+  ],
+  "note": ""
+}

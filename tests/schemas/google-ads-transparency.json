@@ -1,0 +1,209 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Google Ads Transparency Center: ads, advertisers, domain checks",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "editor": "select",
+      "description": "ads = one row per ad (creative) of each target, newest shown first; advertisers = one row per advertiser account (for a name: every matching account, biggest first; for a domain: every account advertising it, including agencies and resellers); domainCheck = one row per domain: does it run Google ads, how many, since when, by whom; summary = one row per target: active and new ads, formats, top messages, longest-running ads, top landing pages and campaigns of its most recently shown ads; messages = the target's ads grouped by message (headline), most used first, with ads, days shown, landing pages and campaigns. summary and messages read every ad's copy and are charged per ad analysed. timeline = one row per week of the last year for each target: ads launched, stopped, shown and running on an average day, from the ad list alone.",
+      "enum": [
+        "ads",
+        "advertisers",
+        "domainCheck",
+        "summary",
+        "messages",
+        "timeline"
+      ],
+      "enumTitles": [
+        "Ads (one row per ad)",
+        "Advertisers (one row per account)",
+        "Domain check (one row per domain)",
+        "Competitor summary (one row per target)",
+        "Messages (ads grouped by headline)",
+        "Timeline (one row per week of the last year)"
+      ],
+      "default": "ads"
+    },
+    "targets": {
+      "title": "Domains, advertisers or Transparency Center URLs",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Mix freely: a domain (nike.com; website URLs and www. are reduced to the domain), an advertiser id (AR16735076323512287233), an advertiser name (Nike, the biggest matching account is used), or a URL copied from adstransparency.google.com (an advertiser page, a single ad, or a search with ?domain=; its region, format, platform and date filters are applied).",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "nike.com"
+      ]
+    },
+    "region": {
+      "title": "Country",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Only ads shown in this country: a 2-letter code (US, GB, DE, FR, AU, ...) or anywhere. 244 countries and territories.",
+      "sectionCaption": "Filters",
+      "default": "anywhere"
+    },
+    "format": {
+      "title": "Ad format",
+      "type": "string",
+      "editor": "select",
+      "description": "text = search ads, image = display and shopping ads, video = YouTube and video ads.",
+      "enum": [
+        "all",
+        "text",
+        "image",
+        "video"
+      ],
+      "enumTitles": [
+        "All formats",
+        "Text",
+        "Image",
+        "Video"
+      ],
+      "default": "all"
+    },
+    "platform": {
+      "title": "Shown on",
+      "type": "string",
+      "editor": "select",
+      "description": "Only ads shown on this Google platform.",
+      "enum": [
+        "all",
+        "search",
+        "youtube",
+        "shopping",
+        "maps",
+        "play"
+      ],
+      "enumTitles": [
+        "All platforms",
+        "Google Search",
+        "YouTube",
+        "Google Shopping",
+        "Google Maps",
+        "Google Play"
+      ],
+      "default": "all"
+    },
+    "dateFrom": {
+      "title": "Shown from",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Only ads shown on or after this day: 2026-09-01, yesterday, or -30 (30 days ago). The Transparency Center keeps day-by-day activity for about the last 13 months. Empty = any time."
+    },
+    "dateTo": {
+      "title": "Shown until",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Only ads shown on or before this day (same formats). Empty = today."
+    },
+    "firstShownFrom": {
+      "title": "First shown from (new ads only)",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Only ads that started running on or after this day, e.g. -7 for ads launched in the last week. Checked on the ads read (see Max ads per target)."
+    },
+    "minDaysShown": {
+      "title": "Minimum days shown",
+      "type": "integer",
+      "editor": "number",
+      "description": "Only ads Google showed on at least this many days. Long-running ads are the ones that keep paying off for the advertiser. 0 = any.",
+      "minimum": 0,
+      "default": 0
+    },
+    "activeOnly": {
+      "title": "Running now only",
+      "type": "boolean",
+      "description": "Only ads shown in the last 2 days.",
+      "default": false
+    },
+    "sortBy": {
+      "title": "Sort by",
+      "type": "string",
+      "editor": "select",
+      "description": "lastShown = the Transparency Center's own order (most recently shown first); firstShown = newest ads first; daysShown = longest-running first. The last two sort the ads read (Max ads per target).",
+      "enum": [
+        "lastShown",
+        "firstShown",
+        "daysShown"
+      ],
+      "enumTitles": [
+        "Last shown (newest activity first)",
+        "First shown (newest ads first)",
+        "Days shown (longest running first)"
+      ],
+      "default": "lastShown"
+    },
+    "includeDetails": {
+      "title": "Countries, impressions and targeting",
+      "type": "boolean",
+      "description": "One extra request per ad: every country the ad was shown in with its first and last day; for ads shown in the EU also impressions per country and per platform and the kinds of targeting used (Digital Services Act disclosures); all variations of the ad; who paid for it. Charged per ad as ad-details.",
+      "sectionCaption": "Data per ad",
+      "default": false
+    },
+    "includeAdContent": {
+      "title": "Ad copy, video and landing page",
+      "type": "boolean",
+      "description": "One extra request per ad: headline, description, call to action, display URL and landing page when the ad has them, the YouTube video id and duration of video ads, product title and merchant of shopping ads, the visible text of display ads. Charged per ad that returned copy as ad-content.",
+      "default": false
+    },
+    "ocrTextAds": {
+      "title": "Read text ads stored as pictures (OCR)",
+      "type": "boolean",
+      "description": "With ad copy on: Google keeps most text ads only as a picture of the ad. This reads the headline, description, display URL and sitelinks from that picture. Charged per ad that returned text as ad-text-ocr.",
+      "default": true
+    },
+    "ocrLanguages": {
+      "title": "OCR languages",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Languages of the ads' text for the OCR, as Tesseract codes: eng, deu, fra, spa, ita, por, nld, pol, tur, jpn, kor, chi_sim... (up to 5). Empty = English plus the language of the chosen region.",
+      "default": []
+    },
+    "onlyNew": {
+      "title": "Only new ads since the last run (watch)",
+      "type": "boolean",
+      "description": "Watch mode for scheduled runs: returns only ads this Actor has not returned before for the same target and filters. The first run returns the current ads as the baseline. The state is kept in a key-value store named google-ads-transparency-watch in your own account. Each run compares the Max ads per target most recently shown ads.",
+      "sectionCaption": "Monitoring",
+      "default": false
+    },
+    "includeStopped": {
+      "title": "Also report stopped ads",
+      "type": "boolean",
+      "description": "With watch mode: also returns ads that were running at the previous run and are not running any more (watchStatus stopped).",
+      "default": false
+    },
+    "advertisersPerName": {
+      "title": "Accounts per advertiser name",
+      "type": "integer",
+      "editor": "number",
+      "description": "Ads mode, for advertiser names: how many matching accounts to read (biggest first). Brands often have one account per country or agency; the log lists the others.",
+      "sectionCaption": "Limits",
+      "minimum": 1,
+      "maximum": 20,
+      "default": 1
+    },
+    "maxItems": {
+      "title": "Max ads per target",
+      "type": "integer",
+      "editor": "number",
+      "description": "Ads mode: rows per target (in watch mode: how many of the most recently shown ads each run compares). Advertisers mode: accounts per name or domain. Summary and messages modes: how many of the most recently shown ads to analyse per target (200-500 gives a fuller picture).",
+      "minimum": 1,
+      "maximum": 100000,
+      "default": 100
+    },
+    "maxScanPages": {
+      "title": "Max pages per target",
+      "type": "integer",
+      "editor": "number",
+      "description": "Safety cap on pages read per target (100 ads per page) when selective filters (minimum days shown, first shown from, running now) keep few of the ads read. Never fewer pages than Max ads per target needs.",
+      "minimum": 1,
+      "maximum": 1000,
+      "default": 20
+    }
+  }
+}

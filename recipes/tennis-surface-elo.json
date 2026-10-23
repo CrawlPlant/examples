@@ -1,0 +1,17 @@
+{
+  "title": "Retrieve grass-court Elo ratings",
+  "process": "export",
+  "steps": [
+    {
+      "name": "data",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 20,
+        "mode": "elo",
+        "eloTour": "atp",
+        "eloSurface": "grass"
+      }
+    }
+  ],
+  "note": ""
+}

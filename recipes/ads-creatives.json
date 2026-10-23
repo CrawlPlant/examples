@@ -1,0 +1,20 @@
+{
+  "title": "Export ad creatives and their source records",
+  "process": "export",
+  "steps": [
+    {
+      "name": "ads",
+      "actor": "google-ads-transparency",
+      "input": {
+        "maxItems": 10,
+        "mode": "ads",
+        "targets": [
+          "${ADVERTISER}"
+        ],
+        "includeAdContent": true,
+        "maxScanPages": 2
+      }
+    }
+  ],
+  "note": ""
+}

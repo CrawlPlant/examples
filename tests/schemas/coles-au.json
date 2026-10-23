@@ -1,0 +1,263 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Coles Australia products, prices & stock",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "editor": "select",
+      "description": "What to fetch: keyword search, a category listing, current specials, products by id, any Coles links, the list of departments and categories, the full catalogue from our nightly snapshot (fast; set Max items high, filters apply), or the store directory (address, coordinates, opening hours).",
+      "enum": [
+        "search",
+        "category",
+        "specials",
+        "products",
+        "urls",
+        "barcodes",
+        "categories",
+        "catalog",
+        "stores"
+      ],
+      "enumTitles": [
+        "Search",
+        "Category",
+        "Specials",
+        "Products by id",
+        "Coles links",
+        "Barcodes (EAN / GTIN)",
+        "List categories",
+        "Full catalogue (from cache)",
+        "Store directory"
+      ],
+      "default": "search"
+    },
+    "queries": {
+      "title": "Search queries",
+      "type": "array",
+      "description": "Used in 'search' mode. Each query is searched separately.",
+      "editor": "stringList",
+      "default": [
+        "milk"
+      ],
+      "prefill": [
+        "milk"
+      ]
+    },
+    "categoryUrls": {
+      "title": "Category URLs",
+      "type": "array",
+      "description": "Used in 'category' mode, e.g. https://www.coles.com.au/browse/dairy-eggs-fridge/milk (or just dairy-eggs-fridge/milk). Tip: run mode 'List categories' to get every category URL.",
+      "editor": "stringList",
+      "default": []
+    },
+    "productIds": {
+      "title": "Product ids",
+      "type": "array",
+      "description": "Used in 'products' mode: the number at the end of a product URL, e.g. 8150288.",
+      "editor": "stringList",
+      "default": []
+    },
+    "barcodes": {
+      "title": "Barcodes",
+      "type": "array",
+      "editor": "stringList",
+      "default": [],
+      "description": "Used in 'barcodes' mode: EAN / GTIN codes, e.g. 9300601186945. Looked up in our Coles database (~91% of products have a barcode); leading zeros don't matter."
+    },
+    "urls": {
+      "title": "Coles links",
+      "type": "array",
+      "description": "Used in 'urls' mode: paste any product, search, category or specials link (or a bare product id). Sort order and the specials filter in a link are kept.",
+      "editor": "stringList",
+      "default": []
+    },
+    "specialsGroups": {
+      "title": "Specials types",
+      "type": "array",
+      "description": "Used in 'specials' mode. Empty = all specials. Values: halfprice, multibuy, onlineonly.",
+      "editor": "stringList",
+      "default": []
+    },
+    "maxItems": {
+      "title": "Max items",
+      "type": "integer",
+      "description": "Maximum products per query / category / link, per store (after filters). For specials, products and the full catalogue: per run and store (the catalogue has ~25k products). Store directory: number of stores.",
+      "minimum": 1,
+      "default": 100
+    },
+    "storeIds": {
+      "title": "Store ids",
+      "type": "array",
+      "description": "Prices and stock of these Coles stores, each store as its own rows. The id is the number at the end of a store page link, e.g. 313 in coles.com.au/find-stores/coles/wa/karratha-313. Empty = Coles' default online store (the one with price history). Store prices come from our nightly read of every store; a store not read since this week's specials change is fetched live.",
+      "editor": "stringList",
+      "default": [],
+      "sectionCaption": "Stores"
+    },
+    "postcodes": {
+      "title": "Postcodes",
+      "type": "array",
+      "description": "Australian postcodes (up to 500): every Coles store in each postcode, each as its own rows. A postcode without a Coles gives no rows; the run warnings name its nearest store and distance, so you can add it to Store ids. Store prices come from our nightly read of every store (fetched live when it's older than this week's specials change).",
+      "editor": "stringList",
+      "default": []
+    },
+    "allStores": {
+      "title": "All Coles stores",
+      "type": "boolean",
+      "description": "Run the searches / categories / specials in every Coles store (~878). Combine with a small Max items: it applies per store.",
+      "default": false
+    },
+    "sortBy": {
+      "title": "Sort by",
+      "type": "string",
+      "editor": "select",
+      "sectionCaption": "Filters & sorting",
+      "description": "Result order. Relevance, price, unit price and best sellers are applied by Coles before paging; biggest discount re-sorts the collected results by % off (use with specialsOnly and a high Max items). Price sorts skip products that are unavailable (no price).",
+      "enum": [
+        "relevance",
+        "price_asc",
+        "price_desc",
+        "unit_price_asc",
+        "best_sellers",
+        "discount_desc"
+      ],
+      "enumTitles": [
+        "Relevance",
+        "Price: low to high",
+        "Price: high to low",
+        "Unit price: low to high",
+        "Best sellers",
+        "Biggest discount (% off)"
+      ],
+      "default": "relevance"
+    },
+    "specialsOnly": {
+      "title": "Specials only",
+      "type": "boolean",
+      "description": "Keep only products currently on special (filtered by Coles, so no pages are wasted).",
+      "default": false
+    },
+    "inStockOnly": {
+      "title": "In stock only",
+      "type": "boolean",
+      "description": "Skip products currently unavailable at the store.",
+      "default": false
+    },
+    "minPrice": {
+      "title": "Min price (AUD)",
+      "type": "number",
+      "description": "Keep only products priced at or above this amount.",
+      "minimum": 0
+    },
+    "maxPrice": {
+      "title": "Max price (AUD)",
+      "type": "number",
+      "description": "Keep only products priced at or below this amount.",
+      "minimum": 0
+    },
+    "excludeCategories": {
+      "title": "Exclude departments",
+      "type": "array",
+      "description": "Departments to leave out, by name or URL slug, e.g. 'liquorland' or 'Pet'. Tobacco is excluded by default (age-restricted); remove it from the list to include it.",
+      "editor": "stringList",
+      "default": [
+        "tobacco"
+      ]
+    },
+    "brands": {
+      "title": "Brands",
+      "type": "array",
+      "editor": "stringList",
+      "default": [],
+      "description": "Keep only these brands (exact brand name, any case), e.g. 'Coles', 'Arnott's'."
+    },
+    "minDiscountPercent": {
+      "title": "Min discount (%)",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Keep only products at least this much below their was-price, e.g. 50 for half price and better. Multi-buy offers have no was-price and never match."
+    },
+    "dietary": {
+      "title": "Dietary",
+      "type": "array",
+      "description": "Keep only products whose dietary statement includes ALL of these, e.g. Gluten Free, Vegan, Source of Calcium. Needs product details (see Fetch full details).",
+      "editor": "stringList",
+      "default": [],
+      "sectionCaption": "Health & nutrition"
+    },
+    "excludeAllergens": {
+      "title": "Exclude allergens",
+      "type": "array",
+      "description": "Skip products that contain or may contain any of these, e.g. Peanut, Milk, Gluten. Products without allergen data are skipped too. Needs product details.",
+      "editor": "stringList",
+      "default": []
+    },
+    "maxSugarPer100g": {
+      "title": "Max sugar per 100 g/mL",
+      "type": "number",
+      "description": "Keep only products with at most this much sugar per 100 g/mL. Needs product details.",
+      "minimum": 0
+    },
+    "minProteinPer100g": {
+      "title": "Min protein per 100 g/mL",
+      "type": "number",
+      "description": "Keep only products with at least this much protein per 100 g/mL. Needs product details.",
+      "minimum": 0
+    },
+    "changedSince": {
+      "title": "Price changed since",
+      "type": "string",
+      "editor": "textfield",
+      "sectionCaption": "Price history",
+      "description": "Return only products whose price changed since this date/time (e.g. 2026-09-01), or 'last-run' for changes since your previous run with the same input. Default online store only."
+    },
+    "includeDisappeared": {
+      "title": "Include disappeared products",
+      "type": "boolean",
+      "default": false,
+      "description": "With 'Price changed since' = last-run: also list products your previous run returned that are gone now (delisted or no longer matching), as rows with type 'disappeared'."
+    },
+    "priceHistoryDays": {
+      "title": "Price history (days)",
+      "type": "integer",
+      "description": "Add each product's price changes from the last N days (0 = off). Every result always includes previous price, 30-day low, 90-day average and a genuine-discount check.",
+      "minimum": 0,
+      "maximum": 3650,
+      "default": 0
+    },
+    "onlyNew": {
+      "title": "Only new products",
+      "type": "boolean",
+      "description": "Only products that appeared at Coles in the last 7 days.",
+      "default": false
+    },
+    "onlyNewSpecials": {
+      "title": "Only new specials",
+      "type": "boolean",
+      "description": "Only products that went on special in the last 7 days (specials change every Wednesday).",
+      "default": false
+    },
+    "fetchFullDetails": {
+      "title": "Fetch full details",
+      "type": "boolean",
+      "description": "Adds barcode (GTIN), ingredients, allergens, dietary statement, nutrition panel, country of origin and storage from each product page (1 extra request and a small charge per product). Many products already have them from our database at no extra cost.",
+      "default": false,
+      "sectionCaption": "Data & freshness"
+    },
+    "maxAgeHours": {
+      "title": "Max cache age (hours)",
+      "type": "integer",
+      "description": "We refresh every product nightly (Sydney time). Data older than this, or read before this week's specials change (Wednesday), is fetched live instead. 0 = always fetch live.",
+      "minimum": 0,
+      "default": 36
+    },
+    "includeRaw": {
+      "title": "Include raw payload",
+      "type": "boolean",
+      "description": "Add the original Coles payload to each record (every field, including ones we do not map).",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Similar sites of any list of domains",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "domains": {
+      "title": "Domains",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Domains, URLs or e-mail addresses, one per line. You get the sites most like each of them.",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "apify.com"
+      ]
+    },
+    "maxReferrersPerDomain": {
+      "title": "Similar sites per domain",
+      "type": "integer",
+      "editor": "number",
+      "description": "How many similar sites to return for each domain, most similar first (up to 1,000).",
+      "minimum": 1,
+      "maximum": 1000000,
+      "default": 50
+    },
+    "minAuthority": {
+      "title": "Minimum Open Authority",
+      "type": "integer",
+      "editor": "number",
+      "description": "Return only similar sites scoring at least this (0-100). 0 = all of them.",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 0
+    },
+    "maxItems": {
+      "title": "Max rows",
+      "type": "integer",
+      "editor": "number",
+      "description": "Maximum rows to return (and pay for).",
+      "minimum": 1,
+      "default": 500
+    }
+  },
+  "required": [
+    "domains"
+  ]
+}

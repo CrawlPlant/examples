@@ -1,0 +1,66 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Link gap: sites that link to your competitors, not to you",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "yourDomain": {
+      "title": "Your domain",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Your site. Its referring domains are left out, so you get the sites that link to your competitors and not to you.",
+      "default": "scrapy.org"
+    },
+    "domains": {
+      "title": "Competitors",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Up to 20 competitor domains or URLs, one per line.",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "apify.com",
+        "zyte.com",
+        "scrapingbee.com"
+      ]
+    },
+    "maxReferrersPerDomain": {
+      "title": "Referring domains compared per competitor",
+      "type": "integer",
+      "editor": "number",
+      "description": "How many of each competitor's strongest referring domains to compare with yours (up to 100,000). More = a longer, deeper list.",
+      "minimum": 1,
+      "maximum": 1000000,
+      "default": 1000
+    },
+    "minAuthority": {
+      "title": "Minimum Open Authority",
+      "type": "integer",
+      "editor": "number",
+      "description": "Return only sites scoring at least this (0-100). 0 = every site.",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 0
+    },
+    "excludeHubs": {
+      "title": "Leave out hubs",
+      "type": "boolean",
+      "editor": "checkbox",
+      "description": "Leave out infrastructure (CDNs, hosts of user content, link shorteners) and sites that link to more than 30,000 domains, such as the biggest platforms. They link to everyone, so they are rarely outreach prospects.",
+      "default": true
+    },
+    "maxItems": {
+      "title": "Max rows",
+      "type": "integer",
+      "editor": "number",
+      "description": "Maximum rows to return (and pay for).",
+      "minimum": 1,
+      "default": 500
+    }
+  },
+  "required": [
+    "yourDomain",
+    "domains"
+  ]
+}

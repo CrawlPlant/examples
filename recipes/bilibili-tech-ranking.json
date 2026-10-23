@@ -1,0 +1,19 @@
+{
+  "title": "Collect a technology video ranking snapshot",
+  "process": "export",
+  "steps": [
+    {
+      "name": "videos",
+      "actor": "bilibili-trending-history",
+      "input": {
+        "maxItems": 10,
+        "mode": "ranking",
+        "rankingCategories": [
+          "tech"
+        ],
+        "trackHistory": false
+      }
+    }
+  ],
+  "note": ""
+}

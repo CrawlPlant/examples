@@ -1,0 +1,287 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Woolworths Australia products & prices",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "What to fetch: keyword search, a category listing, current specials, products by stockcode or barcode (EAN), any Woolworths URLs, the list of departments / categories / specials groups, or the full catalogue from our nightly snapshot (fast; set Max items high, filters apply), or the store directory (all ~1140 supermarkets: address, coordinates, opening hours). Instore: mobile price/location for explicit productIds and exactly one storeId; shared four-hour cache with live fallback through our VPS. Mobile rows have a store-data add-on when active; see README and the Apify Pricing tab for total rates and effective date.",
+      "editor": "select",
+      "enum": [
+        "search",
+        "category",
+        "specials",
+        "products",
+        "urls",
+        "barcodes",
+        "categories",
+        "catalog",
+        "stores",
+        "instore"
+      ],
+      "enumTitles": [
+        "Search",
+        "Category",
+        "Specials",
+        "Products by stockcode",
+        "Woolworths URLs",
+        "Products by barcode",
+        "List categories",
+        "Full catalogue (from cache)",
+        "Store directory",
+        "Mobile in-store details (operator session required)"
+      ],
+      "default": "search"
+    },
+    "queries": {
+      "title": "Search queries",
+      "type": "array",
+      "description": "Used in 'search' mode. Each query is searched separately.",
+      "editor": "stringList",
+      "prefill": [
+        "milk"
+      ],
+      "default": [
+        "milk"
+      ]
+    },
+    "categoryUrls": {
+      "title": "Category URLs",
+      "type": "array",
+      "description": "Used in 'category' mode, e.g. https://www.woolworths.com.au/shop/browse/dairy-eggs-fridge/milk. Tip: run mode 'List categories' to get every category URL.",
+      "editor": "stringList",
+      "default": []
+    },
+    "productIds": {
+      "title": "Stockcodes",
+      "type": "array",
+      "description": "Used in products and instore modes: the stockcode in a product URL, e.g. 88436. Instore requires explicit numeric IDs; it does not search the catalogue.",
+      "editor": "stringList",
+      "default": []
+    },
+    "barcodes": {
+      "title": "Barcodes (EAN / GTIN)",
+      "type": "array",
+      "description": "Used in 'barcodes' mode: the number under the barcode on the pack, e.g. 9310199012717. Barcodes Woolworths doesn't sell are listed in the run summary.",
+      "editor": "stringList",
+      "default": []
+    },
+    "urls": {
+      "title": "Woolworths URLs",
+      "type": "array",
+      "description": "Used in 'urls' mode: paste any product, search, category or specials page URL (or a bare stockcode). Each is fetched the right way automatically.",
+      "editor": "stringList",
+      "default": []
+    },
+    "specialsGroups": {
+      "title": "Specials groups",
+      "type": "array",
+      "description": "Used in 'specials' mode. Empty = every product on special or with a shelf-price label, promotions first. Values: half-price, buy-more-save-more, lower-shelf-price, seasonal-price, bundles, everyday-low-price.",
+      "editor": "stringList",
+      "default": []
+    },
+    "maxItems": {
+      "title": "Max items",
+      "type": "integer",
+      "description": "Maximum products per query / category / URL (after filters). For specials, products and the full catalogue: per run (the catalogue has ~25-30k products).",
+      "minimum": 1,
+      "default": 100
+    },
+    "storeIds": {
+      "title": "Store numbers",
+      "type": "array",
+      "description": "StoreNo from Store directory mode. Web modes emit one row per product/store with store price and inStock when reported. Mobile instore requires exactly one numeric storeId, e.g. 1416 (Double Bay), and returns native availability label/style and aisle/location data when reported; it does not emit generic inStock. Uses a four-hour store cache or live data from our VPS.",
+      "editor": "stringList",
+      "default": [],
+      "sectionCaption": "Stores"
+    },
+    "postcodes": {
+      "title": "Postcodes",
+      "type": "array",
+      "description": "Australian postcodes (up to 500): every Woolworths supermarket in each postcode. A postcode without a Woolworths gives no rows; the run warnings name its nearest store and distance, so you can add it to Store numbers.",
+      "editor": "stringList",
+      "default": []
+    },
+    "allStores": {
+      "title": "All Woolworths stores",
+      "type": "boolean",
+      "description": "Store rows for every Woolworths supermarket (~1140). Combine with a small Max items: every product becomes one row per store.",
+      "default": false
+    },
+    "sortBy": {
+      "title": "Sort by",
+      "type": "string",
+      "description": "Result order. Relevance, price, unit price, name, specials and newest are applied by Woolworths before paging; biggest discount re-sorts the collected results by % off (use with specialsOnly and a high Max items). Price sorts skip products that are unavailable online (no price).",
+      "editor": "select",
+      "enum": [
+        "relevance",
+        "price_asc",
+        "price_desc",
+        "unit_price_asc",
+        "name",
+        "specials_first",
+        "newest",
+        "discount_desc"
+      ],
+      "enumTitles": [
+        "Relevance",
+        "Price: low to high",
+        "Price: high to low",
+        "Unit price: low to high",
+        "Name",
+        "Specials first",
+        "Newest first",
+        "Biggest discount (% off)"
+      ],
+      "default": "relevance",
+      "sectionCaption": "Filters & sorting"
+    },
+    "specialsOnly": {
+      "title": "Only products on special",
+      "type": "boolean",
+      "description": "Keep only products currently on special / half price.",
+      "default": false
+    },
+    "inStockOnly": {
+      "title": "Only products in stock",
+      "type": "boolean",
+      "description": "Skip products currently unavailable online.",
+      "default": false
+    },
+    "minPrice": {
+      "title": "Minimum price (AUD)",
+      "type": "number",
+      "description": "Keep only products priced at or above this amount.",
+      "minimum": 0
+    },
+    "maxPrice": {
+      "title": "Maximum price (AUD)",
+      "type": "number",
+      "description": "Keep only products priced at or below this amount.",
+      "minimum": 0
+    },
+    "minRating": {
+      "title": "Minimum customer rating",
+      "type": "number",
+      "description": "Keep only products with an average customer rating of at least this many stars (0-5). Products without ratings are skipped.",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "includeMarketplace": {
+      "title": "Include Everyday Market (third-party sellers)",
+      "type": "boolean",
+      "description": "Also return products sold by third-party Everyday Market sellers (furniture, electronics, ...). Off = products sold by Woolworths only.",
+      "default": false
+    },
+    "excludeCategories": {
+      "title": "Exclude departments",
+      "type": "array",
+      "description": "Departments to leave out, by name or URL slug, e.g. 'beer-wine-spirits' or 'Pet'.",
+      "editor": "stringList",
+      "default": []
+    },
+    "brands": {
+      "title": "Brands",
+      "type": "array",
+      "description": "Keep only these brands (exact brand name, case-insensitive), e.g. 'Dairy Farmers', 'Woolworths'. Empty = all brands.",
+      "editor": "stringList",
+      "default": []
+    },
+    "minDiscountPercent": {
+      "title": "Minimum discount (%)",
+      "type": "number",
+      "description": "Keep only specials at least this many percent below the was-price, e.g. 40. Multi-buy offers (no was-price) are skipped.",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "dietary": {
+      "title": "Dietary requirements",
+      "type": "array",
+      "description": "Keep only products tagged with ALL of these, e.g. Gluten Free, Vegan, Vegetarian, Halal, Dairy Free, Low Sugar.",
+      "editor": "stringList",
+      "default": [],
+      "sectionCaption": "Health & nutrition"
+    },
+    "excludeAllergens": {
+      "title": "Exclude allergens",
+      "type": "array",
+      "description": "Skip products that contain or may contain any of these, e.g. Peanuts, Tree Nuts, Milk, Gluten. Products without allergen data are skipped too.",
+      "editor": "stringList",
+      "default": []
+    },
+    "minHealthStarRating": {
+      "title": "Minimum Health Star Rating",
+      "type": "number",
+      "description": "Keep only products rated at least this many health stars (0.5-5).",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "maxSugarPer100g": {
+      "title": "Max sugar per 100 g/mL (g)",
+      "type": "number",
+      "description": "Keep only products with at most this much sugar per 100 g/mL. Products without nutrition data are skipped.",
+      "minimum": 0
+    },
+    "minProteinPer100g": {
+      "title": "Min protein per 100 g/mL (g)",
+      "type": "number",
+      "description": "Keep only products with at least this much protein per 100 g/mL.",
+      "minimum": 0
+    },
+    "changedSince": {
+      "title": "Only price changes since",
+      "type": "string",
+      "description": "Return only products whose price changed since this date/time (e.g. 2026-09-01), or 'last-run' for changes since your previous run with the same input. Uses our nightly online price observations; not store-price history.",
+      "editor": "textfield",
+      "sectionCaption": "Price history"
+    },
+    "includeDisappeared": {
+      "title": "Include disappeared products",
+      "type": "boolean",
+      "default": false,
+      "description": "With 'Price changed since' = last-run: also list products your previous run returned that are gone now (delisted or no longer matching), as rows with type 'disappeared'."
+    },
+    "priceHistoryDays": {
+      "title": "Include price history (days)",
+      "type": "integer",
+      "description": "Add available online price observations from the last N days (0 = off). previousPrice and priceChangedAt describe observed online changes, when known. History fields are omitted from store-priced rows; instore has no price history.",
+      "minimum": 0,
+      "maximum": 3650,
+      "default": 0
+    },
+    "onlyNew": {
+      "title": "Only new products",
+      "type": "boolean",
+      "description": "Only products that appeared at Woolworths in the last 7 days.",
+      "default": false
+    },
+    "onlyNewSpecials": {
+      "title": "Only new specials",
+      "type": "boolean",
+      "description": "Only products that went on special in the last 7 days (specials change every Wednesday).",
+      "default": false
+    },
+    "fetchFullDetails": {
+      "title": "Fetch full product details",
+      "type": "boolean",
+      "description": "Adds the printed nutrition panel (per serving and per 100 g/mL), country of origin and all product images. Needs one extra request per product, so it is slower, and it is charged as a separate event per product. Description, ingredients, allergens, health star rating and dietary tags are always included for free.",
+      "default": false,
+      "sectionCaption": "Data & freshness"
+    },
+    "maxAgeHours": {
+      "title": "Max data age (hours)",
+      "type": "integer",
+      "description": "We refresh every product nightly (Sydney time). Data older than this, or read before this week's specials change (Wednesday), is fetched live instead. 0 = always fetch live. Mobile instore: positive values are capped at 4 hours; 0 forces live through our VPS.",
+      "minimum": 0,
+      "default": 36
+    },
+    "includeRaw": {
+      "title": "Include raw payload",
+      "type": "boolean",
+      "description": "Add the original Woolworths payload to each record (every attribute, including ones we don't map).",
+      "default": false
+    }
+  }
+}

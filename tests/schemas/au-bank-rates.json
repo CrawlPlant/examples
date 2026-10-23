@@ -1,0 +1,228 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Australian bank & lender interest rates",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "editor": "select",
+      "description": "best = the best rate per bank for your filters (ranked); rates = every matching rate row; changes = rate changes since a date or your last run; products = one row per product with its rate range; brands = the list of banks and lenders we cover.",
+      "enum": [
+        "best",
+        "rates",
+        "changes",
+        "products",
+        "brands"
+      ],
+      "enumTitles": [
+        "Best rate per bank (ranked)",
+        "All matching rates",
+        "Rate changes",
+        "Products",
+        "Banks & lenders"
+      ],
+      "default": "best"
+    },
+    "categories": {
+      "title": "Product categories",
+      "type": "array",
+      "editor": "select",
+      "description": "Which products to look at. Leave empty for all categories.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "TERM_DEPOSITS",
+          "TRANS_AND_SAVINGS_ACCOUNTS",
+          "RESIDENTIAL_MORTGAGES",
+          "PERS_LOANS",
+          "BUSINESS_LOANS",
+          "CRED_AND_CHRG_CARDS",
+          "OVERDRAFTS",
+          "MARGIN_LOANS",
+          "LEASES",
+          "TRADE_FINANCE",
+          "TRAVEL_CARDS",
+          "REGULATED_TRUST_ACCOUNTS",
+          "BUY_NOW_PAY_LATER",
+          "OTHER"
+        ],
+        "enumTitles": [
+          "Term deposits",
+          "Savings & transaction accounts",
+          "Home loans (mortgages)",
+          "Personal loans",
+          "Business loans",
+          "Credit & charge cards",
+          "Overdrafts",
+          "Margin loans",
+          "Leases",
+          "Trade finance",
+          "Travel cards",
+          "Trust accounts",
+          "Buy now pay later",
+          "Other"
+        ]
+      },
+      "default": [
+        "TERM_DEPOSITS"
+      ]
+    },
+    "brands": {
+      "title": "Banks / lenders",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Only these brands: part of the name (\"commbank\", \"ing\", \"macquarie\") or a brand id from mode \"brands\". Leave empty for all 240+.",
+      "default": []
+    },
+    "industries": {
+      "title": "Banks or non-bank lenders",
+      "type": "array",
+      "editor": "select",
+      "description": "Limit to banks (ADIs) or non-bank lenders. Empty = both.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "banking",
+          "non-bank-lending"
+        ],
+        "enumTitles": [
+          "Banks",
+          "Non-bank lenders"
+        ]
+      },
+      "default": []
+    },
+    "termMonths": {
+      "title": "Terms (months)",
+      "type": "array",
+      "editor": "json",
+      "sectionCaption": "Rate filters",
+      "description": "Term deposit or fixed-rate terms to keep, in months, e.g. [12] or [3, 6, 12]. Ranges like 286-315 days match when the term falls inside. Rows without a term (variable rates) are dropped when this is set.",
+      "prefill": [
+        12
+      ],
+      "default": []
+    },
+    "rateTypes": {
+      "title": "Rate types",
+      "type": "array",
+      "editor": "stringList",
+      "description": "E.g. FIXED, VARIABLE, BONUS, INTRODUCTORY, PURCHASE. Empty: \"best\" compares headline rates (fixed, variable, market-linked, card purchase); \"rates\" returns every type.",
+      "default": []
+    },
+    "loanPurpose": {
+      "title": "Loan purpose",
+      "type": "string",
+      "editor": "select",
+      "description": "Home loans: owner-occupied or investment.",
+      "enum": [
+        "OWNER_OCCUPIED",
+        "INVESTMENT"
+      ],
+      "enumTitles": [
+        "Owner-occupied",
+        "Investment"
+      ]
+    },
+    "repaymentType": {
+      "title": "Repayment type",
+      "type": "string",
+      "editor": "select",
+      "description": "Home loans: principal and interest, or interest only.",
+      "enum": [
+        "PRINCIPAL_AND_INTEREST",
+        "INTEREST_ONLY"
+      ],
+      "enumTitles": [
+        "Principal & interest",
+        "Interest only"
+      ]
+    },
+    "lvr": {
+      "title": "Loan-to-value ratio (LVR)",
+      "type": "number",
+      "description": "Keep rates whose LVR band covers this value: 80 or 0.8 both mean 80%.",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "amount": {
+      "title": "Amount (AUD)",
+      "type": "number",
+      "description": "Deposit or loan amount: keeps rates whose balance/loan band covers it.",
+      "minimum": 0
+    },
+    "sortBy": {
+      "title": "Sort by",
+      "type": "string",
+      "editor": "select",
+      "sectionCaption": "Ranking & limits",
+      "description": "auto: deposits highest rate first, loans lowest comparison rate first (best mode). rates mode keeps the natural order unless you pick one.",
+      "enum": [
+        "auto",
+        "rate_desc",
+        "rate_asc",
+        "comparison_asc",
+        "brand"
+      ],
+      "enumTitles": [
+        "Auto",
+        "Rate: high to low",
+        "Rate: low to high",
+        "Comparison rate: low to high",
+        "Bank name"
+      ],
+      "default": "auto"
+    },
+    "topPerBrand": {
+      "title": "Top rates per bank (best mode)",
+      "type": "integer",
+      "description": "How many rates to keep per bank in \"best\" mode. 0 = all matching rates, ranked.",
+      "minimum": 0,
+      "default": 1
+    },
+    "includeRiskBasedRates": {
+      "title": "Include \"from\" and credit-band rates (best mode)",
+      "type": "boolean",
+      "description": "Loans priced by credit profile often publish only a minimum (\"from\") rate, a maximum rate or one rate per credit band. Best mode leaves them out, because few applicants get the minimum. Turn on to rank them too. Every row says what its rate stands for in rateBasis.",
+      "default": false
+    },
+    "maxItems": {
+      "title": "Max results",
+      "type": "integer",
+      "description": "Stop after this many rows. Every home loan rate is ~15,800 rows, the whole market ~28,500.",
+      "minimum": 1,
+      "default": 500
+    },
+    "changedSince": {
+      "title": "Changed since",
+      "type": "string",
+      "editor": "textfield",
+      "sectionCaption": "History",
+      "description": "Mode \"changes\": a date (2026-09-01) or \"last-run\" for everything since your previous run with the same input. Empty = last 7 days."
+    },
+    "rateHistoryDays": {
+      "title": "Rate history (days)",
+      "type": "integer",
+      "description": "Attach each rate's changes from the last N days (rateHistory). 0 = off.",
+      "minimum": 0,
+      "maximum": 3650,
+      "default": 0
+    },
+    "maxAgeHours": {
+      "title": "Max data age (hours)",
+      "type": "integer",
+      "sectionCaption": "Data",
+      "description": "We refresh every product daily. Older data is still served, with a warning in the run summary.",
+      "minimum": 0,
+      "default": 36
+    },
+    "includeRaw": {
+      "title": "Include raw CDR payload",
+      "type": "boolean",
+      "description": "Add the product's original CDR JSON (large).",
+      "default": false
+    }
+  }
+}

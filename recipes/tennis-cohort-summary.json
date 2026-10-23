@@ -1,0 +1,21 @@
+{
+  "title": "Count tours, surfaces and missing ranks",
+  "process": "cohort",
+  "steps": [
+    {
+      "name": "matches",
+      "actor": "tennis-match-dataset",
+      "input": {
+        "maxItems": 200,
+        "years": [],
+        "dateFrom": "${DATE_FROM}",
+        "dateTo": "${DATE_TO}",
+        "tours": [
+          "atp",
+          "wta"
+        ]
+      }
+    }
+  ],
+  "note": ""
+}

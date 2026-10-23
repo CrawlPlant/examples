@@ -1,0 +1,18 @@
+{
+  "title": "Fetch Coles specials and discounts",
+  "process": "export",
+  "steps": [
+    {
+      "name": "products",
+      "actor": "coles-au",
+      "input": {
+        "maxItems": 20,
+        "mode": "specials",
+        "postcodes": [
+          "${POSTCODE}"
+        ]
+      }
+    }
+  ],
+  "note": ""
+}

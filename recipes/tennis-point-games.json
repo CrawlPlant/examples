@@ -1,0 +1,19 @@
+{
+  "title": "Download game-format point data",
+  "process": "export",
+  "steps": [
+    {
+      "name": "points",
+      "actor": "tennis-point-by-point",
+      "input": {
+        "maxItems": 2,
+        "mode": "matchIds",
+        "matchIds": [
+          "${MATCH_ID}"
+        ],
+        "pointByPointFormat": "games"
+      }
+    }
+  ],
+  "note": ""
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Refresh rows by match ID without duplicates",
+  "process": "update",
+  "steps": [
+    {
+      "name": "matches",
+      "actor": "tennis-match-dataset",
+      "input": {
+        "maxItems": 200,
+        "years": [],
+        "dateFrom": "${DATE_FROM}",
+        "dateTo": "${DATE_TO}",
+        "tours": [
+          "atp",
+          "wta"
+        ]
+      }
+    }
+  ],
+  "note": "Run again with an overlapping date window. merged.json is updated atomically; new records replace matching IDs."
+}

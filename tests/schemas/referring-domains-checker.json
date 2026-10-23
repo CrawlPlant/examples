@@ -1,0 +1,49 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Referring domains of any list of domains",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "domains": {
+      "title": "Domains",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Domains, URLs or e-mail addresses, one per line. Each is reduced to its registrable domain (https://www.bbc.co.uk/news -> bbc.co.uk). You get the domains that link to each of them.",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "apify.com"
+      ]
+    },
+    "maxReferrersPerDomain": {
+      "title": "Referring domains per domain",
+      "type": "integer",
+      "editor": "number",
+      "description": "How many referring domains to return for each of your domains, strongest (highest Open Authority) first. A well-known site can have millions; most small sites have a handful.",
+      "minimum": 1,
+      "maximum": 1000000,
+      "default": 100
+    },
+    "minAuthority": {
+      "title": "Minimum Open Authority",
+      "type": "integer",
+      "editor": "number",
+      "description": "Return only referring domains scoring at least this (0-100). 0 = every referring domain.",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 0
+    },
+    "maxItems": {
+      "title": "Max rows",
+      "type": "integer",
+      "editor": "number",
+      "description": "Maximum rows to return (and pay for).",
+      "minimum": 1,
+      "default": 1000
+    }
+  },
+  "required": [
+    "domains"
+  ]
+}

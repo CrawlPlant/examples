@@ -1,0 +1,22 @@
+{
+  "title": "Compute Elo-versus-market probability differences",
+  "process": "market",
+  "steps": [
+    {
+      "name": "matches",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 20,
+        "mode": "matches",
+        "dateFrom": "${DATE_FROM}",
+        "dateTo": "${DATE_TO}",
+        "includeOdds": true,
+        "tours": [
+          "atp",
+          "wta"
+        ]
+      }
+    }
+  ],
+  "note": "Retrieved odds are not an archived pre-match betting signal. No profit or predictive advantage is claimed."
+}

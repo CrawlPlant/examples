@@ -1,0 +1,21 @@
+{
+  "title": "Search Aldi products with prices",
+  "process": "export",
+  "steps": [
+    {
+      "name": "products",
+      "actor": "aldi-au",
+      "input": {
+        "maxItems": 20,
+        "mode": "search",
+        "queries": [
+          "${QUERY}"
+        ],
+        "postcodes": [
+          "${ALDI_POSTCODE}"
+        ]
+      }
+    }
+  ],
+  "note": ""
+}

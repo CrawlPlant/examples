@@ -1,0 +1,22 @@
+{
+  "title": "Compare electricity estimates for an explicit usage scenario",
+  "process": "export",
+  "steps": [
+    {
+      "name": "plans",
+      "actor": "au-energy-plans",
+      "input": {
+        "maxItems": 10,
+        "mode": "cheapest",
+        "postcodes": [
+          "${POSTCODE}"
+        ],
+        "fuelTypes": [
+          "ELECTRICITY"
+        ],
+        "annualKwh": 4000
+      }
+    }
+  ],
+  "note": "4,000 kWh/year scenario; estimates depend on tariff assumptions and are not a bill guarantee."
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Retrieve an advertiser activity timeline",
+  "process": "export",
+  "steps": [
+    {
+      "name": "timeline",
+      "actor": "google-ads-transparency",
+      "input": {
+        "maxItems": 20,
+        "mode": "timeline",
+        "targets": [
+          "${ADVERTISER}"
+        ],
+        "maxScanPages": 2
+      }
+    }
+  ],
+  "note": ""
+}

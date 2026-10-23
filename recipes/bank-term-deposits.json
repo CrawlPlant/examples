@@ -1,0 +1,22 @@
+{
+  "title": "Export 12-month term-deposit rate records",
+  "process": "export",
+  "steps": [
+    {
+      "name": "rates",
+      "actor": "au-bank-rates",
+      "input": {
+        "maxItems": 10,
+        "mode": "best",
+        "categories": [
+          "TERM_DEPOSITS"
+        ],
+        "termMonths": [
+          12
+        ],
+        "amount": 10000
+      }
+    }
+  ],
+  "note": "Source rates and conditions, not personal financial advice; inspect eligibility and dates."
+}

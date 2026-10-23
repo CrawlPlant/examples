@@ -1,0 +1,18 @@
+{
+  "title": "Discover sites with related linking patterns",
+  "process": "export",
+  "steps": [
+    {
+      "name": "similar",
+      "actor": "similar-sites-finder",
+      "input": {
+        "maxItems": 20,
+        "domains": [
+          "${DOMAIN}"
+        ],
+        "maxReferrersPerDomain": 20
+      }
+    }
+  ],
+  "note": ""
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Build a source-linked scouting packet from three Actor calls",
+  "process": "scout",
+  "steps": [
+    {
+      "name": "match",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 2,
+        "mode": "matchIds",
+        "matchIds": [
+          "${SCOUT_MATCH_ID}"
+        ],
+        "includeOdds": false,
+        "includeH2H": false
+      }
+    }
+  ],
+  "note": "",
+  "goal": "Prepare a concise tennis scout using only eligible pre-match ratings and completed prior matches. State history gaps. Do not use the target result."
+}

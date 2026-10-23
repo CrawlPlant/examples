@@ -1,0 +1,22 @@
+{
+  "title": "Fetch the scheduled match list",
+  "process": "export",
+  "steps": [
+    {
+      "name": "data",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 20,
+        "mode": "matches",
+        "dateFrom": "tomorrow",
+        "status": "scheduled",
+        "tours": [
+          "atp",
+          "wta"
+        ],
+        "includeOdds": false
+      }
+    }
+  ],
+  "note": ""
+}

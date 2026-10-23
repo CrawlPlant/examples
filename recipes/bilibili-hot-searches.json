@@ -1,0 +1,16 @@
+{
+  "title": "Collect current hot search terms",
+  "process": "export",
+  "steps": [
+    {
+      "name": "searches",
+      "actor": "bilibili-trending-history",
+      "input": {
+        "maxItems": 20,
+        "mode": "hotSearches",
+        "trackHistory": false
+      }
+    }
+  ],
+  "note": ""
+}

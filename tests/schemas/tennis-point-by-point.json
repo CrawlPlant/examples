@@ -1,0 +1,197 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Tennis point-by-point of any match, day, tournament or player",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "editor": "select",
+      "description": "matches = every match of the days you pick (any past day; older than 7 days from our tennis database); matchIds = specific matches by id or URL; tournaments = every match of a tournament edition; players = a player's matches, newest first.",
+      "enum": [
+        "matches",
+        "matchIds",
+        "tournaments",
+        "players"
+      ],
+      "enumTitles": [
+        "Matches by day",
+        "Matches by id or URL",
+        "Tournament editions",
+        "A player's matches"
+      ],
+      "default": "matches"
+    },
+    "dateFrom": {
+      "title": "From day (UTC)",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Matches mode: the first day, in UTC. today, yesterday, tomorrow, a date like 2026-09-28, or an offset like -3 (three days ago) or +1. Flashscore's daily lists go 7 days back; days ahead list what is already scheduled (usually 1-2 days).",
+      "default": "yesterday"
+    },
+    "dateTo": {
+      "title": "To day (UTC)",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Matches mode: the last day, inclusive, same formats as From day. Empty = only the From day. Example: From -7 and To today = the last 8 days."
+    },
+    "matchIds": {
+      "title": "Match ids or URLs",
+      "type": "array",
+      "editor": "stringList",
+      "description": "matchIds mode: Flashscore match ids (the 8 characters after mid= or /match/, e.g. llKI871b) or full match URLs. Any date, also older than 7 days. Adds the round (e.g. Final) and the match duration.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "tournamentUrls": {
+      "title": "Tournament URLs",
+      "type": "array",
+      "editor": "stringList",
+      "description": "tournaments mode: Flashscore tournament URLs, e.g. https://www.flashscore.com/tennis/atp-singles/wimbledon/ (or an edition: .../wimbledon-2019/).",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "years": {
+      "title": "Years",
+      "type": "array",
+      "editor": "json",
+      "description": "tournaments mode: the editions to read, e.g. [2019, 2023]; empty = the latest edition.",
+      "default": []
+    },
+    "playerUrls": {
+      "title": "Players (names or URLs)",
+      "type": "array",
+      "editor": "stringList",
+      "description": "players mode: player names, e.g. \"Jannik Sinner\" or \"Swiatek\", or Flashscore player page URLs.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "tours": {
+      "title": "Tours",
+      "type": "array",
+      "editor": "select",
+      "description": "Keep only these tours. Empty = all. challenger-women is the WTA 125 level; teams = Davis Cup, Billie Jean King Cup, Laver Cup ties; other = exhibitions, juniors and the rest.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "atp",
+          "wta",
+          "challenger-men",
+          "challenger-women",
+          "itf-men",
+          "itf-women",
+          "teams",
+          "other"
+        ],
+        "enumTitles": [
+          "ATP",
+          "WTA",
+          "Challenger (men)",
+          "WTA 125 / Challenger (women)",
+          "ITF men",
+          "ITF women",
+          "Team events",
+          "Other"
+        ]
+      },
+      "default": [
+        "atp",
+        "wta"
+      ],
+      "sectionCaption": "Filters"
+    },
+    "matchType": {
+      "title": "Singles or doubles",
+      "type": "string",
+      "editor": "select",
+      "description": "singles (default), doubles (includes mixed doubles), or all (also team ties).",
+      "enum": [
+        "singles",
+        "doubles",
+        "all"
+      ],
+      "enumTitles": [
+        "Singles",
+        "Doubles",
+        "All"
+      ],
+      "default": "singles"
+    },
+    "status": {
+      "title": "Status",
+      "type": "string",
+      "editor": "select",
+      "description": "finished (default: point-by-point of played matches), live (in play: the points so far), or all.",
+      "enum": [
+        "all",
+        "scheduled",
+        "live",
+        "finished"
+      ],
+      "enumTitles": [
+        "All",
+        "Scheduled",
+        "Live",
+        "Finished"
+      ],
+      "default": "finished"
+    },
+    "tournaments": {
+      "title": "Tournament name contains",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep matches whose tournament name or category contains any of these, case-insensitive, e.g. Beijing, US Open, W100, Challenger.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "players": {
+      "title": "Player name contains",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep matches with a player whose name contains any of these, case-insensitive (Flashscore writes names as \"Sinner J.\"): Sinner, Swiatek. A player id also works.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "includeStatistics": {
+      "title": "Match statistics",
+      "type": "boolean",
+      "description": "Serve and return statistics for matches that started: aces, double faults, 1st serve %, points won on 1st / 2nd serve, break points saved and converted, service and return games won, for the match and each set. Included in the base price.",
+      "default": true,
+      "sectionCaption": "Data per match"
+    },
+    "pointByPointFormat": {
+      "title": "Point-by-point layout",
+      "type": "string",
+      "editor": "select",
+      "description": "games = each match row carries its games (server, winner, breaks, the points in order). sackmann = finished matches only, one row per match in the layout of Jeff Sackmann's tennis_pointbypoint files (pbp_id, server1, server2, the whole match as one S/R string, score, minutes), ready for the tools built on them. Each string is checked point by point against the final score. Charged per match that has point-by-point, with no separate match row.",
+      "enum": [
+        "games",
+        "sackmann"
+      ],
+      "enumTitles": [
+        "Games on each match row",
+        "Sackmann's layout (one row per finished match)"
+      ],
+      "default": "games"
+    },
+    "maxItems": {
+      "title": "Max results",
+      "type": "integer",
+      "editor": "number",
+      "description": "Maximum matches to return, counted after the filters. A busy day has 100-200 ATP and WTA singles matches.",
+      "minimum": 1,
+      "default": 20
+    }
+  }
+}

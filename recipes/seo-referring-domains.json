@@ -1,0 +1,18 @@
+{
+  "title": "Inspect a sample of referring domains",
+  "process": "export",
+  "steps": [
+    {
+      "name": "referrers",
+      "actor": "referring-domains-checker",
+      "input": {
+        "maxItems": 20,
+        "domains": [
+          "${DOMAIN}"
+        ],
+        "maxReferrersPerDomain": 20
+      }
+    }
+  ],
+  "note": ""
+}

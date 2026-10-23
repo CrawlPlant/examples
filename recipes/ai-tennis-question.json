@@ -1,0 +1,22 @@
+{
+  "title": "Translate a tennis question into validated Python filters",
+  "process": "query",
+  "steps": [
+    {
+      "name": "matches",
+      "actor": "tennis-match-dataset",
+      "input": {
+        "maxItems": 200,
+        "years": [],
+        "dateFrom": "${DATE_FROM}",
+        "dateTo": "${DATE_TO}",
+        "tours": [
+          "atp",
+          "wta"
+        ]
+      }
+    }
+  ],
+  "note": "",
+  "goal": "Which WTA players on hard courts have the highest ranking-upset rate, with at least two eligible underdog appearances?"
+}

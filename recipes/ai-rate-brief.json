@@ -1,0 +1,23 @@
+{
+  "title": "Prepare a cited rate-comparison evidence packet",
+  "process": "evidence",
+  "steps": [
+    {
+      "name": "rates",
+      "actor": "au-bank-rates",
+      "input": {
+        "maxItems": 10,
+        "mode": "best",
+        "categories": [
+          "TERM_DEPOSITS"
+        ],
+        "termMonths": [
+          12
+        ],
+        "amount": 10000
+      }
+    }
+  ],
+  "note": "",
+  "goal": "Select rate records for a factual term-deposit brief. Preserve term, amount, conditions and date. Do not recommend a personal investment or imply eligibility."
+}

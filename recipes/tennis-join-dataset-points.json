@@ -1,0 +1,36 @@
+{
+  "title": "Join two Actors by match identity",
+  "process": "join",
+  "steps": [
+    {
+      "name": "matches",
+      "actor": "tennis-match-dataset",
+      "input": {
+        "maxItems": 200,
+        "years": [],
+        "dateFrom": "${DATE_FROM}",
+        "dateTo": "${DATE_TO}",
+        "tours": [
+          "atp",
+          "wta"
+        ]
+      }
+    },
+    {
+      "name": "points",
+      "actor": "tennis-point-by-point",
+      "input": {
+        "maxItems": 200,
+        "mode": "matches",
+        "dateFrom": "${DATE_FROM}",
+        "dateTo": "${DATE_TO}",
+        "tours": [
+          "atp",
+          "wta"
+        ],
+        "pointByPointFormat": "sackmann"
+      }
+    }
+  ],
+  "note": ""
+}

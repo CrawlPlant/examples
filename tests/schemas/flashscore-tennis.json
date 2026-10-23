@@ -1,0 +1,443 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Flashscore tennis: matches, live scores, odds, head-to-head and form",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "editor": "select",
+      "description": "matches = every match of the days you pick (any past date; the day lists reach 7 days back, older days come from our tennis database), with results, odds, head-to-head, form, Elo and statistics; live = matches in play right now; matchIds = specific matches by id or URL (any date); players = a player's matches, newest first (the whole career from the database, else about 40 recent); rankings = ATP / WTA rankings, one row per player (the latest, the list of a past date, or every weekly list of a date range); tournaments = every match of a tournament edition with its round; playerProfiles = one row per player: age, country, photo, rank, Elo per surface; playerStats = a player's record and serve / return statistics per season, surface, tour or opponent's rank; h2h = two players' head-to-head with every meeting; elo = the Elo list of a tour and surface; sackmann = every played singles match of the seasons in \"years\" (or the dateFrom..dateTo range; neither = this season) in the columns of Jeff Sackmann's atp_matches / wta_matches CSV files: winner and loser, rank at the time, age, score, round, minutes, serve statistics (tours: ATP and WTA unless set); playerList = every ATP and / or WTA player (from \"Ranking lists\") with ids and names, plus playing hand, birth date, height and country where known, in the columns of Jeff Sackmann's atp_players / wta_players files.",
+      "enum": [
+        "matches",
+        "live",
+        "matchIds",
+        "players",
+        "rankings",
+        "tournaments",
+        "playerProfiles",
+        "playerStats",
+        "h2h",
+        "elo",
+        "sackmann",
+        "playerList"
+      ],
+      "enumTitles": [
+        "Matches by day (results, fixtures, odds)",
+        "Live now (in-play scores and odds)",
+        "Matches by id or URL",
+        "Player results (full career)",
+        "Rankings (ATP, WTA, history)",
+        "Tournament results and draws",
+        "Player profiles (age, Elo, rank)",
+        "Player statistics (season, surface, vs top 10)",
+        "Head-to-head of two players",
+        "Elo ratings (ATP, WTA, per surface)",
+        "Match CSV in Jeff Sackmann's tennis_atp format",
+        "Player list (ids, names, hand, height, country)"
+      ],
+      "default": "matches"
+    },
+    "sackmannFile": {
+      "title": "Sackmann file",
+      "type": "string",
+      "editor": "select",
+      "description": "sackmann mode: which file to write, in the column layout of Jeff Sackmann's tennis files. matches = played matches of the seasons or dates (Closing odds adds the bookmakers' prices); upcoming = today's and tomorrow's scheduled singles with both players' rank, seed, Elo and the Elo win probability; new-results = the matches that finished since your last run with the same tours, each once, usually complete with statistics and Elo (schedule it daily, at least weekly; the first run returns today and the 10 days before); rankings = every weekly ATP / WTA list of the seasons or dates (Top ranks only keeps the top); players = the ATP / WTA player list; pointbypoint = one row per finished match with every point. Matches, upcoming and new results are charged as match rows, rankings as ranking rows, players as player-list rows and point by point at the point-by-point price (see Pricing).",
+      "enum": [
+        "matches",
+        "upcoming",
+        "new-results",
+        "rankings",
+        "players",
+        "pointbypoint"
+      ],
+      "enumTitles": [
+        "Played matches",
+        "Upcoming matches",
+        "New results since the last run",
+        "Rankings",
+        "Players",
+        "Point by point"
+      ],
+      "default": "matches"
+    },
+    "closingOdds": {
+      "title": "Closing odds",
+      "type": "boolean",
+      "description": "sackmann mode, played matches file: adds each match's closing odds from the bookmakers of the country set in Bookmakers of country, in tennis-data.co.uk's columns, winner (W) and loser (L): B365W / B365L (bet365), MaxW / MaxL (best price), AvgW / AvgL (average), OpenAvgW / OpenAvgL (average opening price), ProbW / ProbL (win probability without the bookmaker margin), BookmakerCount and OddsCountry. Charged as bookmaker odds, only for the matches that have odds (see Pricing).",
+      "default": false
+    },
+    "pointByPointFormat": {
+      "title": "Point-by-point layout",
+      "type": "string",
+      "editor": "select",
+      "description": "With Point by point on, in the match modes: games = each match row carries its games (server, winner, breaks, the points in order); sackmann = one row per finished match, in any match mode (matches, matchIds, players, tournaments), in the layout of Jeff Sackmann's tennis_pointbypoint files (pbp_id, server1, server2, the whole match as one S/R string, score, minutes), ready for the tools built on them. Each string is checked point by point against the final score. Sackmann rows are charged as point-by-point only, with no match row. (Whole seasons in this layout: sackmann mode, Sackmann file = Point by point.)",
+      "enum": [
+        "games",
+        "sackmann"
+      ],
+      "enumTitles": [
+        "Games on each match row",
+        "Sackmann's layout (one row per match)"
+      ],
+      "default": "games"
+    },
+    "dateFrom": {
+      "title": "From day (UTC)",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Matches mode: the first day, in UTC. today, yesterday, tomorrow, a date like 2026-09-28, or an offset like -3 (three days ago) or +1. Flashscore's daily lists go 7 days back; days ahead list what is already scheduled (usually 1-2 days).",
+      "default": "today"
+    },
+    "dateTo": {
+      "title": "To day (UTC)",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Matches mode: the last day, inclusive, same formats as From day. Empty = only the From day. Example: From -7 and To today = the last 8 days."
+    },
+    "matchIds": {
+      "title": "Match ids or URLs",
+      "type": "array",
+      "editor": "stringList",
+      "description": "matchIds mode: Flashscore match ids (the 8 characters after mid= or /match/, e.g. llKI871b) or full match URLs. Any date, also older than 7 days. Adds the round (e.g. Final) and the match duration.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "playerUrls": {
+      "title": "Players (names or URLs)",
+      "type": "array",
+      "editor": "stringList",
+      "description": "players, playerProfiles, playerStats and h2h modes: player names, e.g. \"Jannik Sinner\" or \"Swiatek\" (the best-known player of that name), or Flashscore player page URLs, e.g. https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/, to pick one exactly. h2h mode takes them in pairs: 1st v 2nd, 3rd v 4th...",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "rankingLists": {
+      "title": "Ranking lists",
+      "type": "array",
+      "editor": "select",
+      "description": "rankings mode: which lists. Each has about 2,000 players (top 100 in one request, the rest in a second one). playerList mode: atp and / or wta.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "atp",
+          "wta",
+          "atp-race",
+          "wta-race",
+          "atp-doubles",
+          "wta-doubles"
+        ],
+        "enumTitles": [
+          "ATP singles",
+          "WTA singles",
+          "ATP race",
+          "WTA race",
+          "ATP doubles",
+          "WTA doubles"
+        ]
+      },
+      "default": [
+        "atp",
+        "wta"
+      ]
+    },
+    "rankingDate": {
+      "title": "Ranking date",
+      "type": "string",
+      "editor": "textfield",
+      "description": "rankings mode: the list of this date (YYYY-MM-DD; ATP back to 1973, WTA back to 2001); empty = the latest list."
+    },
+    "rankingDateTo": {
+      "title": "Ranking date to",
+      "type": "string",
+      "editor": "textfield",
+      "description": "rankings mode: with a ranking date, every weekly list from that date up to this one (YYYY-MM-DD). Empty = just the one list."
+    },
+    "maxRank": {
+      "title": "Top ranks only",
+      "type": "integer",
+      "editor": "number",
+      "minimum": 1,
+      "description": "rankings mode and the Sackmann rankings file: only players ranked this high or better, e.g. 100 for the top 100. Empty = everyone."
+    },
+    "rankingFormat": {
+      "title": "Rankings layout",
+      "type": "string",
+      "editor": "select",
+      "description": "standard = one row per player with rank, points and movement; sackmann = the columns of Jeff Sackmann's rankings files (date, rank, player, points).",
+      "enum": [
+        "standard",
+        "sackmann"
+      ],
+      "enumTitles": [
+        "Standard",
+        "Sackmann's layout"
+      ],
+      "default": "standard"
+    },
+    "tournamentUrls": {
+      "title": "Tournament URLs",
+      "type": "array",
+      "editor": "stringList",
+      "description": "tournaments mode: Flashscore tournament URLs, e.g. https://www.flashscore.com/tennis/atp-singles/wimbledon/ (or an edition: .../wimbledon-2019/).",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "years": {
+      "title": "Years",
+      "type": "array",
+      "editor": "json",
+      "description": "tournaments mode: the editions to read, e.g. [2019, 2023]; empty = the latest edition. sackmann mode: the seasons, e.g. [2024, 2025] (from 1990).",
+      "default": []
+    },
+    "statsSplitBy": {
+      "title": "Statistics split",
+      "type": "string",
+      "editor": "select",
+      "description": "playerStats mode: one row per season, surface, tour, opponent's rank band (top 10, 11-50, 51-100, 101-250, 251+) or all matches together.",
+      "enum": [
+        "season",
+        "surface",
+        "tour",
+        "opponentRank",
+        "none"
+      ],
+      "enumTitles": [
+        "Season",
+        "Surface",
+        "Tour",
+        "Opponent's rank",
+        "All matches"
+      ],
+      "default": "season"
+    },
+    "eloTour": {
+      "title": "Elo tour",
+      "type": "string",
+      "editor": "select",
+      "description": "elo mode: men (ATP, Challenger, ITF) or women (WTA, Challenger, ITF).",
+      "enum": [
+        "atp",
+        "wta"
+      ],
+      "enumTitles": [
+        "Men",
+        "Women"
+      ],
+      "default": "atp"
+    },
+    "eloSurface": {
+      "title": "Elo surface",
+      "type": "string",
+      "editor": "select",
+      "description": "elo mode: overall Elo or Elo on one surface.",
+      "enum": [
+        "all",
+        "hard",
+        "clay",
+        "grass",
+        "carpet"
+      ],
+      "enumTitles": [
+        "All surfaces",
+        "Hard",
+        "Clay",
+        "Grass",
+        "Carpet"
+      ],
+      "default": "all"
+    },
+    "tours": {
+      "title": "Tours",
+      "type": "array",
+      "editor": "select",
+      "description": "Keep only these tours. Empty = all. challenger-women is the WTA 125 level; teams = Davis Cup, Billie Jean King Cup, Laver Cup ties; other = exhibitions, juniors and the rest.",
+      "sectionCaption": "Filters",
+      "items": {
+        "type": "string",
+        "enum": [
+          "atp",
+          "wta",
+          "challenger-men",
+          "challenger-women",
+          "itf-men",
+          "itf-women",
+          "teams",
+          "other"
+        ],
+        "enumTitles": [
+          "ATP",
+          "WTA",
+          "Challenger (men)",
+          "WTA 125 / Challenger (women)",
+          "ITF men",
+          "ITF women",
+          "Team events",
+          "Other"
+        ]
+      },
+      "default": []
+    },
+    "matchType": {
+      "title": "Singles or doubles",
+      "type": "string",
+      "editor": "select",
+      "description": "singles (default), doubles (includes mixed doubles), or all (also team ties).",
+      "enum": [
+        "singles",
+        "doubles",
+        "all"
+      ],
+      "enumTitles": [
+        "Singles",
+        "Doubles",
+        "All"
+      ],
+      "default": "singles"
+    },
+    "status": {
+      "title": "Status",
+      "type": "string",
+      "editor": "select",
+      "description": "all, scheduled (not started, delayed, postponed), live (in play), finished (including retired, walkover and awarded).",
+      "enum": [
+        "all",
+        "scheduled",
+        "live",
+        "finished"
+      ],
+      "enumTitles": [
+        "All",
+        "Scheduled",
+        "Live",
+        "Finished"
+      ],
+      "default": "all"
+    },
+    "tournaments": {
+      "title": "Tournament name contains",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep matches whose tournament name or category contains any of these, case-insensitive, e.g. Beijing, US Open, W100, Challenger.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "players": {
+      "title": "Player name contains",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep matches with a player whose name contains any of these, case-insensitive (Flashscore writes names as \"Sinner J.\"): Sinner, Swiatek. A player id also works.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "surfaces": {
+      "title": "Surfaces",
+      "type": "array",
+      "editor": "select",
+      "description": "Keep matches on these surfaces. Empty = all. Matches without a surface (team ties) are dropped when this is set.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "hard",
+          "clay",
+          "grass",
+          "carpet"
+        ],
+        "enumTitles": [
+          "Hard",
+          "Clay",
+          "Grass",
+          "Carpet"
+        ]
+      },
+      "default": []
+    },
+    "includeOdds": {
+      "title": "Bookmaker odds",
+      "type": "boolean",
+      "description": "Match-winner odds of each bookmaker (current and opening; closing odds for finished matches), best and average price, win probability without the bookmaker margin, and a link to each bookmaker. Charged per match that has odds (see Pricing).",
+      "sectionCaption": "Data per match",
+      "default": true
+    },
+    "oddsCountry": {
+      "title": "Bookmakers of country",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Bookmakers differ by country (licences). Two-letter code: GB (about 20 bookmakers: bet365, William Hill, Betfair, Sky Bet, Paddy Power...), DE, PL, IT, ES, FR, US, AU, NG and others.",
+      "default": "GB"
+    },
+    "oddsMarkets": {
+      "title": "Odds markets",
+      "type": "string",
+      "editor": "select",
+      "description": "match-winner = the summary and one row per bookmaker; all = also every other market in oddsMarkets: set winner, total games and sets, game and set handicaps, correct score (about 100-200 prices per match).",
+      "enum": [
+        "match-winner",
+        "all"
+      ],
+      "enumTitles": [
+        "Match winner",
+        "All markets"
+      ],
+      "default": "match-winner"
+    },
+    "includeH2H": {
+      "title": "Head-to-head, form and fatigue",
+      "type": "boolean",
+      "description": "Head-to-head record (all surfaces and this surface, last 5 meetings), each player's last 10 results, win % overall and on this surface, days since the last match, matches and sets in the last 7 and 14 days, and whether they retired in their last match. Computed as of the match start. Charged per match (see Pricing).",
+      "default": true
+    },
+    "includeStatistics": {
+      "title": "Match statistics",
+      "type": "boolean",
+      "description": "Serve and return statistics for matches that started: aces, double faults, 1st serve %, points won on 1st / 2nd serve, break points saved and converted, service and return games won, for the match and each set. Included in the base price.",
+      "default": true
+    },
+    "includePointByPoint": {
+      "title": "Point by point",
+      "type": "boolean",
+      "description": "Every game of matches that started: server, winner, breaks, the points in order and break / set / match points. Charged per match (see Pricing).",
+      "default": false
+    },
+    "includeRankings": {
+      "title": "Player rankings",
+      "type": "boolean",
+      "description": "Current ATP / WTA singles rank and points of each player (singles matches). Two small requests per list per run.",
+      "default": true
+    },
+    "sortBy": {
+      "title": "Order",
+      "type": "string",
+      "editor": "select",
+      "description": "tour = ATP first, then WTA, Challenger, ITF, each by start time; time = by start time only. Players mode is always newest first.",
+      "sectionCaption": "Output",
+      "enum": [
+        "tour",
+        "time"
+      ],
+      "enumTitles": [
+        "By tour, then time",
+        "By start time"
+      ],
+      "default": "tour"
+    },
+    "maxItems": {
+      "title": "Max results",
+      "type": "integer",
+      "editor": "number",
+      "description": "Maximum records to return (matches or ranking rows), counted after the filters. A busy day has 300-450 singles matches across all tours.",
+      "minimum": 1,
+      "default": 100
+    }
+  }
+}

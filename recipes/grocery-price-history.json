@@ -1,0 +1,22 @@
+{
+  "title": "Fetch Woolworths products with price history",
+  "process": "export",
+  "steps": [
+    {
+      "name": "products",
+      "actor": "woolworths-au",
+      "input": {
+        "maxItems": 20,
+        "mode": "search",
+        "queries": [
+          "${QUERY}"
+        ],
+        "postcodes": [
+          "${POSTCODE}"
+        ],
+        "priceHistoryDays": 14
+      }
+    }
+  ],
+  "note": ""
+}

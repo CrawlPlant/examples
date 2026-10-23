@@ -1,0 +1,18 @@
+{
+  "title": "Resolve a player profile and stable ID",
+  "process": "export",
+  "steps": [
+    {
+      "name": "data",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 20,
+        "mode": "playerProfiles",
+        "playerUrls": [
+          "${PLAYER}"
+        ]
+      }
+    }
+  ],
+  "note": ""
+}

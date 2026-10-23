@@ -1,0 +1,32 @@
+{
+  "title": "Resolve identity and aggregate a rivalry by surface",
+  "process": "rivalry",
+  "steps": [
+    {
+      "name": "profile",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 2,
+        "mode": "playerProfiles",
+        "playerUrls": [
+          "${PLAYER}"
+        ]
+      }
+    },
+    {
+      "name": "history",
+      "actor": "tennis-match-history",
+      "input": {
+        "maxItems": 100,
+        "playerUrls": [
+          "${PLAYER}"
+        ],
+        "players": [
+          "${OPPONENT}"
+        ],
+        "status": "finished"
+      }
+    }
+  ],
+  "note": ""
+}

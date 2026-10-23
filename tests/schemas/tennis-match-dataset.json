@@ -1,0 +1,85 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "ATP and WTA match results in Jeff Sackmann's CSV columns",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "sackmannFile": {
+      "title": "File",
+      "type": "string",
+      "editor": "select",
+      "description": "matches = played matches of the seasons or dates below; upcoming = today's and tomorrow's scheduled singles in his tournament and player columns, with both players' rank, seed, Elo and the Elo win probability; new-results = only the matches that finished since your last run with the same tours, each once, usually complete with statistics and Elo (schedule it daily, at least weekly; the first run returns today and the 10 days before). Upcoming and new results use Tours and Max results; Years and the days apply to played matches.",
+      "enum": [
+        "matches",
+        "upcoming",
+        "new-results"
+      ],
+      "enumTitles": [
+        "Played matches",
+        "Upcoming matches",
+        "New results since the last run"
+      ],
+      "default": "matches"
+    },
+    "years": {
+      "title": "Years",
+      "type": "array",
+      "editor": "json",
+      "description": "The seasons, e.g. [2024, 2025] (from 1990). Empty = the From / To days below, or this season so far.",
+      "default": [
+        2025
+      ],
+      "prefill": [
+        2025
+      ]
+    },
+    "tours": {
+      "title": "Tours",
+      "type": "array",
+      "editor": "select",
+      "description": "atp = his atp_matches files, wta = wta_matches, challenger-men = qual_chall, itf-men = futures. Empty = ATP and WTA.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "atp",
+          "wta",
+          "challenger-men",
+          "challenger-women",
+          "itf-men",
+          "itf-women"
+        ],
+        "enumTitles": [
+          "ATP",
+          "WTA",
+          "Challenger (men)",
+          "WTA 125 / Challenger (women)",
+          "ITF men",
+          "ITF women"
+        ]
+      },
+      "default": [
+        "atp"
+      ]
+    },
+    "dateFrom": {
+      "title": "From day (UTC)",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Used when Years is empty: the first day, e.g. 2026-01-01 or -7 (seven days ago). Empty Years and From = this season so far."
+    },
+    "dateTo": {
+      "title": "To day (UTC)",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Used when Years is empty: the last day, inclusive. Empty = today."
+    },
+    "maxItems": {
+      "title": "Max results",
+      "type": "integer",
+      "editor": "number",
+      "description": "Maximum matches to return. A full ATP season is about 4,300 matches with qualifying, WTA about 3,800.",
+      "minimum": 1,
+      "default": 1000
+    }
+  }
+}

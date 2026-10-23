@@ -1,0 +1,33 @@
+{
+  "title": "Prepare a source-backed link research shortlist",
+  "process": "evidence",
+  "steps": [
+    {
+      "name": "profiles",
+      "actor": "commoncrawl-domain-metrics",
+      "input": {
+        "maxItems": 20,
+        "domains": [
+          "${DOMAIN}",
+          "${COMPETITOR}"
+        ],
+        "mode": "profiles"
+      }
+    },
+    {
+      "name": "gaps",
+      "actor": "link-gap-finder",
+      "input": {
+        "maxItems": 20,
+        "yourDomain": "${YOUR_DOMAIN}",
+        "domains": [
+          "${DOMAIN}",
+          "${COMPETITOR}"
+        ],
+        "maxReferrersPerDomain": 30
+      }
+    }
+  ],
+  "note": "",
+  "goal": "Select candidate referring domains for manual relevance review. Explain that a link gap does not guarantee outreach suitability or ranking gains. Do not contact anyone."
+}

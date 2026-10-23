@@ -1,0 +1,19 @@
+{
+  "title": "Capture the current live scoreboard",
+  "process": "export",
+  "steps": [
+    {
+      "name": "data",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 20,
+        "mode": "live",
+        "tours": [
+          "atp",
+          "wta"
+        ]
+      }
+    }
+  ],
+  "note": ""
+}

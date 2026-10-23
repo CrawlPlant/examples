@@ -1,0 +1,19 @@
+{
+  "title": "Inspect statistics by opponent rank band",
+  "process": "export",
+  "steps": [
+    {
+      "name": "data",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 20,
+        "mode": "playerStats",
+        "playerUrls": [
+          "${PLAYER}"
+        ],
+        "statsSplitBy": "opponentRank"
+      }
+    }
+  ],
+  "note": ""
+}

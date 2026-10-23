@@ -1,0 +1,246 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "ALDI Australia products, prices & Special Buys",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "editor": "select",
+      "description": "What to fetch: keyword search, a category listing, specials (Super Savers, Lower Prices, Special Buys, Limited Time Only), products by id or barcode, any ALDI links, the list of categories, the full catalogue (~3,200 products; set Max items high, filters apply), or the store directory with hours and services.",
+      "enum": [
+        "search",
+        "category",
+        "specials",
+        "products",
+        "barcodes",
+        "urls",
+        "categories",
+        "catalog",
+        "stores"
+      ],
+      "enumTitles": [
+        "Search",
+        "Category",
+        "Specials & Special Buys",
+        "Products by id",
+        "Barcodes (EAN / GTIN)",
+        "ALDI links",
+        "List categories",
+        "Full catalogue",
+        "Store directory"
+      ],
+      "default": "search"
+    },
+    "queries": {
+      "title": "Search queries",
+      "type": "array",
+      "description": "Used in 'search' mode. Each query is searched separately.",
+      "editor": "stringList",
+      "default": [
+        "milk"
+      ],
+      "prefill": [
+        "milk"
+      ]
+    },
+    "categoryUrls": {
+      "title": "Category URLs",
+      "type": "array",
+      "description": "Used in 'category' mode, e.g. https://www.aldi.com.au/products/dairy-eggs-fridge/milk/k/1111111160 (or dairy-eggs-fridge/milk, or the key 1111111160). Tip: run mode 'List categories' to get every category URL.",
+      "editor": "stringList",
+      "default": []
+    },
+    "productIds": {
+      "title": "Product ids",
+      "type": "array",
+      "description": "Used in 'products' mode: the number at the end of a product URL, e.g. 000000000000398691 (leading zeros may be left out: 398691).",
+      "editor": "stringList",
+      "default": []
+    },
+    "barcodes": {
+      "title": "Barcodes (EAN / GTIN)",
+      "type": "array",
+      "description": "Used in 'barcodes' mode: up to 100 GTIN-8/12/13/14 codes with valid check digits. ALDI maps each known code to product IDs. Unknown codes are reported in warnings; leading zeros are preserved. Example: 8000500003787 (Ferrero Rocher 200g).",
+      "editor": "stringList",
+      "default": []
+    },
+    "urls": {
+      "title": "ALDI links",
+      "type": "array",
+      "description": "Used in 'urls' mode: paste any product, search, category or Special Buys link (or a bare product id). The sort order is kept; a Special Buys date in the link overrides Special Buys dates below.",
+      "editor": "stringList",
+      "default": []
+    },
+    "specialsGroups": {
+      "title": "Specials groups",
+      "type": "array",
+      "description": "Used in 'specials' mode. Empty = all. Values: super-savers, lower-prices, special-buys (on sale now and announced), upcoming-special-buys (announced, not on sale yet), limited-time-only.",
+      "editor": "stringList",
+      "default": []
+    },
+    "specialBuysDates": {
+      "title": "Special Buys dates",
+      "type": "array",
+      "description": "Used in 'specials' mode and for Special Buys links. On-sale dates in YYYY-MM-DD format, e.g. 2026-10-17. Empty = all dates; upcoming-special-buys still excludes dates on or before today in Sydney. With dates or themes selected and no Specials groups, only Special Buys are returned. A dated URL overrides this list.",
+      "editor": "stringList",
+      "default": []
+    },
+    "specialBuysThemes": {
+      "title": "Special Buys themes",
+      "type": "array",
+      "description": "Used in 'specials' mode and for Special Buys links. Exact ALDI theme names, e.g. Gardening or Tools and DIY. Empty = all themes; multiple themes are combined without duplicate products. Themes filter Special Buys only, before Max items. Complete nightly theme memberships are used when fresh; missing or stale memberships fall back to live listings.",
+      "editor": "stringList",
+      "default": []
+    },
+    "maxItems": {
+      "title": "Max items",
+      "type": "integer",
+      "description": "Maximum products per query / category / link, per store (after filters). For specials, products and the full catalogue: per run and store (the catalogue has ~3,200 products). Store directory: number of stores.",
+      "minimum": 1,
+      "default": 100
+    },
+    "storeIds": {
+      "title": "Store ids",
+      "type": "array",
+      "description": "Prices and range of these ALDI stores, each store as its own rows (some fresh produce, meat and liquor prices differ by store and state). The id is a letter and 3 digits, e.g. G525 (Darlinghurst NSW); mode 'Store directory' lists them all. Empty = ALDI's national prices (the ones with price history). Store prices come from our nightly read of every store (fetched live when it's older than this week's Wednesday).",
+      "editor": "stringList",
+      "default": [],
+      "sectionCaption": "Stores"
+    },
+    "postcodes": {
+      "title": "Postcodes",
+      "type": "array",
+      "description": "Australian postcodes (up to 100): every ALDI store in each postcode, each as its own rows. A postcode without an ALDI gives no rows; the run warnings name its nearest store and distance, so you can add it to Store ids.",
+      "editor": "stringList",
+      "default": []
+    },
+    "allStores": {
+      "title": "All ALDI stores",
+      "type": "boolean",
+      "description": "Run the searches / categories / specials in every ALDI store (~614). Combine with a small Max items: it applies per store.",
+      "default": false
+    },
+    "sortBy": {
+      "title": "Sort by",
+      "type": "string",
+      "editor": "select",
+      "sectionCaption": "Filters & sorting",
+      "description": "Result order. Relevance, price and name are applied by ALDI before paging; unit price collects every match first, then sorts (cheapest per kg / litre / item first).",
+      "enum": [
+        "relevance",
+        "price_asc",
+        "price_desc",
+        "unit_price_asc",
+        "name"
+      ],
+      "enumTitles": [
+        "Relevance",
+        "Price: low to high",
+        "Price: high to low",
+        "Unit price: low to high",
+        "Name (A to Z)"
+      ],
+      "default": "relevance"
+    },
+    "specialsOnly": {
+      "title": "Specials only",
+      "type": "boolean",
+      "description": "Keep only products that are a Super Saver, Lower Price, Special Buy or Limited Time Only.",
+      "default": false
+    },
+    "minPrice": {
+      "title": "Min price (AUD)",
+      "type": "number",
+      "description": "Keep only products priced at or above this amount.",
+      "minimum": 0
+    },
+    "maxPrice": {
+      "title": "Max price (AUD)",
+      "type": "number",
+      "description": "Keep only products priced at or below this amount.",
+      "minimum": 0
+    },
+    "excludeCategories": {
+      "title": "Exclude categories",
+      "type": "array",
+      "description": "Categories to leave out, by name or URL slug, e.g. 'Liquor' or 'christmas'.",
+      "editor": "stringList",
+      "default": []
+    },
+    "brands": {
+      "title": "Brands",
+      "type": "array",
+      "editor": "stringList",
+      "default": [],
+      "description": "Keep only these brands (exact brand name, any case), e.g. 'Farmdale', 'Belmont Biscuit Co.'."
+    },
+    "excludeAllergens": {
+      "title": "Exclude allergens",
+      "type": "array",
+      "description": "Skip products that contain or may contain any of these, e.g. Peanut, Milk, Gluten. Products without allergen data are skipped too. Needs product details.",
+      "editor": "stringList",
+      "default": []
+    },
+    "changedSince": {
+      "title": "Price changed since",
+      "type": "string",
+      "editor": "textfield",
+      "sectionCaption": "Price history",
+      "description": "Return only products whose price changed since this date/time (e.g. 2026-10-12), or 'last-run' for changes since your previous run with the same input. National prices only."
+    },
+    "includeDisappeared": {
+      "title": "Include disappeared products",
+      "type": "boolean",
+      "default": false,
+      "description": "With 'Price changed since' = last-run: also list products your previous run returned that are gone now (delisted or no longer matching), as rows with type 'disappeared'."
+    },
+    "priceHistoryDays": {
+      "title": "Price history (days)",
+      "type": "integer",
+      "description": "Add each product's price changes from the last N days (0 = off). Every result always includes previous price, 30-day low and 90-day average once we have that history.",
+      "minimum": 0,
+      "maximum": 3650,
+      "default": 0
+    },
+    "onlyNew": {
+      "title": "Only new products",
+      "type": "boolean",
+      "description": "Only products that appeared at ALDI in the last 7 days.",
+      "default": false
+    },
+    "onlyNewSpecials": {
+      "title": "Only new specials",
+      "type": "boolean",
+      "description": "Only products that became a Super Saver, Lower Price, Special Buy or Limited Time Only in the last 7 days.",
+      "default": false
+    },
+    "fetchFullDetails": {
+      "title": "Fetch full details",
+      "type": "boolean",
+      "description": "Adds description, ingredients, allergens, storage, origin, variants and packaging images from the product endpoint. Newly fetched details also attempt barcode decoding from photos, confirmed against ALDI's SKU mapping; these image reads take extra time. A small charge applies per successfully fetched detail, including image reads. Cached details are included at no extra cost.",
+      "default": false,
+      "sectionCaption": "Data & freshness"
+    },
+    "includeStock": {
+      "title": "Special Buys stock by store",
+      "type": "boolean",
+      "description": "With storeIds, postcodes or allStores: add Special Buys stock observations. Nightly cache is used within Max cache age and never beyond 24 hours; missing or older observations are read live. Max cache age 0 forces live checks. Adds stockStatus, stockInfoDisplay, stockObservedAt and stockSource (cache/live), independently of the price timestamp. Low/no stock does not prove zero units. Failed lookups retain the price row with a warning. Extra requests are included in the product price.",
+      "default": false
+    },
+    "maxAgeHours": {
+      "title": "Max cache age (hours)",
+      "type": "integer",
+      "description": "We refresh every product nightly (Sydney time). Data older than this, or read before this week's Wednesday (Special Buys day), is fetched live instead. 0 = always fetch live.",
+      "minimum": 0,
+      "default": 36
+    },
+    "includeRaw": {
+      "title": "Include raw payload",
+      "type": "boolean",
+      "description": "Add the original ALDI payload to each record (every field, including ones we do not map).",
+      "default": false
+    }
+  }
+}

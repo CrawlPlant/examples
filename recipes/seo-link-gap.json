@@ -1,0 +1,20 @@
+{
+  "title": "Find referring domains shared by competitors",
+  "process": "export",
+  "steps": [
+    {
+      "name": "gaps",
+      "actor": "link-gap-finder",
+      "input": {
+        "maxItems": 20,
+        "yourDomain": "${YOUR_DOMAIN}",
+        "domains": [
+          "${DOMAIN}",
+          "${COMPETITOR}"
+        ],
+        "maxReferrersPerDomain": 30
+      }
+    }
+  ],
+  "note": ""
+}

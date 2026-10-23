@@ -1,0 +1,49 @@
+{
+  "title": "Collect comparable search results from three retailers",
+  "process": "export",
+  "steps": [
+    {
+      "name": "woolworths",
+      "actor": "woolworths-au",
+      "input": {
+        "maxItems": 10,
+        "mode": "search",
+        "queries": [
+          "${QUERY}"
+        ],
+        "postcodes": [
+          "${POSTCODE}"
+        ]
+      }
+    },
+    {
+      "name": "coles",
+      "actor": "coles-au",
+      "input": {
+        "maxItems": 10,
+        "mode": "search",
+        "queries": [
+          "${QUERY}"
+        ],
+        "postcodes": [
+          "${POSTCODE}"
+        ]
+      }
+    },
+    {
+      "name": "aldi",
+      "actor": "aldi-au",
+      "input": {
+        "maxItems": 10,
+        "mode": "search",
+        "queries": [
+          "${QUERY}"
+        ],
+        "postcodes": [
+          "${ALDI_POSTCODE}"
+        ]
+      }
+    }
+  ],
+  "note": "Products are not automatically matched. Compare pack sizes, unit labels, store context and dates before comparing prices."
+}

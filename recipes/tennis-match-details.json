@@ -1,0 +1,20 @@
+{
+  "title": "Inspect a match by stable ID",
+  "process": "export",
+  "steps": [
+    {
+      "name": "match",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 2,
+        "mode": "matchIds",
+        "matchIds": [
+          "${MATCH_ID}"
+        ],
+        "includeOdds": false,
+        "includeH2H": false
+      }
+    }
+  ],
+  "note": ""
+}

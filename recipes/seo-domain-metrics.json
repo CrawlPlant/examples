@@ -1,0 +1,19 @@
+{
+  "title": "Compare domain metrics from public data sources",
+  "process": "export",
+  "steps": [
+    {
+      "name": "profiles",
+      "actor": "commoncrawl-domain-metrics",
+      "input": {
+        "maxItems": 20,
+        "domains": [
+          "${DOMAIN}",
+          "${COMPETITOR}"
+        ],
+        "mode": "profiles"
+      }
+    }
+  ],
+  "note": ""
+}

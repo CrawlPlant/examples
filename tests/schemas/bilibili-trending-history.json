@@ -1,0 +1,380 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Bilibili: trending, rankings, search, videos, comments, danmaku, creators",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "editor": "select",
+      "description": "popular = the popular board (\u7efc\u5408\u70ed\u95e8, up to 500 videos, what Bilibili promotes right now); ranking = Top 100 per category (\u6392\u884c\u699c); weekly = weekly must-watch issues (\u6bcf\u5468\u5fc5\u770b, every issue since March 2019); mustWatch = the all-time must-watch list (\u5165\u7ad9\u5fc5\u5237, ~100 videos); hotSearches = the top 50 hot searches (\u70ed\u641c); search = videos or creators by keyword; videos = details of videos by id or URL; comments = comments of videos; danmaku = bullet comments (\u5f39\u5e55) of videos; creators = creator profiles by id or URL; tracked = the hour-by-hour history of the videos and creators you track (trackDays).",
+      "enum": [
+        "popular",
+        "ranking",
+        "weekly",
+        "mustWatch",
+        "hotSearches",
+        "search",
+        "videos",
+        "comments",
+        "danmaku",
+        "creators",
+        "tracked"
+      ],
+      "enumTitles": [
+        "Popular board (trending now)",
+        "Rankings: Top 100 by category",
+        "Weekly must-watch issues (since 2019)",
+        "All-time must-watch list",
+        "Hot searches (top 50)",
+        "Search videos or creators",
+        "Video details by id or URL",
+        "Comments of videos",
+        "Danmaku (bullet comments) of videos",
+        "Creator profiles",
+        "Tracked videos and creators: their history"
+      ],
+      "default": "popular"
+    },
+    "rankingCategories": {
+      "title": "Ranking categories",
+      "type": "array",
+      "editor": "select",
+      "description": "ranking mode: which Top 100 lists to read, 100 videos each. all = the all-site ranking.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "all",
+          "animation",
+          "chinese-animation",
+          "music",
+          "dance",
+          "gaming",
+          "knowledge",
+          "tech",
+          "sports",
+          "cars",
+          "life",
+          "food",
+          "animals",
+          "kichiku",
+          "fashion",
+          "entertainment",
+          "film-tv"
+        ],
+        "enumTitles": [
+          "All (\u5168\u7ad9)",
+          "Animation (\u52a8\u753b)",
+          "Chinese animation (\u56fd\u521b)",
+          "Music (\u97f3\u4e50)",
+          "Dance (\u821e\u8e48)",
+          "Gaming (\u6e38\u620f)",
+          "Knowledge (\u77e5\u8bc6)",
+          "Tech (\u79d1\u6280)",
+          "Sports (\u8fd0\u52a8)",
+          "Cars (\u6c7d\u8f66)",
+          "Life (\u751f\u6d3b)",
+          "Food (\u7f8e\u98df)",
+          "Animals (\u52a8\u7269\u5708)",
+          "Kichiku, remix & memes (\u9b3c\u755c)",
+          "Fashion (\u65f6\u5c1a)",
+          "Entertainment (\u5a31\u4e50)",
+          "Film & TV (\u5f71\u89c6)"
+        ]
+      },
+      "default": [
+        "all"
+      ]
+    },
+    "weeklyIssues": {
+      "title": "Weekly issues",
+      "type": "array",
+      "editor": "stringList",
+      "description": "weekly mode: latest, an issue number (392) or a range (380-392). Issue 1 is from March 2019; a new issue comes out every Friday evening (China time). About 40-50 videos per issue.",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "latest"
+      ]
+    },
+    "searchQueries": {
+      "title": "Search keywords",
+      "sectionCaption": "Search",
+      "type": "array",
+      "editor": "stringList",
+      "description": "search mode: one or more keywords, in Chinese or English (Chinese finds more: \u8010\u514b rather than Nike). Up to 1,000 results per keyword; maxItems is shared evenly between keywords.",
+      "items": {
+        "type": "string"
+      },
+      "prefill": [
+        "\u539f\u795e"
+      ],
+      "default": []
+    },
+    "searchType": {
+      "title": "Search for",
+      "type": "string",
+      "editor": "select",
+      "description": "search mode: videos, or creators (UP\u4e3b) whose name matches, with followers, video count and their latest uploads.",
+      "enum": [
+        "videos",
+        "creators"
+      ],
+      "enumTitles": [
+        "Videos",
+        "Creators (UP\u4e3b)"
+      ],
+      "default": "videos"
+    },
+    "sortBy": {
+      "title": "Sort videos by",
+      "type": "string",
+      "editor": "select",
+      "description": "search mode (videos): Bilibili's own sorts. relevance = its default ranking; views = most played; newest = newest uploads first; danmaku = most danmaku; favorites = most saved.",
+      "enum": [
+        "relevance",
+        "views",
+        "newest",
+        "danmaku",
+        "favorites"
+      ],
+      "enumTitles": [
+        "Relevance",
+        "Most views",
+        "Newest",
+        "Most danmaku",
+        "Most favorites"
+      ],
+      "default": "relevance"
+    },
+    "durationFilter": {
+      "title": "Video length",
+      "type": "string",
+      "editor": "select",
+      "description": "search mode (videos): only videos of this length.",
+      "enum": [
+        "any",
+        "under10",
+        "10to30",
+        "30to60",
+        "over60"
+      ],
+      "enumTitles": [
+        "Any",
+        "Under 10 minutes",
+        "10-30 minutes",
+        "30-60 minutes",
+        "Over 60 minutes"
+      ],
+      "default": "any"
+    },
+    "searchCategory": {
+      "title": "Category",
+      "type": "string",
+      "editor": "select",
+      "description": "search mode (videos): only videos of this category (the same categories as the rankings).",
+      "enum": [
+        "all",
+        "animation",
+        "chinese-animation",
+        "music",
+        "dance",
+        "gaming",
+        "knowledge",
+        "tech",
+        "sports",
+        "cars",
+        "life",
+        "food",
+        "animals",
+        "kichiku",
+        "fashion",
+        "entertainment",
+        "film-tv"
+      ],
+      "enumTitles": [
+        "All",
+        "Animation",
+        "Chinese animation",
+        "Music",
+        "Dance",
+        "Gaming",
+        "Knowledge",
+        "Tech",
+        "Sports",
+        "Cars",
+        "Life",
+        "Food",
+        "Animals",
+        "Kichiku, remix & memes",
+        "Fashion",
+        "Entertainment",
+        "Film & TV"
+      ],
+      "default": "all"
+    },
+    "publishedAfter": {
+      "title": "Published after",
+      "type": "string",
+      "editor": "textfield",
+      "description": "search mode (videos): only videos published on or after this date. 2026-09-01, an ISO time, or relative: 7 days, 24 hours."
+    },
+    "publishedBefore": {
+      "title": "Published before",
+      "type": "string",
+      "editor": "textfield",
+      "description": "search mode (videos): only videos published on or before this date (a date includes the whole day). Same formats as Published after."
+    },
+    "videos": {
+      "title": "Videos",
+      "sectionCaption": "Videos, comments, danmaku, creators",
+      "type": "array",
+      "editor": "stringList",
+      "description": "videos, comments and danmaku modes: BV ids (BV1Gtap6NEPB), av numbers (av80433022) or video URLs (bilibili.com/video/..., m.bilibili.com). Open b23.tv short links in a browser and paste the full URL.",
+      "items": {
+        "type": "string"
+      },
+      "prefill": [
+        "BV1Gtap6NEPB"
+      ],
+      "default": []
+    },
+    "creators": {
+      "title": "Creators",
+      "type": "array",
+      "editor": "stringList",
+      "description": "creators mode: creator ids (the number in space.bilibili.com/546195) or profile URLs.",
+      "items": {
+        "type": "string"
+      },
+      "prefill": [
+        "946974"
+      ],
+      "default": []
+    },
+    "commentsSort": {
+      "title": "Comments order",
+      "type": "string",
+      "editor": "select",
+      "description": "comments mode: hot = Bilibili's own hot order (popular comments first, the pinned comment on top); newest = newest first.",
+      "enum": [
+        "hot",
+        "newest"
+      ],
+      "enumTitles": [
+        "Hot (popular first)",
+        "Newest first"
+      ],
+      "default": "hot"
+    },
+    "maxCommentsPerVideo": {
+      "title": "Max comments per video",
+      "type": "integer",
+      "editor": "number",
+      "description": "comments mode: stop after this many comments per video (replies included when Include replies is on). 20 per request.",
+      "minimum": 1,
+      "maximum": 5000,
+      "default": 100
+    },
+    "includeReplies": {
+      "title": "Include replies",
+      "type": "boolean",
+      "description": "comments mode: after each comment, add its replies (oldest first, up to maxRepliesPerComment), marked isReply with the comment id in rootId.",
+      "default": false
+    },
+    "maxRepliesPerComment": {
+      "title": "Replies per comment",
+      "type": "integer",
+      "description": "comments mode with includeReplies: replies added under each comment (1-20). Replies count toward maxCommentsPerVideo, so a small number leaves room for more comments.",
+      "minimum": 1,
+      "maximum": 20,
+      "default": 5
+    },
+    "maxDanmakuPerVideo": {
+      "title": "Max danmaku per video",
+      "type": "integer",
+      "editor": "number",
+      "description": "danmaku mode: Bilibili keeps a pool of up to 1,000-8,000+ danmaku per video part. When the pool is larger than this, the rows are an even sample across the whole video timeline (poolSize says how many there were).",
+      "minimum": 1,
+      "maximum": 10000,
+      "default": 1000
+    },
+    "creatorVideos": {
+      "title": "Latest videos per creator",
+      "type": "integer",
+      "editor": "number",
+      "description": "creators mode: also return each creator's newest uploads as video rows (0-50).",
+      "minimum": 0,
+      "maximum": 50,
+      "default": 0
+    },
+    "includeDetails": {
+      "title": "Video details",
+      "sectionCaption": "Data per video",
+      "type": "boolean",
+      "description": "popular, ranking, weekly, mustWatch, search and creator videos: read each video's page too, for tags, honours (e.g. \u5168\u7ad9\u6392\u884c\u699c\u6700\u9ad8\u7b2c1\u540d), coins and shares where the list lacks them, exact weekly counts, and the creator's followers and video count. One extra request per video, priced as a detailed video row.",
+      "default": false
+    },
+    "minViews": {
+      "title": "Minimum views",
+      "type": "integer",
+      "editor": "number",
+      "description": "Video modes: only videos with at least this many views (applied before rows are saved and charged). 0 = all.",
+      "minimum": 0,
+      "default": 0
+    },
+    "trackHistory": {
+      "title": "Track changes between runs",
+      "sectionCaption": "Trend tracking",
+      "type": "boolean",
+      "description": "Remember what earlier runs saw (popular board, each ranking, hot searches, each search, each creator's uploads, videos and creators by id) and add to each row: firstSeenAt, timesSeen, isNew, previousPosition, positionChange, bestPosition, and views gained (followers gained, heat change) since the previous run. Kept in a key-value store named bilibili-trending-history in your own account. Schedule the run (e.g. hourly) to build the history.",
+      "default": true
+    },
+    "onlyNew": {
+      "title": "Only new rows",
+      "type": "boolean",
+      "description": "Return only videos, hot searches and search results that earlier runs of the same board or search did not see: a feed of what is newly trending. The first run returns everything.",
+      "default": false
+    },
+    "historyKey": {
+      "title": "History name",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Optional: a name that keeps this task's tracking apart from your other runs of the same board (e.g. hourly-popular vs daily-popular). Empty = shared per board or search."
+    },
+    "trackDays": {
+      "title": "Track on our server for (days)",
+      "type": "integer",
+      "editor": "number",
+      "minimum": 0,
+      "maximum": 90,
+      "description": "videos and creators modes: keep reading these videos and creators every hour on our server for this many days, also while this Actor is not running (views, likes, coins, favorites, shares, comments and danmaku of each video; followers, videos, likes and new uploads of each creator). Run mode tracked any time later for the curves. Charged per video or creator and day (tracking-day); running it again extends the period and charges only the added days. 0 = off.",
+      "default": 0
+    },
+    "historyResolution": {
+      "title": "History points",
+      "type": "string",
+      "editor": "select",
+      "description": "tracked mode: one point per day (the day's last reading) or every hourly reading.",
+      "enum": [
+        "daily",
+        "hourly"
+      ],
+      "enumTitles": [
+        "One per day",
+        "Every hourly reading"
+      ],
+      "default": "daily"
+    },
+    "maxItems": {
+      "title": "Max rows",
+      "type": "integer",
+      "editor": "number",
+      "description": "Stop after this many rows in total (after filters). Every row is charged, so this also caps the cost.",
+      "minimum": 1,
+      "default": 100
+    }
+  }
+}

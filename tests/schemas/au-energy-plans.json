@@ -1,0 +1,223 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Australian electricity & gas plans",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "editor": "select",
+      "description": "cheapest = plans available at your postcodes, ranked by the estimated annual bill; plans = every matching plan; changes = price changes since a date or your last run; brands = the retailers we cover.",
+      "enum": [
+        "cheapest",
+        "plans",
+        "changes",
+        "brands"
+      ],
+      "enumTitles": [
+        "Cheapest plans (ranked by estimated bill)",
+        "All matching plans",
+        "Plan price changes",
+        "Retailers"
+      ],
+      "default": "cheapest"
+    },
+    "postcodes": {
+      "title": "Postcodes",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Australian postcodes (4 digits, e.g. 2000, 3000, 0800). A plan is returned once with every requested postcode it serves.",
+      "default": [
+        "2000"
+      ]
+    },
+    "fuelTypes": {
+      "title": "Fuel",
+      "type": "array",
+      "editor": "select",
+      "description": "Electricity, gas, or dual-fuel plans (exact match).",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ELECTRICITY",
+          "GAS",
+          "DUAL"
+        ],
+        "enumTitles": [
+          "Electricity",
+          "Gas",
+          "Dual fuel"
+        ]
+      },
+      "default": [
+        "ELECTRICITY"
+      ]
+    },
+    "customerType": {
+      "title": "Customer type",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "RESIDENTIAL",
+        "BUSINESS"
+      ],
+      "enumTitles": [
+        "Residential",
+        "Small business"
+      ],
+      "default": "RESIDENTIAL",
+      "description": "Residential (home) or small-business plans."
+    },
+    "planTypes": {
+      "title": "Plan types",
+      "type": "array",
+      "editor": "select",
+      "description": "Market offers, standing offers (default offer) or regulated plans. Empty = all.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "MARKET",
+          "STANDING",
+          "REGULATED"
+        ],
+        "enumTitles": [
+          "Market offers",
+          "Standing offers",
+          "Regulated"
+        ]
+      },
+      "default": []
+    },
+    "brands": {
+      "title": "Retailers",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Only these retailers: a word of the name (\"agl\", \"origin\", \"red\") or a retailer id from mode \"brands\".",
+      "default": []
+    },
+    "features": {
+      "title": "Must have",
+      "type": "array",
+      "editor": "select",
+      "description": "Keep only plans with all of these. \"No demand charges\" is on by default because the bill estimate cannot price demand charges; remove it to see those plans too.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "solar",
+          "controlledLoad",
+          "timeOfUse",
+          "singleRate",
+          "greenPower",
+          "noDemandCharges"
+        ],
+        "enumTitles": [
+          "Solar feed-in tariff",
+          "Controlled load (off-peak hot water)",
+          "Time-of-use prices",
+          "Single (flat) rate",
+          "GreenPower option",
+          "No demand charges"
+        ]
+      },
+      "default": [
+        "noDemandCharges"
+      ]
+    },
+    "annualKwh": {
+      "title": "Electricity use per year (kWh)",
+      "type": "number",
+      "sectionCaption": "Your usage (for the bill estimate)",
+      "description": "About 4,000 kWh for a typical 2-3 person home; your bill shows your own.",
+      "minimum": 0,
+      "default": 4000
+    },
+    "peakShare": {
+      "title": "Peak share",
+      "type": "number",
+      "description": "Share of your electricity used in peak hours (time-of-use plans). Peak + shoulder + off-peak should be 1.",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0.35
+    },
+    "shoulderShare": {
+      "title": "Shoulder share",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0.25,
+      "description": "Share of your electricity used in shoulder hours (time-of-use plans)."
+    },
+    "offPeakShare": {
+      "title": "Off-peak share",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0.4,
+      "description": "Share of your electricity used off-peak (time-of-use plans)."
+    },
+    "solarExportKwh": {
+      "title": "Solar export per year (kWh)",
+      "type": "number",
+      "description": "Electricity your panels send to the grid; credited at the plan's best feed-in tariff.",
+      "minimum": 0,
+      "default": 0
+    },
+    "gasAnnualMj": {
+      "title": "Gas use per year (MJ)",
+      "type": "number",
+      "description": "For gas plans. Around 25,000 MJ for a home with gas heating and hot water; 0 = no gas estimate.",
+      "minimum": 0,
+      "default": 25000
+    },
+    "sortBy": {
+      "title": "Sort by",
+      "type": "string",
+      "editor": "select",
+      "sectionCaption": "Ranking & limits",
+      "enum": [
+        "estimate_asc",
+        "supply_asc",
+        "usage_rate_asc",
+        "fit_desc",
+        "brand"
+      ],
+      "enumTitles": [
+        "Estimated annual bill (lowest first)",
+        "Daily supply charge",
+        "Usage rate",
+        "Solar feed-in tariff (highest first)",
+        "Retailer name"
+      ],
+      "default": "estimate_asc",
+      "description": "How to order the plans. cheapest mode ranks by the estimated annual bill by default."
+    },
+    "maxItems": {
+      "title": "Max results",
+      "type": "integer",
+      "description": "Stop after this many rows.",
+      "minimum": 1,
+      "default": 100
+    },
+    "changedSince": {
+      "title": "Changed since",
+      "type": "string",
+      "editor": "textfield",
+      "sectionCaption": "History & data",
+      "description": "Mode \"changes\": a date (2026-09-01) or \"last-run\". Empty = last 7 days."
+    },
+    "maxAgeHours": {
+      "title": "Max data age (hours)",
+      "type": "integer",
+      "description": "We refresh every plan daily. Older data is still served, with a warning in the run summary.",
+      "minimum": 0,
+      "default": 36
+    },
+    "includeRaw": {
+      "title": "Include raw CDR payload",
+      "type": "boolean",
+      "description": "Add the plan's original CDR JSON (large).",
+      "default": false
+    }
+  }
+}

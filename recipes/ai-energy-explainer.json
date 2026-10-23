@@ -1,0 +1,23 @@
+{
+  "title": "Prepare evidence to explain electricity plan estimates",
+  "process": "evidence",
+  "steps": [
+    {
+      "name": "plans",
+      "actor": "au-energy-plans",
+      "input": {
+        "maxItems": 10,
+        "mode": "cheapest",
+        "postcodes": [
+          "${POSTCODE}"
+        ],
+        "fuelTypes": [
+          "ELECTRICITY"
+        ],
+        "annualKwh": 4000
+      }
+    }
+  ],
+  "note": "",
+  "goal": "Select plan records to explain a 4,000 kWh/year electricity estimate. Preserve supply charges, usage assumptions and conditions. Do not promise savings."
+}

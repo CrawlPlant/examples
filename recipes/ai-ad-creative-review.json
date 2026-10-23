@@ -1,0 +1,21 @@
+{
+  "title": "Prepare evidence for an ad messaging review",
+  "process": "evidence",
+  "steps": [
+    {
+      "name": "ads",
+      "actor": "google-ads-transparency",
+      "input": {
+        "maxItems": 10,
+        "mode": "ads",
+        "targets": [
+          "${ADVERTISER}"
+        ],
+        "includeAdContent": true,
+        "maxScanPages": 2
+      }
+    }
+  ],
+  "note": "",
+  "goal": "Select ad creatives useful for reviewing observable messaging. Cite records and distinguish copy, dates and formats. Do not claim spend, conversions, ROAS or winning ads from visibility alone."
+}

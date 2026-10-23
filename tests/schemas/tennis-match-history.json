@@ -1,0 +1,158 @@
+{
+  "$schema": "https://apify.com/schemas/v1/input.ide.json",
+  "title": "Tennis match history of any player",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "playerUrls": {
+      "title": "Players (names or URLs)",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Player names, e.g. \"Jannik Sinner\" or \"Swiatek\" (the best-known player of that name), or Flashscore player page URLs, e.g. https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/, to pick one exactly. You get every match of each, newest first.",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "Jannik Sinner"
+      ],
+      "prefill": [
+        "Jannik Sinner"
+      ]
+    },
+    "players": {
+      "title": "Opponent name contains",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep only matches against these opponents (name contains, case-insensitive), e.g. Alcaraz. Empty = every opponent.",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "sectionCaption": "Filters"
+    },
+    "surfaces": {
+      "title": "Surfaces",
+      "type": "array",
+      "editor": "select",
+      "description": "Keep matches on these surfaces. Empty = all. Matches without a surface (team ties) are dropped when this is set.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "hard",
+          "clay",
+          "grass",
+          "carpet"
+        ],
+        "enumTitles": [
+          "Hard",
+          "Clay",
+          "Grass",
+          "Carpet"
+        ]
+      },
+      "default": []
+    },
+    "tournaments": {
+      "title": "Tournament name contains",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep matches whose tournament name or category contains any of these, case-insensitive, e.g. Beijing, US Open, W100, Challenger.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "tours": {
+      "title": "Tours",
+      "type": "array",
+      "editor": "select",
+      "description": "Keep only these tours. The default leaves out other = exhibitions (e.g. Six Kings Slam), juniors and the rest; empty = all.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "atp",
+          "wta",
+          "challenger-men",
+          "challenger-women",
+          "itf-men",
+          "itf-women",
+          "teams",
+          "other"
+        ],
+        "enumTitles": [
+          "ATP",
+          "WTA",
+          "Challenger (men)",
+          "WTA 125 / Challenger (women)",
+          "ITF men",
+          "ITF women",
+          "Team events",
+          "Other"
+        ]
+      },
+      "default": [
+        "atp",
+        "wta",
+        "challenger-men",
+        "challenger-women",
+        "itf-men",
+        "itf-women",
+        "teams"
+      ]
+    },
+    "matchType": {
+      "title": "Singles or doubles",
+      "type": "string",
+      "editor": "select",
+      "description": "singles (default), doubles (includes mixed doubles), or all (also team ties).",
+      "enum": [
+        "singles",
+        "doubles",
+        "all"
+      ],
+      "enumTitles": [
+        "Singles",
+        "Doubles",
+        "All"
+      ],
+      "default": "singles"
+    },
+    "status": {
+      "title": "Status",
+      "type": "string",
+      "editor": "select",
+      "description": "finished (default: played matches, including retired, walkover and awarded), scheduled (the player's next matches), live, or all.",
+      "enum": [
+        "all",
+        "scheduled",
+        "live",
+        "finished"
+      ],
+      "enumTitles": [
+        "All",
+        "Scheduled",
+        "Live",
+        "Finished"
+      ],
+      "default": "finished"
+    },
+    "includeStatistics": {
+      "title": "Match statistics",
+      "type": "boolean",
+      "description": "Serve and return statistics for matches that started: aces, double faults, 1st serve %, points won on 1st / 2nd serve, break points saved and converted, service and return games won, for the match and each set. Included in the base price.",
+      "default": true,
+      "sectionCaption": "Data per match"
+    },
+    "maxItems": {
+      "title": "Max results",
+      "type": "integer",
+      "editor": "number",
+      "description": "Maximum matches to return, counted after the filters. A long career has 1,000-1,500 singles matches.",
+      "minimum": 1,
+      "default": 200
+    }
+  },
+  "required": [
+    "playerUrls"
+  ]
+}

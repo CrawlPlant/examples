@@ -1,11 +1,34 @@
 # CrawlPlant examples
 
+**48 live recipes · 15 Actors · 10 AI workflows · Python + JavaScript**
+
+Paste your Apify token into `.env`, choose an example and run it.
+Examples cover tennis, grocery prices, SEO, advertising, video trends, bank rates and energy plans.
+
+- [Start here: live setup](docs/LIVE-QUICKSTART.md)
+- [Browse all 48 recipes](docs/CATALOG.md)
+- [Python and JavaScript examples](code/README.md)
+- [Use the examples with an AI agent](docs/AI-AGENTS.md)
+- [What was tested](docs/VALIDATION.md)
+
+```sh
+python -m pip install -r requirements.txt
+# Copy .env.example to .env and paste your APIFY_TOKEN.
+python run.py tennis-match-details
+python run.py grocery-three-retailers
+python run.py ai-tennis-scout
+```
+
+AI recipes work with an Apify token alone to generate evidence and prompts for your own
+assistant. Optional `--ai` adds a real model call and requires a separate OpenAI key/model.
+Live Actor runs can incur charges; each recipe documents how many runs it starts.
+
 Runnable data and AI projects built with [CrawlPlant Actors](https://apify.com/crawlplant).
 Start with a finished result, reproduce it locally, then follow the guide to connect live data.
 
 ![Four Actors, one investigation](tennis/assets/14-workflow-report.png)
 
-## Quick start
+## Original offline gallery: nine tennis projects
 
 Python 3.11 or newer. Run from the repository root:
 

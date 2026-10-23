@@ -1,0 +1,50 @@
+{
+  "title": "Prepare evidence for a three-retailer shopping comparison",
+  "process": "evidence",
+  "steps": [
+    {
+      "name": "woolworths",
+      "actor": "woolworths-au",
+      "input": {
+        "maxItems": 10,
+        "mode": "search",
+        "queries": [
+          "${QUERY}"
+        ],
+        "postcodes": [
+          "${POSTCODE}"
+        ]
+      }
+    },
+    {
+      "name": "coles",
+      "actor": "coles-au",
+      "input": {
+        "maxItems": 10,
+        "mode": "search",
+        "queries": [
+          "${QUERY}"
+        ],
+        "postcodes": [
+          "${POSTCODE}"
+        ]
+      }
+    },
+    {
+      "name": "aldi",
+      "actor": "aldi-au",
+      "input": {
+        "maxItems": 10,
+        "mode": "search",
+        "queries": [
+          "${QUERY}"
+        ],
+        "postcodes": [
+          "${ALDI_POSTCODE}"
+        ]
+      }
+    }
+  ],
+  "note": "",
+  "goal": "Select comparable products for a shopping comparison. Compare only matching quantities and unit-price units. Retain retailer, postcode and retrieval context; do not invent a cheapest basket."
+}

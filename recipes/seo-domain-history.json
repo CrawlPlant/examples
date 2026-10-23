@@ -1,0 +1,19 @@
+{
+  "title": "Export domain metrics across releases",
+  "process": "export",
+  "steps": [
+    {
+      "name": "history",
+      "actor": "commoncrawl-domain-metrics",
+      "input": {
+        "maxItems": 20,
+        "mode": "history",
+        "domains": [
+          "${DOMAIN}"
+        ],
+        "historyReleases": 3
+      }
+    }
+  ],
+  "note": ""
+}

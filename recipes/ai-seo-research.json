@@ -1,0 +1,42 @@
+{
+  "title": "Connect metrics, referrers and similar sites into a research packet",
+  "process": "evidence",
+  "steps": [
+    {
+      "name": "profiles",
+      "actor": "commoncrawl-domain-metrics",
+      "input": {
+        "maxItems": 20,
+        "domains": [
+          "${DOMAIN}",
+          "${COMPETITOR}"
+        ],
+        "mode": "profiles"
+      }
+    },
+    {
+      "name": "referrers",
+      "actor": "referring-domains-checker",
+      "input": {
+        "maxItems": 20,
+        "domains": [
+          "${DOMAIN}"
+        ],
+        "maxReferrersPerDomain": 20
+      }
+    },
+    {
+      "name": "similar",
+      "actor": "similar-sites-finder",
+      "input": {
+        "maxItems": 20,
+        "domains": [
+          "${DOMAIN}"
+        ],
+        "maxReferrersPerDomain": 20
+      }
+    }
+  ],
+  "note": "",
+  "goal": "Select evidence for a domain research brief. Distinguish authority metrics, sampled link data and hypotheses about related sites. Do not equate similarity with commercial competition."
+}

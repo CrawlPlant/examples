@@ -1,0 +1,19 @@
+{
+  "title": "Compare a player’s statistics by surface",
+  "process": "export",
+  "steps": [
+    {
+      "name": "data",
+      "actor": "flashscore-tennis",
+      "input": {
+        "maxItems": 20,
+        "mode": "playerStats",
+        "playerUrls": [
+          "${PLAYER}"
+        ],
+        "statsSplitBy": "surface"
+      }
+    }
+  ],
+  "note": ""
+}

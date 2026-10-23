@@ -1,0 +1,20 @@
+{
+  "title": "Create a factual recap evidence ledger",
+  "process": "recap",
+  "steps": [
+    {
+      "name": "points",
+      "actor": "tennis-point-by-point",
+      "input": {
+        "maxItems": 2,
+        "mode": "matchIds",
+        "matchIds": [
+          "${MATCH_ID}"
+        ],
+        "pointByPointFormat": "games"
+      }
+    }
+  ],
+  "note": "",
+  "goal": "Select the result and important pressure games for a concise match recap. Cite the event IDs. Avoid emotional or causal claims."
+}
