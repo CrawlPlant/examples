@@ -1,0 +1,3468 @@
+[
+  {
+    "recordType": "match",
+    "matchId": "n5DWLXD5",
+    "url": "https://www.flashscore.com/match/n5DWLXD5/",
+    "date": "2026-07-12",
+    "startTime": "2026-07-12T15:10:00.000Z",
+    "endTime": "2026-07-12T18:57:04.000Z",
+    "tour": "atp",
+    "category": "ATP - Singles",
+    "matchType": "singles",
+    "tournament": "Wimbledon",
+    "tournamentStage": null,
+    "round": "Final",
+    "tournamentCountry": "United Kingdom",
+    "surface": "grass",
+    "indoor": false,
+    "tournamentUrl": null,
+    "tournamentId": null,
+    "status": "finished",
+    "statusText": null,
+    "isLive": false,
+    "player1Name": "Sinner J.",
+    "player2Name": "Zverev A.",
+    "player1Rank": null,
+    "player2Rank": null,
+    "player1Form": null,
+    "player2Form": null,
+    "player1Elo": 2717,
+    "player2Elo": 2483,
+    "player1EloWinProbability": 0.7613,
+    "player1": {
+      "name": "Sinner J.",
+      "playerId": "6HdC3z4H",
+      "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+      "country": "Italy",
+      "players": [
+        {
+          "name": "Sinner J.",
+          "playerId": "6HdC3z4H",
+          "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+          "country": "Italy"
+        }
+      ],
+      "rank": null,
+      "rankingPoints": null,
+      "rankingList": null,
+      "rankingDate": null
+    },
+    "player2": {
+      "name": "Zverev A.",
+      "playerId": "dGbUhw9m",
+      "url": "https://www.flashscore.com/player/zverev-alexander/dGbUhw9m/",
+      "country": "Germany",
+      "players": [
+        {
+          "name": "Zverev A.",
+          "playerId": "dGbUhw9m",
+          "url": "https://www.flashscore.com/player/zverev-alexander/dGbUhw9m/",
+          "country": "Germany"
+        }
+      ],
+      "rank": null,
+      "rankingPoints": null,
+      "rankingList": null,
+      "rankingDate": null
+    },
+    "winner": "player1",
+    "winnerName": "Sinner J.",
+    "setsPlayer1": 3,
+    "setsPlayer2": 1,
+    "score": "6-7(7) 7-6(2) 6-3 6-4",
+    "sets": [
+      {
+        "set": 1,
+        "player1": 6,
+        "player2": 7,
+        "tiebreak1": 7,
+        "tiebreak2": 9
+      },
+      {
+        "set": 2,
+        "player1": 7,
+        "player2": 6,
+        "tiebreak1": 7,
+        "tiebreak2": 2
+      },
+      {
+        "set": 3,
+        "player1": 6,
+        "player2": 3,
+        "tiebreak1": null,
+        "tiebreak2": null
+      },
+      {
+        "set": 4,
+        "player1": 6,
+        "player2": 4,
+        "tiebreak1": null,
+        "tiebreak2": null
+      }
+    ],
+    "currentGame": null,
+    "note": null,
+    "durationMinutes": 228,
+    "broadcasts": null,
+    "odds": null,
+    "elo": {
+      "player1": 2717,
+      "player2": 2483,
+      "player1Surface": 2157,
+      "player2Surface": 1988,
+      "basis": "pre-match",
+      "player1WinProbability": 0.7613
+    },
+    "headToHead": null,
+    "form": null,
+    "statistics": {
+      "sets": [
+        {
+          "aces": {
+            "player1": 8,
+            "player2": 5
+          },
+          "winners": {
+            "player1": 18,
+            "player2": 16
+          },
+          "doubleFaults": {
+            "player1": 0,
+            "player2": 1
+          },
+          "netPointsWon": {
+            "player1": 83,
+            "player2": 67,
+            "player1Won": 5,
+            "player2Won": 6,
+            "player1Total": 6,
+            "player2Total": 9
+          },
+          "totalGamesWon": {
+            "player1": 50,
+            "player2": 50,
+            "player1Won": 6,
+            "player2Won": 6,
+            "player1Total": 12,
+            "player2Total": 12
+          },
+          "returnGamesWon": {
+            "player1": 0,
+            "player2": 0,
+            "player1Won": 0,
+            "player2Won": 0,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "totalPointsWon": {
+            "player1": 48,
+            "player2": 52,
+            "player1Won": 39,
+            "player2Won": 43,
+            "player1Total": 82,
+            "player2Total": 82
+          },
+          "unforcedErrors": {
+            "player1": 7,
+            "player2": 15
+          },
+          "returnPointsWon": {
+            "player1": 19,
+            "player2": 23,
+            "player1Won": 8,
+            "player2Won": 9,
+            "player1Total": 42,
+            "player2Total": 40
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 100,
+            "player1Won": 6,
+            "player2Won": 6,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "breakPointsSaved": {
+            "player1": null,
+            "player2": 100,
+            "player1Won": 0,
+            "player2Won": 1,
+            "player1Total": 0,
+            "player2Total": 1
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 78,
+            "player2": 81,
+            "player1Won": 31,
+            "player2Won": 34,
+            "player1Total": 40,
+            "player2Total": 42
+          },
+          "firstServePointsWon": {
+            "player1": 73,
+            "player2": 81,
+            "player1Won": 19,
+            "player2Won": 25,
+            "player1Total": 26,
+            "player2Total": 31
+          },
+          "breakPointsConverted": {
+            "player1": 0,
+            "player2": null,
+            "player1Won": 0,
+            "player2Won": 0,
+            "player1Total": 1,
+            "player2Total": 0
+          },
+          "firstReturnPointsWon": {
+            "player1": 19,
+            "player2": 27,
+            "player1Won": 6,
+            "player2Won": 7,
+            "player1Total": 31,
+            "player2Total": 26
+          },
+          "firstServePercentage": {
+            "player1": 65,
+            "player2": 74
+          },
+          "secondServePointsWon": {
+            "player1": 86,
+            "player2": 82,
+            "player1Won": 12,
+            "player2Won": 9,
+            "player1Total": 14,
+            "player2Total": 11
+          },
+          "distanceCoveredMetres": {
+            "player1": 777,
+            "player2": 719
+          },
+          "secondReturnPointsWon": {
+            "player1": 18,
+            "player2": 14,
+            "player1Won": 2,
+            "player2Won": 2,
+            "player1Total": 11,
+            "player2Total": 14
+          }
+        },
+        {
+          "aces": {
+            "player1": 4,
+            "player2": 5
+          },
+          "winners": {
+            "player1": 18,
+            "player2": 15
+          },
+          "doubleFaults": {
+            "player1": 1,
+            "player2": 0
+          },
+          "netPointsWon": {
+            "player1": 57,
+            "player2": 60,
+            "player1Won": 4,
+            "player2Won": 6,
+            "player1Total": 7,
+            "player2Total": 10
+          },
+          "totalGamesWon": {
+            "player1": 50,
+            "player2": 50,
+            "player1Won": 6,
+            "player2Won": 6,
+            "player1Total": 12,
+            "player2Total": 12
+          },
+          "returnGamesWon": {
+            "player1": 0,
+            "player2": 0,
+            "player1Won": 0,
+            "player2Won": 0,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "totalPointsWon": {
+            "player1": 53,
+            "player2": 47,
+            "player1Won": 42,
+            "player2Won": 37,
+            "player1Total": 79,
+            "player2Total": 79
+          },
+          "unforcedErrors": {
+            "player1": 6,
+            "player2": 11
+          },
+          "returnPointsWon": {
+            "player1": 34,
+            "player2": 26,
+            "player1Won": 14,
+            "player2Won": 10,
+            "player1Total": 41,
+            "player2Total": 38
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 100,
+            "player1Won": 6,
+            "player2Won": 6,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "breakPointsSaved": {
+            "player1": null,
+            "player2": null,
+            "player1Won": 0,
+            "player2Won": 0,
+            "player1Total": 0,
+            "player2Total": 0
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 74,
+            "player2": 66,
+            "player1Won": 28,
+            "player2Won": 27,
+            "player1Total": 38,
+            "player2Total": 41
+          },
+          "firstServePointsWon": {
+            "player1": 86,
+            "player2": 66,
+            "player1Won": 18,
+            "player2Won": 23,
+            "player1Total": 21,
+            "player2Total": 35
+          },
+          "breakPointsConverted": {
+            "player1": null,
+            "player2": null,
+            "player1Won": 0,
+            "player2Won": 0,
+            "player1Total": 0,
+            "player2Total": 0
+          },
+          "firstReturnPointsWon": {
+            "player1": 34,
+            "player2": 14,
+            "player1Won": 12,
+            "player2Won": 3,
+            "player1Total": 35,
+            "player2Total": 21
+          },
+          "firstServePercentage": {
+            "player1": 55,
+            "player2": 85
+          },
+          "secondServePointsWon": {
+            "player1": 59,
+            "player2": 67,
+            "player1Won": 10,
+            "player2Won": 4,
+            "player1Total": 17,
+            "player2Total": 6
+          },
+          "distanceCoveredMetres": {
+            "player1": 724,
+            "player2": 682
+          },
+          "secondReturnPointsWon": {
+            "player1": 33,
+            "player2": 41,
+            "player1Won": 2,
+            "player2Won": 7,
+            "player1Total": 6,
+            "player2Total": 17
+          }
+        },
+        {
+          "aces": {
+            "player1": 2,
+            "player2": 3
+          },
+          "winners": {
+            "player1": 13,
+            "player2": 5
+          },
+          "doubleFaults": {
+            "player1": 1,
+            "player2": 1
+          },
+          "netPointsWon": {
+            "player1": 100,
+            "player2": 100,
+            "player1Won": 4,
+            "player2Won": 3,
+            "player1Total": 4,
+            "player2Total": 3
+          },
+          "totalGamesWon": {
+            "player1": 67,
+            "player2": 33,
+            "player1Won": 6,
+            "player2Won": 3,
+            "player1Total": 9,
+            "player2Total": 9
+          },
+          "returnGamesWon": {
+            "player1": 25,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 4,
+            "player2Total": 5
+          },
+          "totalPointsWon": {
+            "player1": 59,
+            "player2": 41,
+            "player1Won": 33,
+            "player2Won": 23,
+            "player1Total": 56,
+            "player2Total": 56
+          },
+          "unforcedErrors": {
+            "player1": 7,
+            "player2": 11
+          },
+          "returnPointsWon": {
+            "player1": 41,
+            "player2": 24,
+            "player1Won": 11,
+            "player2Won": 7,
+            "player1Total": 27,
+            "player2Total": 29
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 75,
+            "player1Won": 5,
+            "player2Won": 3,
+            "player1Total": 5,
+            "player2Total": 4
+          },
+          "breakPointsSaved": {
+            "player1": 100,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 1,
+            "player2Total": 1
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 76,
+            "player2": 59,
+            "player1Won": 22,
+            "player2Won": 16,
+            "player1Total": 29,
+            "player2Total": 27
+          },
+          "firstServePointsWon": {
+            "player1": 81,
+            "player2": 70,
+            "player1Won": 17,
+            "player2Won": 14,
+            "player1Total": 21,
+            "player2Total": 20
+          },
+          "breakPointsConverted": {
+            "player1": 100,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 1,
+            "player2Total": 1
+          },
+          "firstReturnPointsWon": {
+            "player1": 30,
+            "player2": 19,
+            "player1Won": 6,
+            "player2Won": 4,
+            "player1Total": 20,
+            "player2Total": 21
+          },
+          "firstServePercentage": {
+            "player1": 72,
+            "player2": 74
+          },
+          "secondServePointsWon": {
+            "player1": 63,
+            "player2": 29,
+            "player1Won": 5,
+            "player2Won": 2,
+            "player1Total": 8,
+            "player2Total": 7
+          },
+          "distanceCoveredMetres": {
+            "player1": 490,
+            "player2": 459
+          },
+          "secondReturnPointsWon": {
+            "player1": 71,
+            "player2": 38,
+            "player1Won": 5,
+            "player2Won": 3,
+            "player1Total": 7,
+            "player2Total": 8
+          }
+        },
+        {
+          "aces": {
+            "player1": 1,
+            "player2": 4
+          },
+          "winners": {
+            "player1": 9,
+            "player2": 13
+          },
+          "doubleFaults": {
+            "player1": 0,
+            "player2": 0
+          },
+          "netPointsWon": {
+            "player1": 83,
+            "player2": 83,
+            "player1Won": 5,
+            "player2Won": 5,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "totalGamesWon": {
+            "player1": 60,
+            "player2": 40,
+            "player1Won": 6,
+            "player2Won": 4,
+            "player1Total": 10,
+            "player2Total": 10
+          },
+          "returnGamesWon": {
+            "player1": 20,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "totalPointsWon": {
+            "player1": 53,
+            "player2": 47,
+            "player1Won": 31,
+            "player2Won": 27,
+            "player1Total": 58,
+            "player2Total": 58
+          },
+          "unforcedErrors": {
+            "player1": 5,
+            "player2": 8
+          },
+          "returnPointsWon": {
+            "player1": 34,
+            "player2": 28,
+            "player1Won": 10,
+            "player2Won": 8,
+            "player1Total": 29,
+            "player2Total": 29
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 80,
+            "player1Won": 5,
+            "player2Won": 4,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "breakPointsSaved": {
+            "player1": null,
+            "player2": 66.7,
+            "player1Won": 0,
+            "player2Won": 2,
+            "player1Total": 0,
+            "player2Total": 3
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 72,
+            "player2": 66,
+            "player1Won": 21,
+            "player2Won": 19,
+            "player1Total": 29,
+            "player2Total": 29
+          },
+          "firstServePointsWon": {
+            "player1": 84,
+            "player2": 74,
+            "player1Won": 16,
+            "player2Won": 14,
+            "player1Total": 19,
+            "player2Total": 19
+          },
+          "breakPointsConverted": {
+            "player1": 33.3,
+            "player2": null,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 3,
+            "player2Total": 0
+          },
+          "firstReturnPointsWon": {
+            "player1": 26,
+            "player2": 16,
+            "player1Won": 5,
+            "player2Won": 3,
+            "player1Total": 19,
+            "player2Total": 19
+          },
+          "firstServePercentage": {
+            "player1": 66,
+            "player2": 66
+          },
+          "secondServePointsWon": {
+            "player1": 50,
+            "player2": 50,
+            "player1Won": 5,
+            "player2Won": 5,
+            "player1Total": 10,
+            "player2Total": 10
+          },
+          "distanceCoveredMetres": {
+            "player1": 600,
+            "player2": 581
+          },
+          "secondReturnPointsWon": {
+            "player1": 50,
+            "player2": 50,
+            "player1Won": 5,
+            "player2Won": 5,
+            "player1Total": 10,
+            "player2Total": 10
+          }
+        }
+      ],
+      "match": {
+        "aces": {
+          "player1": 15,
+          "player2": 17
+        },
+        "winners": {
+          "player1": 58,
+          "player2": 49
+        },
+        "last10Balls": {
+          "player1": 6,
+          "player2": 4
+        },
+        "doubleFaults": {
+          "player1": 2,
+          "player2": 2
+        },
+        "netPointsWon": {
+          "player1": 78,
+          "player2": 71,
+          "player1Won": 18,
+          "player2Won": 20,
+          "player1Total": 23,
+          "player2Total": 28
+        },
+        "totalGamesWon": {
+          "player1": 56,
+          "player2": 44,
+          "player1Won": 24,
+          "player2Won": 19,
+          "player1Total": 43,
+          "player2Total": 43
+        },
+        "returnGamesWon": {
+          "player1": 10,
+          "player2": 0,
+          "player1Won": 2,
+          "player2Won": 0,
+          "player1Total": 21,
+          "player2Total": 22
+        },
+        "totalPointsWon": {
+          "player1": 53,
+          "player2": 47,
+          "player1Won": 145,
+          "player2Won": 130,
+          "player1Total": 275,
+          "player2Total": 275
+        },
+        "unforcedErrors": {
+          "player1": 25,
+          "player2": 45
+        },
+        "returnPointsWon": {
+          "player1": 31,
+          "player2": 25,
+          "player1Won": 43,
+          "player2Won": 34,
+          "player1Total": 139,
+          "player2Total": 136
+        },
+        "serviceGamesWon": {
+          "player1": 100,
+          "player2": 90,
+          "player1Won": 22,
+          "player2Won": 19,
+          "player1Total": 22,
+          "player2Total": 21
+        },
+        "breakPointsSaved": {
+          "player1": 100,
+          "player2": 60,
+          "player1Won": 1,
+          "player2Won": 3,
+          "player1Total": 1,
+          "player2Total": 5
+        },
+        "matchPointsSaved": {
+          "player1": 0,
+          "player2": 0
+        },
+        "servicePointsWon": {
+          "player1": 75,
+          "player2": 69,
+          "player1Won": 102,
+          "player2Won": 96,
+          "player1Total": 136,
+          "player2Total": 139
+        },
+        "firstServePointsWon": {
+          "player1": 80,
+          "player2": 72,
+          "player1Won": 70,
+          "player2Won": 76,
+          "player1Total": 87,
+          "player2Total": 105
+        },
+        "breakPointsConverted": {
+          "player1": 40,
+          "player2": 0,
+          "player1Won": 2,
+          "player2Won": 0,
+          "player1Total": 5,
+          "player2Total": 1
+        },
+        "firstReturnPointsWon": {
+          "player1": 28,
+          "player2": 20,
+          "player1Won": 29,
+          "player2Won": 17,
+          "player1Total": 105,
+          "player2Total": 87
+        },
+        "firstServePercentage": {
+          "player1": 64,
+          "player2": 76
+        },
+        "secondServePointsWon": {
+          "player1": 65,
+          "player2": 59,
+          "player1Won": 32,
+          "player2Won": 20,
+          "player1Total": 49,
+          "player2Total": 34
+        },
+        "distanceCoveredMetres": {
+          "player1": 2591,
+          "player2": 2441
+        },
+        "secondReturnPointsWon": {
+          "player1": 41,
+          "player2": 35,
+          "player1Won": 14,
+          "player2Won": 17,
+          "player1Total": 34,
+          "player2Total": 49
+        },
+        "averageFirstServeSpeed": {
+          "player1": null,
+          "player2": null
+        },
+        "averageSecondServeSpeed": {
+          "player1": null,
+          "player2": null
+        }
+      }
+    },
+    "scrapedAt": "2026-10-23T06:44:33.652Z",
+    "source": "cache",
+    "store": "flashscore"
+  },
+  {
+    "recordType": "match",
+    "matchId": "nkXJ8mYa",
+    "url": "https://www.flashscore.com/match/nkXJ8mYa/",
+    "date": "2026-07-10",
+    "startTime": "2026-07-10T15:20:00.000Z",
+    "endTime": "2026-07-10T17:41:38.000Z",
+    "tour": "atp",
+    "category": "ATP - Singles",
+    "matchType": "singles",
+    "tournament": "Wimbledon",
+    "tournamentStage": null,
+    "round": "Semi-finals",
+    "tournamentCountry": "United Kingdom",
+    "surface": "grass",
+    "indoor": false,
+    "tournamentUrl": null,
+    "tournamentId": null,
+    "status": "finished",
+    "statusText": null,
+    "isLive": false,
+    "player1Name": "Sinner J.",
+    "player2Name": "Djokovic N.",
+    "player1Rank": null,
+    "player2Rank": null,
+    "player1Form": null,
+    "player2Form": null,
+    "player1Elo": 2711,
+    "player2Elo": 2526,
+    "player1EloWinProbability": 0.5373,
+    "player1": {
+      "name": "Sinner J.",
+      "playerId": "6HdC3z4H",
+      "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+      "country": "Italy",
+      "players": [
+        {
+          "name": "Sinner J.",
+          "playerId": "6HdC3z4H",
+          "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+          "country": "Italy"
+        }
+      ],
+      "rank": null,
+      "rankingPoints": null,
+      "rankingList": null,
+      "rankingDate": null
+    },
+    "player2": {
+      "name": "Djokovic N.",
+      "playerId": "AZg49Et9",
+      "url": "https://www.flashscore.com/player/djokovic-novak/AZg49Et9/",
+      "country": "Serbia",
+      "players": [
+        {
+          "name": "Djokovic N.",
+          "playerId": "AZg49Et9",
+          "url": "https://www.flashscore.com/player/djokovic-novak/AZg49Et9/",
+          "country": "Serbia"
+        }
+      ],
+      "rank": null,
+      "rankingPoints": null,
+      "rankingList": null,
+      "rankingDate": null
+    },
+    "winner": "player1",
+    "winnerName": "Sinner J.",
+    "setsPlayer1": 3,
+    "setsPlayer2": 0,
+    "score": "6-4 6-4 6-4",
+    "sets": [
+      {
+        "set": 1,
+        "player1": 6,
+        "player2": 4,
+        "tiebreak1": null,
+        "tiebreak2": null
+      },
+      {
+        "set": 2,
+        "player1": 6,
+        "player2": 4,
+        "tiebreak1": null,
+        "tiebreak2": null
+      },
+      {
+        "set": 3,
+        "player1": 6,
+        "player2": 4,
+        "tiebreak1": null,
+        "tiebreak2": null
+      }
+    ],
+    "currentGame": null,
+    "note": null,
+    "durationMinutes": 141,
+    "broadcasts": null,
+    "odds": null,
+    "elo": {
+      "player1": 2711,
+      "player2": 2526,
+      "player1Surface": 2122,
+      "player2Surface": 2255,
+      "basis": "pre-match",
+      "player1WinProbability": 0.5373
+    },
+    "headToHead": null,
+    "form": null,
+    "statistics": {
+      "sets": [
+        {
+          "aces": {
+            "player1": 4,
+            "player2": 4
+          },
+          "winners": {
+            "player1": 14,
+            "player2": 7
+          },
+          "doubleFaults": {
+            "player1": 0,
+            "player2": 2
+          },
+          "netPointsWon": {
+            "player1": 89,
+            "player2": 50,
+            "player1Won": 8,
+            "player2Won": 1,
+            "player1Total": 9,
+            "player2Total": 2
+          },
+          "totalGamesWon": {
+            "player1": 60,
+            "player2": 40,
+            "player1Won": 6,
+            "player2Won": 4,
+            "player1Total": 10,
+            "player2Total": 10
+          },
+          "returnGamesWon": {
+            "player1": 20,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "totalPointsWon": {
+            "player1": 57,
+            "player2": 43,
+            "player1Won": 30,
+            "player2Won": 23,
+            "player1Total": 53,
+            "player2Total": 53
+          },
+          "unforcedErrors": {
+            "player1": 4,
+            "player2": 5
+          },
+          "returnPointsWon": {
+            "player1": 34,
+            "player2": 17,
+            "player1Won": 10,
+            "player2Won": 4,
+            "player1Total": 29,
+            "player2Total": 24
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 80,
+            "player1Won": 5,
+            "player2Won": 4,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "breakPointsSaved": {
+            "player1": null,
+            "player2": 66.7,
+            "player1Won": 0,
+            "player2Won": 2,
+            "player1Total": 0,
+            "player2Total": 3
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 83,
+            "player2": 66,
+            "player1Won": 20,
+            "player2Won": 19,
+            "player1Total": 24,
+            "player2Total": 29
+          },
+          "firstServePointsWon": {
+            "player1": 88,
+            "player2": 82,
+            "player1Won": 15,
+            "player2Won": 18,
+            "player1Total": 17,
+            "player2Total": 22
+          },
+          "breakPointsConverted": {
+            "player1": 33.3,
+            "player2": null,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 3,
+            "player2Total": 0
+          },
+          "firstReturnPointsWon": {
+            "player1": 18,
+            "player2": 12,
+            "player1Won": 4,
+            "player2Won": 2,
+            "player1Total": 22,
+            "player2Total": 17
+          },
+          "firstServePercentage": {
+            "player1": 71,
+            "player2": 76
+          },
+          "secondServePointsWon": {
+            "player1": 71,
+            "player2": 14,
+            "player1Won": 5,
+            "player2Won": 1,
+            "player1Total": 7,
+            "player2Total": 7
+          },
+          "distanceCoveredMetres": {
+            "player1": 508,
+            "player2": 435
+          },
+          "secondReturnPointsWon": {
+            "player1": 86,
+            "player2": 29,
+            "player1Won": 6,
+            "player2Won": 2,
+            "player1Total": 7,
+            "player2Total": 7
+          }
+        },
+        {
+          "aces": {
+            "player1": 6,
+            "player2": 2
+          },
+          "winners": {
+            "player1": 13,
+            "player2": 8
+          },
+          "doubleFaults": {
+            "player1": 0,
+            "player2": 1
+          },
+          "netPointsWon": {
+            "player1": 100,
+            "player2": 60,
+            "player1Won": 3,
+            "player2Won": 3,
+            "player1Total": 3,
+            "player2Total": 5
+          },
+          "totalGamesWon": {
+            "player1": 60,
+            "player2": 40,
+            "player1Won": 6,
+            "player2Won": 4,
+            "player1Total": 10,
+            "player2Total": 10
+          },
+          "returnGamesWon": {
+            "player1": 20,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "totalPointsWon": {
+            "player1": 56,
+            "player2": 44,
+            "player1Won": 33,
+            "player2Won": 26,
+            "player1Total": 59,
+            "player2Total": 59
+          },
+          "unforcedErrors": {
+            "player1": 7,
+            "player2": 12
+          },
+          "returnPointsWon": {
+            "player1": 39,
+            "player2": 23,
+            "player1Won": 13,
+            "player2Won": 6,
+            "player1Total": 33,
+            "player2Total": 26
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 80,
+            "player1Won": 5,
+            "player2Won": 4,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "breakPointsSaved": {
+            "player1": null,
+            "player2": 75,
+            "player1Won": 0,
+            "player2Won": 3,
+            "player1Total": 0,
+            "player2Total": 4
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 77,
+            "player2": 61,
+            "player1Won": 20,
+            "player2Won": 20,
+            "player1Total": 26,
+            "player2Total": 33
+          },
+          "firstServePointsWon": {
+            "player1": 87,
+            "player2": 74,
+            "player1Won": 13,
+            "player2Won": 14,
+            "player1Total": 15,
+            "player2Total": 19
+          },
+          "breakPointsConverted": {
+            "player1": 25,
+            "player2": null,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 4,
+            "player2Total": 0
+          },
+          "firstReturnPointsWon": {
+            "player1": 26,
+            "player2": 13,
+            "player1Won": 5,
+            "player2Won": 2,
+            "player1Total": 19,
+            "player2Total": 15
+          },
+          "firstServePercentage": {
+            "player1": 58,
+            "player2": 58
+          },
+          "secondServePointsWon": {
+            "player1": 64,
+            "player2": 43,
+            "player1Won": 7,
+            "player2Won": 6,
+            "player1Total": 11,
+            "player2Total": 14
+          },
+          "distanceCoveredMetres": {
+            "player1": 633,
+            "player2": 557
+          },
+          "secondReturnPointsWon": {
+            "player1": 57,
+            "player2": 36,
+            "player1Won": 8,
+            "player2Won": 4,
+            "player1Total": 14,
+            "player2Total": 11
+          }
+        },
+        {
+          "aces": {
+            "player1": 6,
+            "player2": 2
+          },
+          "winners": {
+            "player1": 13,
+            "player2": 11
+          },
+          "doubleFaults": {
+            "player1": 0,
+            "player2": 0
+          },
+          "netPointsWon": {
+            "player1": 75,
+            "player2": 67,
+            "player1Won": 6,
+            "player2Won": 8,
+            "player1Total": 8,
+            "player2Total": 12
+          },
+          "totalGamesWon": {
+            "player1": 60,
+            "player2": 40,
+            "player1Won": 6,
+            "player2Won": 4,
+            "player1Total": 10,
+            "player2Total": 10
+          },
+          "returnGamesWon": {
+            "player1": 20,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "totalPointsWon": {
+            "player1": 56,
+            "player2": 44,
+            "player1Won": 40,
+            "player2Won": 32,
+            "player1Total": 72,
+            "player2Total": 72
+          },
+          "unforcedErrors": {
+            "player1": 4,
+            "player2": 6
+          },
+          "returnPointsWon": {
+            "player1": 42,
+            "player2": 24,
+            "player1Won": 18,
+            "player2Won": 7,
+            "player1Total": 43,
+            "player2Total": 29
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 80,
+            "player1Won": 5,
+            "player2Won": 4,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "breakPointsSaved": {
+            "player1": 100,
+            "player2": 83.3,
+            "player1Won": 1,
+            "player2Won": 5,
+            "player1Total": 1,
+            "player2Total": 6
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 76,
+            "player2": 58,
+            "player1Won": 22,
+            "player2Won": 25,
+            "player1Total": 29,
+            "player2Total": 43
+          },
+          "firstServePointsWon": {
+            "player1": 89,
+            "player2": 73,
+            "player1Won": 17,
+            "player2Won": 19,
+            "player1Total": 19,
+            "player2Total": 26
+          },
+          "breakPointsConverted": {
+            "player1": 16.7,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 6,
+            "player2Total": 1
+          },
+          "firstReturnPointsWon": {
+            "player1": 27,
+            "player2": 11,
+            "player1Won": 7,
+            "player2Won": 2,
+            "player1Total": 26,
+            "player2Total": 19
+          },
+          "firstServePercentage": {
+            "player1": 66,
+            "player2": 60
+          },
+          "secondServePointsWon": {
+            "player1": 50,
+            "player2": 35,
+            "player1Won": 5,
+            "player2Won": 6,
+            "player1Total": 10,
+            "player2Total": 17
+          },
+          "distanceCoveredMetres": {
+            "player1": 842,
+            "player2": 696
+          },
+          "secondReturnPointsWon": {
+            "player1": 65,
+            "player2": 50,
+            "player1Won": 11,
+            "player2Won": 5,
+            "player1Total": 17,
+            "player2Total": 10
+          }
+        }
+      ],
+      "match": {
+        "aces": {
+          "player1": 16,
+          "player2": 8
+        },
+        "winners": {
+          "player1": 40,
+          "player2": 26
+        },
+        "last10Balls": {
+          "player1": 6,
+          "player2": 4
+        },
+        "doubleFaults": {
+          "player1": 0,
+          "player2": 3
+        },
+        "netPointsWon": {
+          "player1": 85,
+          "player2": 63,
+          "player1Won": 17,
+          "player2Won": 12,
+          "player1Total": 20,
+          "player2Total": 19
+        },
+        "totalGamesWon": {
+          "player1": 60,
+          "player2": 40,
+          "player1Won": 18,
+          "player2Won": 12,
+          "player1Total": 30,
+          "player2Total": 30
+        },
+        "returnGamesWon": {
+          "player1": 20,
+          "player2": 0,
+          "player1Won": 3,
+          "player2Won": 0,
+          "player1Total": 15,
+          "player2Total": 15
+        },
+        "totalPointsWon": {
+          "player1": 56,
+          "player2": 44,
+          "player1Won": 103,
+          "player2Won": 81,
+          "player1Total": 184,
+          "player2Total": 184
+        },
+        "unforcedErrors": {
+          "player1": 15,
+          "player2": 23
+        },
+        "returnPointsWon": {
+          "player1": 39,
+          "player2": 22,
+          "player1Won": 41,
+          "player2Won": 17,
+          "player1Total": 105,
+          "player2Total": 79
+        },
+        "serviceGamesWon": {
+          "player1": 100,
+          "player2": 80,
+          "player1Won": 15,
+          "player2Won": 12,
+          "player1Total": 15,
+          "player2Total": 15
+        },
+        "breakPointsSaved": {
+          "player1": 100,
+          "player2": 76.9,
+          "player1Won": 1,
+          "player2Won": 10,
+          "player1Total": 1,
+          "player2Total": 13
+        },
+        "matchPointsSaved": {
+          "player1": 0,
+          "player2": 0
+        },
+        "servicePointsWon": {
+          "player1": 78,
+          "player2": 61,
+          "player1Won": 62,
+          "player2Won": 64,
+          "player1Total": 79,
+          "player2Total": 105
+        },
+        "firstServePointsWon": {
+          "player1": 88,
+          "player2": 76,
+          "player1Won": 45,
+          "player2Won": 51,
+          "player1Total": 51,
+          "player2Total": 67
+        },
+        "breakPointsConverted": {
+          "player1": 23.1,
+          "player2": 0,
+          "player1Won": 3,
+          "player2Won": 0,
+          "player1Total": 13,
+          "player2Total": 1
+        },
+        "firstReturnPointsWon": {
+          "player1": 24,
+          "player2": 12,
+          "player1Won": 16,
+          "player2Won": 6,
+          "player1Total": 67,
+          "player2Total": 51
+        },
+        "firstServePercentage": {
+          "player1": 65,
+          "player2": 64
+        },
+        "secondServePointsWon": {
+          "player1": 61,
+          "player2": 34,
+          "player1Won": 17,
+          "player2Won": 13,
+          "player1Total": 28,
+          "player2Total": 38
+        },
+        "distanceCoveredMetres": {
+          "player1": 1983,
+          "player2": 1688
+        },
+        "secondReturnPointsWon": {
+          "player1": 66,
+          "player2": 39,
+          "player1Won": 25,
+          "player2Won": 11,
+          "player1Total": 38,
+          "player2Total": 28
+        },
+        "averageFirstServeSpeed": {
+          "player1": null,
+          "player2": null
+        },
+        "averageSecondServeSpeed": {
+          "player1": null,
+          "player2": null
+        }
+      }
+    },
+    "scrapedAt": "2026-10-23T06:44:33.652Z",
+    "source": "cache",
+    "store": "flashscore"
+  },
+  {
+    "recordType": "match",
+    "matchId": "ABfCFoU8",
+    "url": "https://www.flashscore.com/match/ABfCFoU8/",
+    "date": "2026-07-07",
+    "startTime": "2026-07-07T12:05:00.000Z",
+    "endTime": "2026-07-07T14:43:26.000Z",
+    "tour": "atp",
+    "category": "ATP - Singles",
+    "matchType": "singles",
+    "tournament": "Wimbledon",
+    "tournamentStage": null,
+    "round": "Quarter-finals",
+    "tournamentCountry": "United Kingdom",
+    "surface": "grass",
+    "indoor": false,
+    "tournamentUrl": null,
+    "tournamentId": null,
+    "status": "finished",
+    "statusText": null,
+    "isLive": false,
+    "player1Name": "Sinner J.",
+    "player2Name": "Struff J-L.",
+    "player1Rank": null,
+    "player2Rank": null,
+    "player1Form": null,
+    "player2Form": null,
+    "player1Elo": 2711,
+    "player2Elo": 2122,
+    "player1EloWinProbability": 0.922,
+    "player1": {
+      "name": "Sinner J.",
+      "playerId": "6HdC3z4H",
+      "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+      "country": "Italy",
+      "players": [
+        {
+          "name": "Sinner J.",
+          "playerId": "6HdC3z4H",
+          "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+          "country": "Italy"
+        }
+      ],
+      "rank": null,
+      "rankingPoints": null,
+      "rankingList": null,
+      "rankingDate": null
+    },
+    "player2": {
+      "name": "Struff J-L.",
+      "playerId": "Ek3bDDo2",
+      "url": "https://www.flashscore.com/player/struff-jan-lennard/Ek3bDDo2/",
+      "country": "Germany",
+      "players": [
+        {
+          "name": "Struff J-L.",
+          "playerId": "Ek3bDDo2",
+          "url": "https://www.flashscore.com/player/struff-jan-lennard/Ek3bDDo2/",
+          "country": "Germany"
+        }
+      ],
+      "rank": null,
+      "rankingPoints": null,
+      "rankingList": null,
+      "rankingDate": null
+    },
+    "winner": "player1",
+    "winnerName": "Sinner J.",
+    "setsPlayer1": 3,
+    "setsPlayer2": 0,
+    "score": "7-5 7-6(4) 6-3",
+    "sets": [
+      {
+        "set": 1,
+        "player1": 7,
+        "player2": 5,
+        "tiebreak1": null,
+        "tiebreak2": null
+      },
+      {
+        "set": 2,
+        "player1": 7,
+        "player2": 6,
+        "tiebreak1": 7,
+        "tiebreak2": 4
+      },
+      {
+        "set": 3,
+        "player1": 6,
+        "player2": 3,
+        "tiebreak1": null,
+        "tiebreak2": null
+      }
+    ],
+    "currentGame": null,
+    "note": null,
+    "durationMinutes": 157,
+    "broadcasts": null,
+    "odds": null,
+    "elo": {
+      "player1": 2711,
+      "player2": 2122,
+      "player1Surface": 2113,
+      "player2Surface": 1844,
+      "basis": "pre-match",
+      "player1WinProbability": 0.922
+    },
+    "headToHead": null,
+    "form": null,
+    "statistics": {
+      "sets": [
+        {
+          "aces": {
+            "player1": 3,
+            "player2": 5
+          },
+          "winners": {
+            "player1": 7,
+            "player2": 8
+          },
+          "doubleFaults": {
+            "player1": 0,
+            "player2": 0
+          },
+          "netPointsWon": {
+            "player1": 40,
+            "player2": 67,
+            "player1Won": 2,
+            "player2Won": 6,
+            "player1Total": 5,
+            "player2Total": 9
+          },
+          "totalGamesWon": {
+            "player1": 58,
+            "player2": 42,
+            "player1Won": 7,
+            "player2Won": 5,
+            "player1Total": 12,
+            "player2Total": 12
+          },
+          "returnGamesWon": {
+            "player1": 17,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "totalPointsWon": {
+            "player1": 52,
+            "player2": 48,
+            "player1Won": 35,
+            "player2Won": 32,
+            "player1Total": 67,
+            "player2Total": 67
+          },
+          "unforcedErrors": {
+            "player1": 10,
+            "player2": 14
+          },
+          "returnPointsWon": {
+            "player1": 27,
+            "player2": 27,
+            "player1Won": 8,
+            "player2Won": 10,
+            "player1Total": 30,
+            "player2Total": 37
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 83,
+            "player1Won": 6,
+            "player2Won": 5,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "breakPointsSaved": {
+            "player1": null,
+            "player2": 66.7,
+            "player1Won": 0,
+            "player2Won": 2,
+            "player1Total": 0,
+            "player2Total": 3
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 73,
+            "player2": 73,
+            "player1Won": 27,
+            "player2Won": 22,
+            "player1Total": 37,
+            "player2Total": 30
+          },
+          "firstServePointsWon": {
+            "player1": 83,
+            "player2": 82,
+            "player1Won": 20,
+            "player2Won": 14,
+            "player1Total": 24,
+            "player2Total": 17
+          },
+          "breakPointsConverted": {
+            "player1": 33.3,
+            "player2": null,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 3,
+            "player2Total": 0
+          },
+          "firstReturnPointsWon": {
+            "player1": 18,
+            "player2": 17,
+            "player1Won": 3,
+            "player2Won": 4,
+            "player1Total": 17,
+            "player2Total": 24
+          },
+          "firstServePercentage": {
+            "player1": 65,
+            "player2": 57
+          },
+          "secondServePointsWon": {
+            "player1": 54,
+            "player2": 62,
+            "player1Won": 7,
+            "player2Won": 8,
+            "player1Total": 13,
+            "player2Total": 13
+          },
+          "distanceCoveredMetres": {
+            "player1": 532,
+            "player2": 523
+          },
+          "secondReturnPointsWon": {
+            "player1": 38,
+            "player2": 46,
+            "player1Won": 5,
+            "player2Won": 6,
+            "player1Total": 13,
+            "player2Total": 13
+          }
+        },
+        {
+          "aces": {
+            "player1": 9,
+            "player2": 5
+          },
+          "winners": {
+            "player1": 15,
+            "player2": 13
+          },
+          "doubleFaults": {
+            "player1": 2,
+            "player2": 2
+          },
+          "netPointsWon": {
+            "player1": 33,
+            "player2": 68,
+            "player1Won": 2,
+            "player2Won": 15,
+            "player1Total": 6,
+            "player2Total": 22
+          },
+          "totalGamesWon": {
+            "player1": 50,
+            "player2": 50,
+            "player1Won": 6,
+            "player2Won": 6,
+            "player1Total": 12,
+            "player2Total": 12
+          },
+          "returnGamesWon": {
+            "player1": 17,
+            "player2": 17,
+            "player1Won": 1,
+            "player2Won": 1,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "totalPointsWon": {
+            "player1": 53,
+            "player2": 47,
+            "player1Won": 47,
+            "player2Won": 42,
+            "player1Total": 89,
+            "player2Total": 89
+          },
+          "unforcedErrors": {
+            "player1": 12,
+            "player2": 16
+          },
+          "returnPointsWon": {
+            "player1": 37,
+            "player2": 33,
+            "player1Won": 16,
+            "player2Won": 15,
+            "player1Total": 43,
+            "player2Total": 46
+          },
+          "serviceGamesWon": {
+            "player1": 83,
+            "player2": 83,
+            "player1Won": 5,
+            "player2Won": 5,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "breakPointsSaved": {
+            "player1": 50,
+            "player2": 66.7,
+            "player1Won": 1,
+            "player2Won": 2,
+            "player1Total": 2,
+            "player2Total": 3
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 67,
+            "player2": 63,
+            "player1Won": 31,
+            "player2Won": 27,
+            "player1Total": 46,
+            "player2Total": 43
+          },
+          "firstServePointsWon": {
+            "player1": 83,
+            "player2": 78,
+            "player1Won": 24,
+            "player2Won": 18,
+            "player1Total": 29,
+            "player2Total": 23
+          },
+          "breakPointsConverted": {
+            "player1": 33.3,
+            "player2": 50,
+            "player1Won": 1,
+            "player2Won": 1,
+            "player1Total": 3,
+            "player2Total": 2
+          },
+          "firstReturnPointsWon": {
+            "player1": 22,
+            "player2": 17,
+            "player1Won": 5,
+            "player2Won": 5,
+            "player1Total": 23,
+            "player2Total": 29
+          },
+          "firstServePercentage": {
+            "player1": 63,
+            "player2": 53
+          },
+          "secondServePointsWon": {
+            "player1": 41,
+            "player2": 45,
+            "player1Won": 7,
+            "player2Won": 9,
+            "player1Total": 17,
+            "player2Total": 20
+          },
+          "distanceCoveredMetres": {
+            "player1": 653,
+            "player2": 664
+          },
+          "secondReturnPointsWon": {
+            "player1": 55,
+            "player2": 59,
+            "player1Won": 11,
+            "player2Won": 10,
+            "player1Total": 20,
+            "player2Total": 17
+          }
+        },
+        {
+          "aces": {
+            "player1": 4,
+            "player2": 2
+          },
+          "winners": {
+            "player1": 10,
+            "player2": 7
+          },
+          "doubleFaults": {
+            "player1": 0,
+            "player2": 1
+          },
+          "netPointsWon": {
+            "player1": 100,
+            "player2": 86,
+            "player1Won": 6,
+            "player2Won": 6,
+            "player1Total": 6,
+            "player2Total": 7
+          },
+          "totalGamesWon": {
+            "player1": 67,
+            "player2": 33,
+            "player1Won": 6,
+            "player2Won": 3,
+            "player1Total": 9,
+            "player2Total": 9
+          },
+          "returnGamesWon": {
+            "player1": 25,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 4,
+            "player2Total": 5
+          },
+          "totalPointsWon": {
+            "player1": 60,
+            "player2": 40,
+            "player1Won": 32,
+            "player2Won": 21,
+            "player1Total": 53,
+            "player2Total": 53
+          },
+          "unforcedErrors": {
+            "player1": 4,
+            "player2": 8
+          },
+          "returnPointsWon": {
+            "player1": 43,
+            "player2": 20,
+            "player1Won": 12,
+            "player2Won": 5,
+            "player1Total": 28,
+            "player2Total": 25
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 75,
+            "player1Won": 5,
+            "player2Won": 3,
+            "player1Total": 5,
+            "player2Total": 4
+          },
+          "breakPointsSaved": {
+            "player1": null,
+            "player2": 66.7,
+            "player1Won": 0,
+            "player2Won": 2,
+            "player1Total": 0,
+            "player2Total": 3
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 80,
+            "player2": 57,
+            "player1Won": 20,
+            "player2Won": 16,
+            "player1Total": 25,
+            "player2Total": 28
+          },
+          "firstServePointsWon": {
+            "player1": 88,
+            "player2": 80,
+            "player1Won": 15,
+            "player2Won": 8,
+            "player1Total": 17,
+            "player2Total": 10
+          },
+          "breakPointsConverted": {
+            "player1": 33.3,
+            "player2": null,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 3,
+            "player2Total": 0
+          },
+          "firstReturnPointsWon": {
+            "player1": 20,
+            "player2": 12,
+            "player1Won": 2,
+            "player2Won": 2,
+            "player1Total": 10,
+            "player2Total": 17
+          },
+          "firstServePercentage": {
+            "player1": 68,
+            "player2": 36
+          },
+          "secondServePointsWon": {
+            "player1": 63,
+            "player2": 44,
+            "player1Won": 5,
+            "player2Won": 8,
+            "player1Total": 8,
+            "player2Total": 18
+          },
+          "distanceCoveredMetres": {
+            "player1": 478,
+            "player2": 469
+          },
+          "secondReturnPointsWon": {
+            "player1": 56,
+            "player2": 38,
+            "player1Won": 10,
+            "player2Won": 3,
+            "player1Total": 18,
+            "player2Total": 8
+          }
+        }
+      ],
+      "match": {
+        "aces": {
+          "player1": 16,
+          "player2": 12
+        },
+        "winners": {
+          "player1": 32,
+          "player2": 28
+        },
+        "last10Balls": {
+          "player1": 8,
+          "player2": 2
+        },
+        "doubleFaults": {
+          "player1": 2,
+          "player2": 3
+        },
+        "netPointsWon": {
+          "player1": 59,
+          "player2": 71,
+          "player1Won": 10,
+          "player2Won": 27,
+          "player1Total": 17,
+          "player2Total": 38
+        },
+        "totalGamesWon": {
+          "player1": 58,
+          "player2": 42,
+          "player1Won": 19,
+          "player2Won": 14,
+          "player1Total": 33,
+          "player2Total": 33
+        },
+        "returnGamesWon": {
+          "player1": 19,
+          "player2": 6,
+          "player1Won": 3,
+          "player2Won": 1,
+          "player1Total": 16,
+          "player2Total": 17
+        },
+        "totalPointsWon": {
+          "player1": 55,
+          "player2": 45,
+          "player1Won": 114,
+          "player2Won": 95,
+          "player1Total": 209,
+          "player2Total": 209
+        },
+        "unforcedErrors": {
+          "player1": 26,
+          "player2": 38
+        },
+        "returnPointsWon": {
+          "player1": 36,
+          "player2": 28,
+          "player1Won": 36,
+          "player2Won": 30,
+          "player1Total": 101,
+          "player2Total": 108
+        },
+        "serviceGamesWon": {
+          "player1": 94,
+          "player2": 81,
+          "player1Won": 16,
+          "player2Won": 13,
+          "player1Total": 17,
+          "player2Total": 16
+        },
+        "breakPointsSaved": {
+          "player1": 50,
+          "player2": 66.7,
+          "player1Won": 1,
+          "player2Won": 6,
+          "player1Total": 2,
+          "player2Total": 9
+        },
+        "matchPointsSaved": {
+          "player1": 0,
+          "player2": 0
+        },
+        "servicePointsWon": {
+          "player1": 72,
+          "player2": 64,
+          "player1Won": 78,
+          "player2Won": 65,
+          "player1Total": 108,
+          "player2Total": 101
+        },
+        "firstServePointsWon": {
+          "player1": 84,
+          "player2": 80,
+          "player1Won": 59,
+          "player2Won": 40,
+          "player1Total": 70,
+          "player2Total": 50
+        },
+        "breakPointsConverted": {
+          "player1": 33.3,
+          "player2": 50,
+          "player1Won": 3,
+          "player2Won": 1,
+          "player1Total": 9,
+          "player2Total": 2
+        },
+        "firstReturnPointsWon": {
+          "player1": 20,
+          "player2": 16,
+          "player1Won": 10,
+          "player2Won": 11,
+          "player1Total": 50,
+          "player2Total": 70
+        },
+        "firstServePercentage": {
+          "player1": 65,
+          "player2": 50
+        },
+        "secondServePointsWon": {
+          "player1": 50,
+          "player2": 49,
+          "player1Won": 19,
+          "player2Won": 25,
+          "player1Total": 38,
+          "player2Total": 51
+        },
+        "distanceCoveredMetres": {
+          "player1": 1663,
+          "player2": 1656
+        },
+        "secondReturnPointsWon": {
+          "player1": 51,
+          "player2": 50,
+          "player1Won": 26,
+          "player2Won": 19,
+          "player1Total": 51,
+          "player2Total": 38
+        },
+        "averageFirstServeSpeed": {
+          "player1": null,
+          "player2": null
+        },
+        "averageSecondServeSpeed": {
+          "player1": null,
+          "player2": null
+        }
+      }
+    },
+    "scrapedAt": "2026-10-23T06:44:33.652Z",
+    "source": "cache",
+    "store": "flashscore"
+  },
+  {
+    "recordType": "match",
+    "matchId": "QeCDdkzA",
+    "url": "https://www.flashscore.com/match/QeCDdkzA/",
+    "date": "2026-07-05",
+    "startTime": "2026-07-05T18:20:00.000Z",
+    "endTime": "2026-07-05T20:59:00.000Z",
+    "tour": "atp",
+    "category": "ATP - Singles",
+    "matchType": "singles",
+    "tournament": "Wimbledon",
+    "tournamentStage": null,
+    "round": "1/8-finals",
+    "tournamentCountry": "United Kingdom",
+    "surface": "grass",
+    "indoor": false,
+    "tournamentUrl": null,
+    "tournamentId": null,
+    "status": "finished",
+    "statusText": null,
+    "isLive": false,
+    "player1Name": "Sinner J.",
+    "player2Name": "Mochizuki S.",
+    "player1Rank": null,
+    "player2Rank": null,
+    "player1Form": null,
+    "player2Form": null,
+    "player1Elo": 2710,
+    "player2Elo": 1977,
+    "player1EloWinProbability": 0.9524,
+    "player1": {
+      "name": "Sinner J.",
+      "playerId": "6HdC3z4H",
+      "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+      "country": "Italy",
+      "players": [
+        {
+          "name": "Sinner J.",
+          "playerId": "6HdC3z4H",
+          "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+          "country": "Italy"
+        }
+      ],
+      "rank": null,
+      "rankingPoints": null,
+      "rankingList": null,
+      "rankingDate": null
+    },
+    "player2": {
+      "name": "Mochizuki S.",
+      "playerId": "KrwvlzXb",
+      "url": "https://www.flashscore.com/player/mochizuki-shintaro/KrwvlzXb/",
+      "country": "Japan",
+      "players": [
+        {
+          "name": "Mochizuki S.",
+          "playerId": "KrwvlzXb",
+          "url": "https://www.flashscore.com/player/mochizuki-shintaro/KrwvlzXb/",
+          "country": "Japan"
+        }
+      ],
+      "rank": null,
+      "rankingPoints": null,
+      "rankingList": null,
+      "rankingDate": null
+    },
+    "winner": "player1",
+    "winnerName": "Sinner J.",
+    "setsPlayer1": 3,
+    "setsPlayer2": 0,
+    "score": "6-3 7-6(0) 6-3",
+    "sets": [
+      {
+        "set": 1,
+        "player1": 6,
+        "player2": 3,
+        "tiebreak1": null,
+        "tiebreak2": null
+      },
+      {
+        "set": 2,
+        "player1": 7,
+        "player2": 6,
+        "tiebreak1": 7,
+        "tiebreak2": 0
+      },
+      {
+        "set": 3,
+        "player1": 6,
+        "player2": 3,
+        "tiebreak1": null,
+        "tiebreak2": null
+      }
+    ],
+    "currentGame": null,
+    "note": "Playing under a closed roof.",
+    "durationMinutes": 146,
+    "broadcasts": null,
+    "odds": null,
+    "elo": {
+      "player1": 2710,
+      "player2": 1977,
+      "player1Surface": 2105,
+      "player2Surface": 1797,
+      "basis": "pre-match",
+      "player1WinProbability": 0.9524
+    },
+    "headToHead": null,
+    "form": null,
+    "statistics": {
+      "sets": [
+        {
+          "aces": {
+            "player1": 4,
+            "player2": 0
+          },
+          "winners": {
+            "player1": 11,
+            "player2": 7
+          },
+          "doubleFaults": {
+            "player1": 1,
+            "player2": 2
+          },
+          "netPointsWon": {
+            "player1": 78,
+            "player2": 90,
+            "player1Won": 7,
+            "player2Won": 9,
+            "player1Total": 9,
+            "player2Total": 10
+          },
+          "totalGamesWon": {
+            "player1": 67,
+            "player2": 33,
+            "player1Won": 6,
+            "player2Won": 3,
+            "player1Total": 9,
+            "player2Total": 9
+          },
+          "returnGamesWon": {
+            "player1": 40,
+            "player2": 0,
+            "player1Won": 2,
+            "player2Won": 0,
+            "player1Total": 5,
+            "player2Total": 4
+          },
+          "totalPointsWon": {
+            "player1": 58,
+            "player2": 42,
+            "player1Won": 29,
+            "player2Won": 21,
+            "player1Total": 50,
+            "player2Total": 50
+          },
+          "unforcedErrors": {
+            "player1": 8,
+            "player2": 8
+          },
+          "returnPointsWon": {
+            "player1": 43,
+            "player2": 23,
+            "player1Won": 12,
+            "player2Won": 5,
+            "player1Total": 28,
+            "player2Total": 22
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 60,
+            "player1Won": 4,
+            "player2Won": 3,
+            "player1Total": 4,
+            "player2Total": 5
+          },
+          "breakPointsSaved": {
+            "player1": 100,
+            "player2": 50,
+            "player1Won": 1,
+            "player2Won": 2,
+            "player1Total": 1,
+            "player2Total": 4
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 77,
+            "player2": 57,
+            "player1Won": 17,
+            "player2Won": 16,
+            "player1Total": 22,
+            "player2Total": 28
+          },
+          "firstServePointsWon": {
+            "player1": 81,
+            "player2": 85,
+            "player1Won": 13,
+            "player2Won": 11,
+            "player1Total": 16,
+            "player2Total": 13
+          },
+          "breakPointsConverted": {
+            "player1": 50,
+            "player2": 0,
+            "player1Won": 2,
+            "player2Won": 0,
+            "player1Total": 4,
+            "player2Total": 1
+          },
+          "firstReturnPointsWon": {
+            "player1": 15,
+            "player2": 19,
+            "player1Won": 2,
+            "player2Won": 3,
+            "player1Total": 13,
+            "player2Total": 16
+          },
+          "firstServePercentage": {
+            "player1": 73,
+            "player2": 46
+          },
+          "secondServePointsWon": {
+            "player1": 67,
+            "player2": 33,
+            "player1Won": 4,
+            "player2Won": 5,
+            "player1Total": 6,
+            "player2Total": 15
+          },
+          "distanceCoveredMetres": {
+            "player1": 532,
+            "player2": 538
+          },
+          "secondReturnPointsWon": {
+            "player1": 67,
+            "player2": 33,
+            "player1Won": 10,
+            "player2Won": 2,
+            "player1Total": 15,
+            "player2Total": 6
+          }
+        },
+        {
+          "aces": {
+            "player1": 10,
+            "player2": 3
+          },
+          "winners": {
+            "player1": 21,
+            "player2": 11
+          },
+          "doubleFaults": {
+            "player1": 1,
+            "player2": 0
+          },
+          "netPointsWon": {
+            "player1": 73,
+            "player2": 80,
+            "player1Won": 8,
+            "player2Won": 12,
+            "player1Total": 11,
+            "player2Total": 15
+          },
+          "totalGamesWon": {
+            "player1": 50,
+            "player2": 50,
+            "player1Won": 6,
+            "player2Won": 6,
+            "player1Total": 12,
+            "player2Total": 12
+          },
+          "returnGamesWon": {
+            "player1": 0,
+            "player2": 0,
+            "player1Won": 0,
+            "player2Won": 0,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "totalPointsWon": {
+            "player1": 52,
+            "player2": 48,
+            "player1Won": 44,
+            "player2Won": 40,
+            "player1Total": 84,
+            "player2Total": 84
+          },
+          "unforcedErrors": {
+            "player1": 17,
+            "player2": 11
+          },
+          "returnPointsWon": {
+            "player1": 31,
+            "player2": 23,
+            "player1Won": 14,
+            "player2Won": 9,
+            "player1Total": 45,
+            "player2Total": 39
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 100,
+            "player1Won": 6,
+            "player2Won": 6,
+            "player1Total": 6,
+            "player2Total": 6
+          },
+          "breakPointsSaved": {
+            "player1": 100,
+            "player2": 100,
+            "player1Won": 1,
+            "player2Won": 3,
+            "player1Total": 1,
+            "player2Total": 3
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 77,
+            "player2": 69,
+            "player1Won": 30,
+            "player2Won": 31,
+            "player1Total": 39,
+            "player2Total": 45
+          },
+          "firstServePointsWon": {
+            "player1": 86,
+            "player2": 72,
+            "player1Won": 24,
+            "player2Won": 18,
+            "player1Total": 28,
+            "player2Total": 25
+          },
+          "breakPointsConverted": {
+            "player1": 0,
+            "player2": 0,
+            "player1Won": 0,
+            "player2Won": 0,
+            "player1Total": 3,
+            "player2Total": 1
+          },
+          "firstReturnPointsWon": {
+            "player1": 28,
+            "player2": 14,
+            "player1Won": 7,
+            "player2Won": 4,
+            "player1Total": 25,
+            "player2Total": 28
+          },
+          "firstServePercentage": {
+            "player1": 72,
+            "player2": 56
+          },
+          "secondServePointsWon": {
+            "player1": 55,
+            "player2": 65,
+            "player1Won": 6,
+            "player2Won": 13,
+            "player1Total": 11,
+            "player2Total": 20
+          },
+          "distanceCoveredMetres": {
+            "player1": 969,
+            "player2": 935
+          },
+          "secondReturnPointsWon": {
+            "player1": 35,
+            "player2": 45,
+            "player1Won": 7,
+            "player2Won": 5,
+            "player1Total": 20,
+            "player2Total": 11
+          }
+        },
+        {
+          "aces": {
+            "player1": 1,
+            "player2": 1
+          },
+          "winners": {
+            "player1": 12,
+            "player2": 7
+          },
+          "doubleFaults": {
+            "player1": 1,
+            "player2": 1
+          },
+          "netPointsWon": {
+            "player1": 78,
+            "player2": 80,
+            "player1Won": 7,
+            "player2Won": 12,
+            "player1Total": 9,
+            "player2Total": 15
+          },
+          "totalGamesWon": {
+            "player1": 67,
+            "player2": 33,
+            "player1Won": 6,
+            "player2Won": 3,
+            "player1Total": 9,
+            "player2Total": 9
+          },
+          "returnGamesWon": {
+            "player1": 40,
+            "player2": 0,
+            "player1Won": 2,
+            "player2Won": 0,
+            "player1Total": 5,
+            "player2Total": 4
+          },
+          "totalPointsWon": {
+            "player1": 56,
+            "player2": 44,
+            "player1Won": 38,
+            "player2Won": 30,
+            "player1Total": 68,
+            "player2Total": 68
+          },
+          "unforcedErrors": {
+            "player1": 8,
+            "player2": 9
+          },
+          "returnPointsWon": {
+            "player1": 48,
+            "player2": 29,
+            "player1Won": 21,
+            "player2Won": 7,
+            "player1Total": 44,
+            "player2Total": 24
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 60,
+            "player1Won": 4,
+            "player2Won": 3,
+            "player1Total": 4,
+            "player2Total": 5
+          },
+          "breakPointsSaved": {
+            "player1": 100,
+            "player2": 60,
+            "player1Won": 3,
+            "player2Won": 3,
+            "player1Total": 3,
+            "player2Total": 5
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 71,
+            "player2": 52,
+            "player1Won": 17,
+            "player2Won": 23,
+            "player1Total": 24,
+            "player2Total": 44
+          },
+          "firstServePointsWon": {
+            "player1": 75,
+            "player2": 70,
+            "player1Won": 12,
+            "player2Won": 16,
+            "player1Total": 16,
+            "player2Total": 23
+          },
+          "breakPointsConverted": {
+            "player1": 40,
+            "player2": 0,
+            "player1Won": 2,
+            "player2Won": 0,
+            "player1Total": 5,
+            "player2Total": 3
+          },
+          "firstReturnPointsWon": {
+            "player1": 30,
+            "player2": 25,
+            "player1Won": 7,
+            "player2Won": 4,
+            "player1Total": 23,
+            "player2Total": 16
+          },
+          "firstServePercentage": {
+            "player1": 67,
+            "player2": 55
+          },
+          "secondServePointsWon": {
+            "player1": 63,
+            "player2": 32,
+            "player1Won": 5,
+            "player2Won": 6,
+            "player1Total": 8,
+            "player2Total": 19
+          },
+          "distanceCoveredMetres": {
+            "player1": 871,
+            "player2": 887
+          },
+          "secondReturnPointsWon": {
+            "player1": 68,
+            "player2": 38,
+            "player1Won": 13,
+            "player2Won": 3,
+            "player1Total": 19,
+            "player2Total": 8
+          }
+        }
+      ],
+      "match": {
+        "aces": {
+          "player1": 15,
+          "player2": 4
+        },
+        "winners": {
+          "player1": 44,
+          "player2": 25
+        },
+        "last10Balls": {
+          "player1": 8,
+          "player2": 2
+        },
+        "doubleFaults": {
+          "player1": 3,
+          "player2": 3
+        },
+        "netPointsWon": {
+          "player1": 76,
+          "player2": 83,
+          "player1Won": 22,
+          "player2Won": 33,
+          "player1Total": 29,
+          "player2Total": 40
+        },
+        "totalGamesWon": {
+          "player1": 60,
+          "player2": 40,
+          "player1Won": 18,
+          "player2Won": 12,
+          "player1Total": 30,
+          "player2Total": 30
+        },
+        "returnGamesWon": {
+          "player1": 25,
+          "player2": 0,
+          "player1Won": 4,
+          "player2Won": 0,
+          "player1Total": 16,
+          "player2Total": 14
+        },
+        "totalPointsWon": {
+          "player1": 55,
+          "player2": 45,
+          "player1Won": 111,
+          "player2Won": 91,
+          "player1Total": 202,
+          "player2Total": 202
+        },
+        "unforcedErrors": {
+          "player1": 33,
+          "player2": 28
+        },
+        "returnPointsWon": {
+          "player1": 40,
+          "player2": 25,
+          "player1Won": 47,
+          "player2Won": 21,
+          "player1Total": 117,
+          "player2Total": 85
+        },
+        "serviceGamesWon": {
+          "player1": 100,
+          "player2": 75,
+          "player1Won": 14,
+          "player2Won": 12,
+          "player1Total": 14,
+          "player2Total": 16
+        },
+        "breakPointsSaved": {
+          "player1": 100,
+          "player2": 66.7,
+          "player1Won": 5,
+          "player2Won": 8,
+          "player1Total": 5,
+          "player2Total": 12
+        },
+        "matchPointsSaved": {
+          "player1": 0,
+          "player2": 0
+        },
+        "servicePointsWon": {
+          "player1": 75,
+          "player2": 60,
+          "player1Won": 64,
+          "player2Won": 70,
+          "player1Total": 85,
+          "player2Total": 117
+        },
+        "firstServePointsWon": {
+          "player1": 82,
+          "player2": 74,
+          "player1Won": 49,
+          "player2Won": 45,
+          "player1Total": 60,
+          "player2Total": 61
+        },
+        "breakPointsConverted": {
+          "player1": 33.3,
+          "player2": 0,
+          "player1Won": 4,
+          "player2Won": 0,
+          "player1Total": 12,
+          "player2Total": 5
+        },
+        "firstReturnPointsWon": {
+          "player1": 26,
+          "player2": 18,
+          "player1Won": 16,
+          "player2Won": 11,
+          "player1Total": 61,
+          "player2Total": 60
+        },
+        "firstServePercentage": {
+          "player1": 71,
+          "player2": 53
+        },
+        "secondServePointsWon": {
+          "player1": 60,
+          "player2": 44,
+          "player1Won": 15,
+          "player2Won": 24,
+          "player1Total": 25,
+          "player2Total": 54
+        },
+        "distanceCoveredMetres": {
+          "player1": 2372,
+          "player2": 2360
+        },
+        "secondReturnPointsWon": {
+          "player1": 56,
+          "player2": 40,
+          "player1Won": 30,
+          "player2Won": 10,
+          "player1Total": 54,
+          "player2Total": 25
+        },
+        "averageFirstServeSpeed": {
+          "player1": null,
+          "player2": null
+        },
+        "averageSecondServeSpeed": {
+          "player1": null,
+          "player2": null
+        }
+      }
+    },
+    "scrapedAt": "2026-10-23T06:44:33.652Z",
+    "source": "cache",
+    "store": "flashscore"
+  },
+  {
+    "recordType": "match",
+    "matchId": "GAzHKLTk",
+    "url": "https://www.flashscore.com/match/GAzHKLTk/",
+    "date": "2026-07-03",
+    "startTime": "2026-07-03T13:40:00.000Z",
+    "endTime": "2026-07-03T15:54:33.000Z",
+    "tour": "atp",
+    "category": "ATP - Singles",
+    "matchType": "singles",
+    "tournament": "Wimbledon",
+    "tournamentStage": null,
+    "round": "1/16-finals",
+    "tournamentCountry": "United Kingdom",
+    "surface": "grass",
+    "indoor": false,
+    "tournamentUrl": null,
+    "tournamentId": null,
+    "status": "finished",
+    "statusText": null,
+    "isLive": false,
+    "player1Name": "Sinner J.",
+    "player2Name": "Brooksby J.",
+    "player1Rank": null,
+    "player2Rank": null,
+    "player1Form": null,
+    "player2Form": null,
+    "player1Elo": 2710,
+    "player2Elo": 2094,
+    "player1EloWinProbability": 0.9406,
+    "player1": {
+      "name": "Sinner J.",
+      "playerId": "6HdC3z4H",
+      "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+      "country": "Italy",
+      "players": [
+        {
+          "name": "Sinner J.",
+          "playerId": "6HdC3z4H",
+          "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+          "country": "Italy"
+        }
+      ],
+      "rank": null,
+      "rankingPoints": null,
+      "rankingList": null,
+      "rankingDate": null
+    },
+    "player2": {
+      "name": "Brooksby J.",
+      "playerId": "MoOtVkbN",
+      "url": "https://www.flashscore.com/player/brooksby-jenson/MoOtVkbN/",
+      "country": "USA",
+      "players": [
+        {
+          "name": "Brooksby J.",
+          "playerId": "MoOtVkbN",
+          "url": "https://www.flashscore.com/player/brooksby-jenson/MoOtVkbN/",
+          "country": "USA"
+        }
+      ],
+      "rank": null,
+      "rankingPoints": null,
+      "rankingList": null,
+      "rankingDate": null
+    },
+    "winner": "player1",
+    "winnerName": "Sinner J.",
+    "setsPlayer1": 3,
+    "setsPlayer2": 0,
+    "score": "6-4 6-3 6-4",
+    "sets": [
+      {
+        "set": 1,
+        "player1": 6,
+        "player2": 4,
+        "tiebreak1": null,
+        "tiebreak2": null
+      },
+      {
+        "set": 2,
+        "player1": 6,
+        "player2": 3,
+        "tiebreak1": null,
+        "tiebreak2": null
+      },
+      {
+        "set": 3,
+        "player1": 6,
+        "player2": 4,
+        "tiebreak1": null,
+        "tiebreak2": null
+      }
+    ],
+    "currentGame": null,
+    "note": null,
+    "durationMinutes": 135,
+    "broadcasts": null,
+    "odds": null,
+    "elo": {
+      "player1": 2710,
+      "player2": 2094,
+      "player1Surface": 2099,
+      "player2Surface": 1755,
+      "basis": "pre-match",
+      "player1WinProbability": 0.9406
+    },
+    "headToHead": null,
+    "form": null,
+    "statistics": {
+      "sets": [
+        {
+          "aces": {
+            "player1": 6,
+            "player2": 2
+          },
+          "winners": {
+            "player1": 9,
+            "player2": 6
+          },
+          "doubleFaults": {
+            "player1": 0,
+            "player2": 0
+          },
+          "netPointsWon": {
+            "player1": 67,
+            "player2": 75,
+            "player1Won": 2,
+            "player2Won": 3,
+            "player1Total": 3,
+            "player2Total": 4
+          },
+          "totalGamesWon": {
+            "player1": 60,
+            "player2": 40,
+            "player1Won": 6,
+            "player2Won": 4,
+            "player1Total": 10,
+            "player2Total": 10
+          },
+          "returnGamesWon": {
+            "player1": 20,
+            "player2": 0,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "totalPointsWon": {
+            "player1": 56,
+            "player2": 44,
+            "player1Won": 30,
+            "player2Won": 24,
+            "player1Total": 54,
+            "player2Total": 54
+          },
+          "unforcedErrors": {
+            "player1": 10,
+            "player2": 5
+          },
+          "returnPointsWon": {
+            "player1": 34,
+            "player2": 20,
+            "player1Won": 10,
+            "player2Won": 5,
+            "player1Total": 29,
+            "player2Total": 25
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 80,
+            "player1Won": 5,
+            "player2Won": 4,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "breakPointsSaved": {
+            "player1": null,
+            "player2": 50,
+            "player1Won": 0,
+            "player2Won": 1,
+            "player1Total": 0,
+            "player2Total": 2
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 80,
+            "player2": 66,
+            "player1Won": 20,
+            "player2Won": 19,
+            "player1Total": 25,
+            "player2Total": 29
+          },
+          "firstServePointsWon": {
+            "player1": 89,
+            "player2": 73,
+            "player1Won": 16,
+            "player2Won": 16,
+            "player1Total": 18,
+            "player2Total": 22
+          },
+          "breakPointsConverted": {
+            "player1": 50,
+            "player2": null,
+            "player1Won": 1,
+            "player2Won": 0,
+            "player1Total": 2,
+            "player2Total": 0
+          },
+          "firstReturnPointsWon": {
+            "player1": 27,
+            "player2": 11,
+            "player1Won": 6,
+            "player2Won": 2,
+            "player1Total": 22,
+            "player2Total": 18
+          },
+          "firstServePercentage": {
+            "player1": 72,
+            "player2": 76
+          },
+          "secondServePointsWon": {
+            "player1": 57,
+            "player2": 43,
+            "player1Won": 4,
+            "player2Won": 3,
+            "player1Total": 7,
+            "player2Total": 7
+          },
+          "distanceCoveredMetres": {
+            "player1": 648,
+            "player2": 586
+          },
+          "secondReturnPointsWon": {
+            "player1": 57,
+            "player2": 43,
+            "player1Won": 4,
+            "player2Won": 3,
+            "player1Total": 7,
+            "player2Total": 7
+          }
+        },
+        {
+          "aces": {
+            "player1": 4,
+            "player2": 1
+          },
+          "winners": {
+            "player1": 12,
+            "player2": 6
+          },
+          "doubleFaults": {
+            "player1": 0,
+            "player2": 2
+          },
+          "netPointsWon": {
+            "player1": 100,
+            "player2": 86,
+            "player1Won": 11,
+            "player2Won": 6,
+            "player1Total": 11,
+            "player2Total": 7
+          },
+          "totalGamesWon": {
+            "player1": 67,
+            "player2": 33,
+            "player1Won": 6,
+            "player2Won": 3,
+            "player1Total": 9,
+            "player2Total": 9
+          },
+          "returnGamesWon": {
+            "player1": 40,
+            "player2": 0,
+            "player1Won": 2,
+            "player2Won": 0,
+            "player1Total": 5,
+            "player2Total": 4
+          },
+          "totalPointsWon": {
+            "player1": 59,
+            "player2": 41,
+            "player1Won": 37,
+            "player2Won": 26,
+            "player1Total": 63,
+            "player2Total": 63
+          },
+          "unforcedErrors": {
+            "player1": 8,
+            "player2": 10
+          },
+          "returnPointsWon": {
+            "player1": 50,
+            "player2": 31,
+            "player1Won": 17,
+            "player2Won": 9,
+            "player1Total": 34,
+            "player2Total": 29
+          },
+          "serviceGamesWon": {
+            "player1": 100,
+            "player2": 60,
+            "player1Won": 4,
+            "player2Won": 3,
+            "player1Total": 4,
+            "player2Total": 5
+          },
+          "breakPointsSaved": {
+            "player1": 100,
+            "player2": 60,
+            "player1Won": 3,
+            "player2Won": 3,
+            "player1Total": 3,
+            "player2Total": 5
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 0
+          },
+          "servicePointsWon": {
+            "player1": 69,
+            "player2": 50,
+            "player1Won": 20,
+            "player2Won": 17,
+            "player1Total": 29,
+            "player2Total": 34
+          },
+          "firstServePointsWon": {
+            "player1": 90,
+            "player2": 55,
+            "player1Won": 18,
+            "player2Won": 12,
+            "player1Total": 20,
+            "player2Total": 22
+          },
+          "breakPointsConverted": {
+            "player1": 40,
+            "player2": 0,
+            "player1Won": 2,
+            "player2Won": 0,
+            "player1Total": 5,
+            "player2Total": 3
+          },
+          "firstReturnPointsWon": {
+            "player1": 45,
+            "player2": 10,
+            "player1Won": 10,
+            "player2Won": 2,
+            "player1Total": 22,
+            "player2Total": 20
+          },
+          "firstServePercentage": {
+            "player1": 69,
+            "player2": 65
+          },
+          "secondServePointsWon": {
+            "player1": 22,
+            "player2": 42,
+            "player1Won": 2,
+            "player2Won": 5,
+            "player1Total": 9,
+            "player2Total": 12
+          },
+          "distanceCoveredMetres": {
+            "player1": 831,
+            "player2": 790
+          },
+          "secondReturnPointsWon": {
+            "player1": 58,
+            "player2": 78,
+            "player1Won": 7,
+            "player2Won": 7,
+            "player1Total": 12,
+            "player2Total": 9
+          }
+        },
+        {
+          "aces": {
+            "player1": 3,
+            "player2": 0
+          },
+          "winners": {
+            "player1": 8,
+            "player2": 7
+          },
+          "doubleFaults": {
+            "player1": 2,
+            "player2": 2
+          },
+          "netPointsWon": {
+            "player1": 67,
+            "player2": 44,
+            "player1Won": 4,
+            "player2Won": 4,
+            "player1Total": 6,
+            "player2Total": 9
+          },
+          "totalGamesWon": {
+            "player1": 60,
+            "player2": 40,
+            "player1Won": 6,
+            "player2Won": 4,
+            "player1Total": 10,
+            "player2Total": 10
+          },
+          "returnGamesWon": {
+            "player1": 60,
+            "player2": 40,
+            "player1Won": 3,
+            "player2Won": 2,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "totalPointsWon": {
+            "player1": 56,
+            "player2": 44,
+            "player1Won": 30,
+            "player2Won": 24,
+            "player1Total": 54,
+            "player2Total": 54
+          },
+          "unforcedErrors": {
+            "player1": 9,
+            "player2": 6
+          },
+          "returnPointsWon": {
+            "player1": 50,
+            "player2": 38,
+            "player1Won": 14,
+            "player2Won": 10,
+            "player1Total": 28,
+            "player2Total": 26
+          },
+          "serviceGamesWon": {
+            "player1": 60,
+            "player2": 40,
+            "player1Won": 3,
+            "player2Won": 2,
+            "player1Total": 5,
+            "player2Total": 5
+          },
+          "breakPointsSaved": {
+            "player1": 0,
+            "player2": 50,
+            "player1Won": 0,
+            "player2Won": 3,
+            "player1Total": 2,
+            "player2Total": 6
+          },
+          "matchPointsSaved": {
+            "player1": 0,
+            "player2": 2
+          },
+          "servicePointsWon": {
+            "player1": 62,
+            "player2": 50,
+            "player1Won": 16,
+            "player2Won": 14,
+            "player1Total": 26,
+            "player2Total": 28
+          },
+          "firstServePointsWon": {
+            "player1": 80,
+            "player2": 67,
+            "player1Won": 12,
+            "player2Won": 10,
+            "player1Total": 15,
+            "player2Total": 15
+          },
+          "breakPointsConverted": {
+            "player1": 50,
+            "player2": 100,
+            "player1Won": 3,
+            "player2Won": 2,
+            "player1Total": 6,
+            "player2Total": 2
+          },
+          "firstReturnPointsWon": {
+            "player1": 33,
+            "player2": 20,
+            "player1Won": 5,
+            "player2Won": 3,
+            "player1Total": 15,
+            "player2Total": 15
+          },
+          "firstServePercentage": {
+            "player1": 58,
+            "player2": 54
+          },
+          "secondServePointsWon": {
+            "player1": 36,
+            "player2": 31,
+            "player1Won": 4,
+            "player2Won": 4,
+            "player1Total": 11,
+            "player2Total": 13
+          },
+          "distanceCoveredMetres": {
+            "player1": 636,
+            "player2": 581
+          },
+          "secondReturnPointsWon": {
+            "player1": 69,
+            "player2": 64,
+            "player1Won": 9,
+            "player2Won": 7,
+            "player1Total": 13,
+            "player2Total": 11
+          }
+        }
+      ],
+      "match": {
+        "aces": {
+          "player1": 13,
+          "player2": 3
+        },
+        "winners": {
+          "player1": 29,
+          "player2": 19
+        },
+        "last10Balls": {
+          "player1": 5,
+          "player2": 5
+        },
+        "doubleFaults": {
+          "player1": 2,
+          "player2": 4
+        },
+        "netPointsWon": {
+          "player1": 85,
+          "player2": 65,
+          "player1Won": 17,
+          "player2Won": 13,
+          "player1Total": 20,
+          "player2Total": 20
+        },
+        "totalGamesWon": {
+          "player1": 62,
+          "player2": 38,
+          "player1Won": 18,
+          "player2Won": 11,
+          "player1Total": 29,
+          "player2Total": 29
+        },
+        "returnGamesWon": {
+          "player1": 40,
+          "player2": 14,
+          "player1Won": 6,
+          "player2Won": 2,
+          "player1Total": 15,
+          "player2Total": 14
+        },
+        "totalPointsWon": {
+          "player1": 57,
+          "player2": 43,
+          "player1Won": 97,
+          "player2Won": 74,
+          "player1Total": 171,
+          "player2Total": 171
+        },
+        "unforcedErrors": {
+          "player1": 27,
+          "player2": 21
+        },
+        "returnPointsWon": {
+          "player1": 45,
+          "player2": 30,
+          "player1Won": 41,
+          "player2Won": 24,
+          "player1Total": 91,
+          "player2Total": 80
+        },
+        "serviceGamesWon": {
+          "player1": 86,
+          "player2": 60,
+          "player1Won": 12,
+          "player2Won": 9,
+          "player1Total": 14,
+          "player2Total": 15
+        },
+        "breakPointsSaved": {
+          "player1": 60,
+          "player2": 53.8,
+          "player1Won": 3,
+          "player2Won": 7,
+          "player1Total": 5,
+          "player2Total": 13
+        },
+        "matchPointsSaved": {
+          "player1": 0,
+          "player2": 2
+        },
+        "servicePointsWon": {
+          "player1": 70,
+          "player2": 55,
+          "player1Won": 56,
+          "player2Won": 50,
+          "player1Total": 80,
+          "player2Total": 91
+        },
+        "firstServePointsWon": {
+          "player1": 87,
+          "player2": 64,
+          "player1Won": 46,
+          "player2Won": 38,
+          "player1Total": 53,
+          "player2Total": 59
+        },
+        "breakPointsConverted": {
+          "player1": 46.2,
+          "player2": 40,
+          "player1Won": 6,
+          "player2Won": 2,
+          "player1Total": 13,
+          "player2Total": 5
+        },
+        "firstReturnPointsWon": {
+          "player1": 36,
+          "player2": 13,
+          "player1Won": 21,
+          "player2Won": 7,
+          "player1Total": 59,
+          "player2Total": 53
+        },
+        "firstServePercentage": {
+          "player1": 66,
+          "player2": 65
+        },
+        "secondServePointsWon": {
+          "player1": 37,
+          "player2": 38,
+          "player1Won": 10,
+          "player2Won": 12,
+          "player1Total": 27,
+          "player2Total": 32
+        },
+        "distanceCoveredMetres": {
+          "player1": 2115,
+          "player2": 1957
+        },
+        "secondReturnPointsWon": {
+          "player1": 63,
+          "player2": 63,
+          "player1Won": 20,
+          "player2Won": 17,
+          "player1Total": 32,
+          "player2Total": 27
+        },
+        "averageFirstServeSpeed": {
+          "player1": null,
+          "player2": null
+        },
+        "averageSecondServeSpeed": {
+          "player1": null,
+          "player2": null
+        }
+      }
+    },
+    "scrapedAt": "2026-10-23T06:44:33.652Z",
+    "source": "cache",
+    "store": "flashscore"
+  }
+]

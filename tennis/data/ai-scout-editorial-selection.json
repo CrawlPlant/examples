@@ -1,0 +1,8 @@
+{
+  "kind": "editorial-preview-not-model-output",
+  "fact_ids": [
+    "player1-elo",
+    "player2-elo",
+    "player1-available-form"
+  ]
+}

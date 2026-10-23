@@ -1,0 +1,126 @@
+{
+  "matchId": "n5DWLXD5",
+  "title": "Sinner J. vs Zverev A.",
+  "cutoff": "2026-07-12T15:10:00.000Z",
+  "facts": [
+    {
+      "id": "player1-elo",
+      "text": "Sinner J.: 2717 overall Elo before this match.",
+      "sources": [
+        {
+          "matchId": "n5DWLXD5",
+          "url": "https://www.flashscore.com/match/n5DWLXD5/",
+          "field": "player1Elo"
+        }
+      ]
+    },
+    {
+      "id": "player1-surface",
+      "text": "Sinner J.: 2157 surface Elo before this match.",
+      "sources": [
+        {
+          "matchId": "n5DWLXD5",
+          "url": "https://www.flashscore.com/match/n5DWLXD5/",
+          "field": "elo.player1Surface"
+        }
+      ]
+    },
+    {
+      "id": "player1-available-form",
+      "text": "Sinner J.: 4 wins from 4 available completed prior matches in this export.",
+      "sources": [
+        {
+          "matchId": "nkXJ8mYa",
+          "url": "https://www.flashscore.com/match/nkXJ8mYa/",
+          "field": "winner,endTime,playerId"
+        },
+        {
+          "matchId": "ABfCFoU8",
+          "url": "https://www.flashscore.com/match/ABfCFoU8/",
+          "field": "winner,endTime,playerId"
+        },
+        {
+          "matchId": "QeCDdkzA",
+          "url": "https://www.flashscore.com/match/QeCDdkzA/",
+          "field": "winner,endTime,playerId"
+        },
+        {
+          "matchId": "GAzHKLTk",
+          "url": "https://www.flashscore.com/match/GAzHKLTk/",
+          "field": "winner,endTime,playerId"
+        }
+      ]
+    },
+    {
+      "id": "prior-nkXJ8mYa-player1",
+      "text": "Sinner J. won the 2026-07-10 match at Wimbledon (6-4 6-4 6-4).",
+      "sources": [
+        {
+          "matchId": "nkXJ8mYa",
+          "url": "https://www.flashscore.com/match/nkXJ8mYa/",
+          "field": "winner,score,date,tournament"
+        }
+      ]
+    },
+    {
+      "id": "prior-ABfCFoU8-player1",
+      "text": "Sinner J. won the 2026-07-07 match at Wimbledon (7-5 7-6(4) 6-3).",
+      "sources": [
+        {
+          "matchId": "ABfCFoU8",
+          "url": "https://www.flashscore.com/match/ABfCFoU8/",
+          "field": "winner,score,date,tournament"
+        }
+      ]
+    },
+    {
+      "id": "prior-QeCDdkzA-player1",
+      "text": "Sinner J. won the 2026-07-05 match at Wimbledon (6-3 7-6(0) 6-3).",
+      "sources": [
+        {
+          "matchId": "QeCDdkzA",
+          "url": "https://www.flashscore.com/match/QeCDdkzA/",
+          "field": "winner,score,date,tournament"
+        }
+      ]
+    },
+    {
+      "id": "prior-GAzHKLTk-player1",
+      "text": "Sinner J. won the 2026-07-03 match at Wimbledon (6-4 6-3 6-4).",
+      "sources": [
+        {
+          "matchId": "GAzHKLTk",
+          "url": "https://www.flashscore.com/match/GAzHKLTk/",
+          "field": "winner,score,date,tournament"
+        }
+      ]
+    },
+    {
+      "id": "player2-elo",
+      "text": "Zverev A.: 2483 overall Elo before this match.",
+      "sources": [
+        {
+          "matchId": "n5DWLXD5",
+          "url": "https://www.flashscore.com/match/n5DWLXD5/",
+          "field": "player2Elo"
+        }
+      ]
+    },
+    {
+      "id": "player2-surface",
+      "text": "Zverev A.: 1988 surface Elo before this match.",
+      "sources": [
+        {
+          "matchId": "n5DWLXD5",
+          "url": "https://www.flashscore.com/match/n5DWLXD5/",
+          "field": "elo.player2Surface"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No eligible prior completed matches for Zverev A. in the supplied export.",
+    "This export is a limited sample, not a verified complete last-ten or career history.",
+    "Historical reconstruction retrieved after the event, not an archived pre-match prediction."
+  ]
+}

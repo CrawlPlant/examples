@@ -1,0 +1,257 @@
+{
+  "plan": {
+    "tour": "wta",
+    "surface": "Hard",
+    "minimum_matches": 2
+  },
+  "ranking": [
+    {
+      "player": "Jelena Ostapenko",
+      "eligible": 3,
+      "upsets": 3,
+      "match_ids": [
+        "2q8d3S5m",
+        "OQrVaKPa",
+        "GMKMNMkS"
+      ],
+      "rate": 1.0
+    },
+    {
+      "player": "Jasmine Paolini",
+      "eligible": 2,
+      "upsets": 2,
+      "match_ids": [
+        "2BWvu3Li",
+        "vgFuoojJ"
+      ],
+      "rate": 1.0
+    },
+    {
+      "player": "Leylah Fernandez",
+      "eligible": 2,
+      "upsets": 2,
+      "match_ids": [
+        "pxDCblIs",
+        "ITD2mo8U"
+      ],
+      "rate": 1.0
+    },
+    {
+      "player": "Maja Chwalinska",
+      "eligible": 2,
+      "upsets": 2,
+      "match_ids": [
+        "r5hwu7cm",
+        "GjUtJfr9"
+      ],
+      "rate": 1.0
+    },
+    {
+      "player": "Polina Kudermetova",
+      "eligible": 2,
+      "upsets": 2,
+      "match_ids": [
+        "IipZd7gA",
+        "QZAP4LZR"
+      ],
+      "rate": 1.0
+    },
+    {
+      "player": "Sonay Kartal",
+      "eligible": 6,
+      "upsets": 5,
+      "match_ids": [
+        "vLw8Vkle",
+        "YiYpakYR",
+        "fqCwH0A4",
+        "bgI2iy3d",
+        "r1Ik4Fsf",
+        "UyZvIQm2"
+      ],
+      "rate": 0.8333333333333334
+    },
+    {
+      "player": "Ashlyn Krueger",
+      "eligible": 4,
+      "upsets": 3,
+      "match_ids": [
+        "GSVk4MV6",
+        "nVGrJfNM",
+        "IBKHFSIl",
+        "ny601gA7"
+      ],
+      "rate": 0.75
+    },
+    {
+      "player": "Aliaksandra Sasnovich",
+      "eligible": 3,
+      "upsets": 2,
+      "match_ids": [
+        "UoUBgg4F",
+        "YZpn8ZOM",
+        "WMr9755F"
+      ],
+      "rate": 0.6666666666666666
+    },
+    {
+      "player": "Mia Pohankova",
+      "eligible": 3,
+      "upsets": 2,
+      "match_ids": [
+        "jRgwcsop",
+        "Sldl1SwH",
+        "h0DD5fGs"
+      ],
+      "rate": 0.6666666666666666
+    },
+    {
+      "player": "Han Shi",
+      "eligible": 4,
+      "upsets": 2,
+      "match_ids": [
+        "GUnW9n8D",
+        "OtZF6nRG",
+        "nc5KnPum",
+        "U5WH2Dnp"
+      ],
+      "rate": 0.5
+    },
+    {
+      "player": "Hanyu Guo",
+      "eligible": 4,
+      "upsets": 2,
+      "match_ids": [
+        "zqymrTX0",
+        "nPFQlaGD",
+        "CM7vd00b",
+        "UP8vgkvg"
+      ],
+      "rate": 0.5
+    },
+    {
+      "player": "Yulia Putintseva",
+      "eligible": 4,
+      "upsets": 2,
+      "match_ids": [
+        "AXqOB8w1",
+        "pdZ7ljMU",
+        "bPYNZ8RH",
+        "I97H6s5F"
+      ],
+      "rate": 0.5
+    },
+    {
+      "player": "Ann Li",
+      "eligible": 2,
+      "upsets": 1,
+      "match_ids": [
+        "S6LOZBG7",
+        "21am1MHN"
+      ],
+      "rate": 0.5
+    },
+    {
+      "player": "Caty McNally",
+      "eligible": 2,
+      "upsets": 1,
+      "match_ids": [
+        "8OZHXk0K",
+        "0Ww2Emx1"
+      ],
+      "rate": 0.5
+    },
+    {
+      "player": "Janice Tjen",
+      "eligible": 2,
+      "upsets": 1,
+      "match_ids": [
+        "rN9Cap5C",
+        "tYDOPI7k"
+      ],
+      "rate": 0.5
+    },
+    {
+      "player": "Lilli Tagger",
+      "eligible": 2,
+      "upsets": 1,
+      "match_ids": [
+        "WSeFTTI7",
+        "Y17jCgCd"
+      ],
+      "rate": 0.5
+    },
+    {
+      "player": "Maria Sakkari",
+      "eligible": 2,
+      "upsets": 1,
+      "match_ids": [
+        "YTRH0o23",
+        "YBrRGOYi"
+      ],
+      "rate": 0.5
+    },
+    {
+      "player": "Tatiana Prozorova",
+      "eligible": 2,
+      "upsets": 1,
+      "match_ids": [
+        "t8McpkR1",
+        "00chd6XI"
+      ],
+      "rate": 0.5
+    },
+    {
+      "player": "Tereza Valentova",
+      "eligible": 2,
+      "upsets": 1,
+      "match_ids": [
+        "dvimEzas",
+        "UXYqpB76"
+      ],
+      "rate": 0.5
+    },
+    {
+      "player": "Anastasia Zakharova",
+      "eligible": 3,
+      "upsets": 1,
+      "match_ids": [
+        "48rseoOM",
+        "UXdcNJKc",
+        "OjjNMjTO"
+      ],
+      "rate": 0.3333333333333333
+    },
+    {
+      "player": "Aoi Ito",
+      "eligible": 3,
+      "upsets": 1,
+      "match_ids": [
+        "0EpOg4hd",
+        "Gpa1wMdK",
+        "xb05LckA"
+      ],
+      "rate": 0.3333333333333333
+    },
+    {
+      "player": "Dayana Yastremska",
+      "eligible": 3,
+      "upsets": 1,
+      "match_ids": [
+        "08DSkKZ9",
+        "l0luvERE",
+        "ziZCkPop"
+      ],
+      "rate": 0.3333333333333333
+    },
+    {
+      "player": "Sofia Kenin",
+      "eligible": 2,
+      "upsets": 0,
+      "match_ids": [
+        "UTM92b1L",
+        "A5uAsCn1"
+      ],
+      "rate": 0.0
+    }
+  ]
+}

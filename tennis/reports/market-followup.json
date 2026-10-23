@@ -1,0 +1,856 @@
+{
+  "comparison": {
+    "matchId": "bJT29aAL",
+    "player1": "Machac T.",
+    "player2": "Khachanov K.",
+    "elo": 0.4034,
+    "market": 0.3074,
+    "gap_pp": 9.599999999999998,
+    "status": "finished"
+  },
+  "history": [
+    {
+      "matchId": "vXZBea7K",
+      "url": "https://www.flashscore.com/match/vXZBea7K/",
+      "startTime": "2026-10-21T08:45:00.000Z",
+      "endTime": "2026-10-21T09:47:38.000Z",
+      "tour": "atp",
+      "category": "ATP - Singles",
+      "matchType": "singles",
+      "tournament": "Almaty",
+      "templateId": "KrjEivYq",
+      "tournamentStage": null,
+      "round": "1/16-finals",
+      "surface": "hard",
+      "indoor": true,
+      "tournamentCountry": "Kazakhstan",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/nurlanuly-zangar/vLMQqf9e/",
+        "name": "Nurlanuly Z.",
+        "country": "Kazakhstan",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/nurlanuly-zangar/vLMQqf9e/",
+            "name": "Nurlanuly Z.",
+            "country": "Kazakhstan",
+            "playerId": "vLMQqf9e"
+          }
+        ],
+        "playerId": "vLMQqf9e",
+        "eventParticipantId": "WdBOf4Cs"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+        "name": "Machac T.",
+        "country": "Czech Republic",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+            "name": "Machac T.",
+            "country": "Czech Republic",
+            "playerId": "S44E7UYr"
+          }
+        ],
+        "playerId": "S44E7UYr",
+        "eventParticipantId": "vNEWhrsf"
+      },
+      "winner": "player2",
+      "setsPlayer1": 0,
+      "setsPlayer2": 2,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 2,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 2,
+          "player1": 0,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "2-6 0-6",
+      "note": null,
+      "durationMinutes": 63,
+      "setMinutes": [
+        36,
+        27
+      ],
+      "umpire": null,
+      "elo": {
+        "player1": 1523,
+        "player2": 2162,
+        "player1Surface": 1523,
+        "player2Surface": 2086,
+        "player1WinProbability": 0.0305
+      }
+    },
+    {
+      "matchId": "pG7nqUH5",
+      "url": "https://www.flashscore.com/match/pG7nqUH5/",
+      "startTime": "2026-10-16T05:45:00.000Z",
+      "endTime": "2026-10-16T08:01:19.000Z",
+      "tour": "challenger-men",
+      "category": "Challenger Men - Singles",
+      "matchType": "singles",
+      "tournament": "Jinan",
+      "templateId": "Snma12qm",
+      "tournamentStage": null,
+      "round": "Quarter-finals",
+      "surface": "hard",
+      "indoor": false,
+      "tournamentCountry": "China",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+        "name": "Machac T.",
+        "country": "Czech Republic",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+            "name": "Machac T.",
+            "country": "Czech Republic",
+            "playerId": "S44E7UYr"
+          }
+        ],
+        "playerId": "S44E7UYr",
+        "eventParticipantId": "6BBBVMF6"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/draxl-liam/IiUa42eG/",
+        "name": "Draxl L.",
+        "country": "Canada",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/draxl-liam/IiUa42eG/",
+            "name": "Draxl L.",
+            "country": "Canada",
+            "playerId": "IiUa42eG"
+          }
+        ],
+        "playerId": "IiUa42eG",
+        "eventParticipantId": "EyFJT0pJ"
+      },
+      "winner": "player2",
+      "setsPlayer1": 1,
+      "setsPlayer2": 2,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 4,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 2,
+          "player1": 6,
+          "player2": 3,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 3,
+          "player1": 4,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "4-6 6-3 4-6",
+      "note": null,
+      "durationMinutes": 141,
+      "setMinutes": [
+        44,
+        44,
+        53
+      ],
+      "umpire": null,
+      "elo": {
+        "player1": 2178,
+        "player2": 2020,
+        "player1Surface": 2105,
+        "player2Surface": 1957,
+        "player1WinProbability": 0.707
+      }
+    },
+    {
+      "matchId": "xnIWM9Qs",
+      "url": "https://www.flashscore.com/match/xnIWM9Qs/",
+      "startTime": "2026-10-15T07:35:00.000Z",
+      "endTime": "2026-10-15T08:34:32.000Z",
+      "tour": "challenger-men",
+      "category": "Challenger Men - Singles",
+      "matchType": "singles",
+      "tournament": "Jinan",
+      "templateId": "Snma12qm",
+      "tournamentStage": null,
+      "round": "1/8-finals",
+      "surface": "hard",
+      "indoor": false,
+      "tournamentCountry": "China",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+        "name": "Machac T.",
+        "country": "Czech Republic",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+            "name": "Machac T.",
+            "country": "Czech Republic",
+            "playerId": "S44E7UYr"
+          }
+        ],
+        "playerId": "S44E7UYr",
+        "eventParticipantId": "OpNn7TMG"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/vukic-aleksandar/O2CmIROi/",
+        "name": "Vukic A.",
+        "country": "Australia",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/vukic-aleksandar/O2CmIROi/",
+            "name": "Vukic A.",
+            "country": "Australia",
+            "playerId": "O2CmIROi"
+          }
+        ],
+        "playerId": "O2CmIROi",
+        "eventParticipantId": "WAQf57iT"
+      },
+      "winner": "player1",
+      "setsPlayer1": 2,
+      "setsPlayer2": 0,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 6,
+          "player2": 2,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 2,
+          "player1": 6,
+          "player2": 1,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "6-2 6-1",
+      "note": null,
+      "durationMinutes": 62,
+      "setMinutes": [
+        28,
+        34
+      ],
+      "umpire": null,
+      "elo": {
+        "player1": 2171,
+        "player2": 2016,
+        "player1Surface": 2096,
+        "player2Surface": 1973,
+        "player1WinProbability": 0.69
+      }
+    },
+    {
+      "matchId": "4fy9sBat",
+      "url": "https://www.flashscore.com/match/4fy9sBat/",
+      "startTime": "2026-10-13T10:25:00.000Z",
+      "endTime": "2026-10-13T11:46:43.000Z",
+      "tour": "challenger-men",
+      "category": "Challenger Men - Singles",
+      "matchType": "singles",
+      "tournament": "Jinan",
+      "templateId": "Snma12qm",
+      "tournamentStage": null,
+      "round": "1/16-finals",
+      "surface": "hard",
+      "indoor": false,
+      "tournamentCountry": "China",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+        "name": "Machac T.",
+        "country": "Czech Republic",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+            "name": "Machac T.",
+            "country": "Czech Republic",
+            "playerId": "S44E7UYr"
+          }
+        ],
+        "playerId": "S44E7UYr",
+        "eventParticipantId": "pKoQRo03"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/muller-alexandre/nLLdS9q0/",
+        "name": "Muller A.",
+        "country": "France",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/muller-alexandre/nLLdS9q0/",
+            "name": "Muller A.",
+            "country": "France",
+            "playerId": "nLLdS9q0"
+          }
+        ],
+        "playerId": "nLLdS9q0",
+        "eventParticipantId": "IXqYPPUF"
+      },
+      "winner": "player1",
+      "setsPlayer1": 2,
+      "setsPlayer2": 0,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 6,
+          "player2": 3,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 2,
+          "player1": 6,
+          "player2": 4,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "6-3 6-4",
+      "note": null,
+      "durationMinutes": 81,
+      "setMinutes": [
+        35,
+        46
+      ],
+      "umpire": null,
+      "elo": {
+        "player1": 2165,
+        "player2": 2010,
+        "player1Surface": 2087,
+        "player2Surface": 1966,
+        "player1WinProbability": 0.6888
+      }
+    },
+    {
+      "matchId": "hr6BwfJN",
+      "url": "https://www.flashscore.com/match/hr6BwfJN/",
+      "startTime": "2026-10-09T12:40:00.000Z",
+      "endTime": "2026-10-09T14:02:19.000Z",
+      "tour": "atp",
+      "category": "ATP - Singles",
+      "matchType": "singles",
+      "tournament": "Shanghai",
+      "templateId": "lSHMFchs",
+      "tournamentStage": null,
+      "round": "1/32-finals",
+      "surface": "hard",
+      "indoor": false,
+      "tournamentCountry": "China",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/bublik-alexander/t0WN9vR6/",
+        "name": "Bublik A.",
+        "country": "Kazakhstan",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/bublik-alexander/t0WN9vR6/",
+            "name": "Bublik A.",
+            "country": "Kazakhstan",
+            "playerId": "t0WN9vR6"
+          }
+        ],
+        "playerId": "t0WN9vR6",
+        "eventParticipantId": "lQF1YThU"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+        "name": "Machac T.",
+        "country": "Czech Republic",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+            "name": "Machac T.",
+            "country": "Czech Republic",
+            "playerId": "S44E7UYr"
+          }
+        ],
+        "playerId": "S44E7UYr",
+        "eventParticipantId": "xMfBhXwn"
+      },
+      "winner": "player1",
+      "setsPlayer1": 2,
+      "setsPlayer2": 0,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 6,
+          "player2": 4,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 2,
+          "player1": 7,
+          "player2": 6,
+          "tiebreak1": 7,
+          "tiebreak2": 4
+        }
+      ],
+      "score": "6-4 7-6(4)",
+      "note": null,
+      "durationMinutes": 85,
+      "setMinutes": [
+        32,
+        53
+      ],
+      "umpire": "Nour A.",
+      "elo": {
+        "player1": 2248,
+        "player2": 2174,
+        "player1Surface": 2151,
+        "player2Surface": 2099,
+        "player1WinProbability": 0.5897
+      }
+    },
+    {
+      "matchId": "CCd1gVME",
+      "url": "https://www.flashscore.com/match/CCd1gVME/",
+      "startTime": "2026-10-07T06:45:00.000Z",
+      "endTime": "2026-10-07T08:57:13.000Z",
+      "tour": "atp",
+      "category": "ATP - Singles",
+      "matchType": "singles",
+      "tournament": "Shanghai",
+      "templateId": "lSHMFchs",
+      "tournamentStage": null,
+      "round": "1/64-finals",
+      "surface": "hard",
+      "indoor": false,
+      "tournamentCountry": "China",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/zhang-zhizhen/IFKEHRGG/",
+        "name": "Zhang Z.",
+        "country": "China",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/zhang-zhizhen/IFKEHRGG/",
+            "name": "Zhang Z.",
+            "country": "China",
+            "playerId": "IFKEHRGG"
+          }
+        ],
+        "playerId": "IFKEHRGG",
+        "eventParticipantId": "l0zRnrmo"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+        "name": "Machac T.",
+        "country": "Czech Republic",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+            "name": "Machac T.",
+            "country": "Czech Republic",
+            "playerId": "S44E7UYr"
+          }
+        ],
+        "playerId": "S44E7UYr",
+        "eventParticipantId": "G6SCAouh"
+      },
+      "winner": "player2",
+      "setsPlayer1": 1,
+      "setsPlayer2": 2,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 6,
+          "player2": 1,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 2,
+          "player1": 6,
+          "player2": 7,
+          "tiebreak1": 3,
+          "tiebreak2": 7
+        },
+        {
+          "set": 3,
+          "player1": 2,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "6-1 6-7(3) 2-6",
+      "note": null,
+      "durationMinutes": 133,
+      "setMinutes": [
+        28,
+        61,
+        44
+      ],
+      "umpire": "Rask C.",
+      "elo": {
+        "player1": 1990,
+        "player2": 2168,
+        "player1Surface": 1890,
+        "player2Surface": 2092,
+        "player1WinProbability": 0.2509
+      }
+    },
+    {
+      "matchId": "YoL7c71N",
+      "url": "https://www.flashscore.com/match/YoL7c71N/",
+      "startTime": "2026-10-01T03:20:00.000Z",
+      "endTime": "2026-10-01T04:21:02.000Z",
+      "tour": "atp",
+      "category": "ATP - Singles",
+      "matchType": "singles",
+      "tournament": "Beijing",
+      "templateId": "UirAofN6",
+      "tournamentStage": null,
+      "round": "1/16-finals",
+      "surface": "hard",
+      "indoor": false,
+      "tournamentCountry": "China",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/molcan-alex/drgiRTl7/",
+        "name": "Molcan A.",
+        "country": "Slovakia",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/molcan-alex/drgiRTl7/",
+            "name": "Molcan A.",
+            "country": "Slovakia",
+            "playerId": "drgiRTl7"
+          }
+        ],
+        "playerId": "drgiRTl7",
+        "eventParticipantId": "jHKZbTDr"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+        "name": "Machac T.",
+        "country": "Czech Republic",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+            "name": "Machac T.",
+            "country": "Czech Republic",
+            "playerId": "S44E7UYr"
+          }
+        ],
+        "playerId": "S44E7UYr",
+        "eventParticipantId": "bsOsc7re"
+      },
+      "winner": "player1",
+      "setsPlayer1": 2,
+      "setsPlayer2": 0,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 6,
+          "player2": 3,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 2,
+          "player1": 6,
+          "player2": 2,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "6-3 6-2",
+      "note": null,
+      "durationMinutes": 61,
+      "setMinutes": [
+        34,
+        27
+      ],
+      "umpire": "Carvalho A.",
+      "elo": {
+        "player1": 2125,
+        "player2": 2181,
+        "player1Surface": 1897,
+        "player2Surface": 2113,
+        "player1WinProbability": 0.3137
+      }
+    },
+    {
+      "matchId": "llKI871b",
+      "url": "https://www.flashscore.com/match/llKI871b/",
+      "startTime": "2026-09-29T03:10:00.000Z",
+      "endTime": "2026-09-29T04:28:04.000Z",
+      "tour": "atp",
+      "category": "ATP - Singles",
+      "matchType": "singles",
+      "tournament": "Beijing",
+      "templateId": "UirAofN6",
+      "tournamentStage": "Qualification",
+      "round": "Q2",
+      "surface": "hard",
+      "indoor": false,
+      "tournamentCountry": "China",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+        "name": "Machac T.",
+        "country": "Czech Republic",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+            "name": "Machac T.",
+            "country": "Czech Republic",
+            "playerId": "S44E7UYr"
+          }
+        ],
+        "playerId": "S44E7UYr",
+        "eventParticipantId": "pxZybrBm"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/gea-arthur/M5Nr6FTR/",
+        "name": "Gea A.",
+        "country": "France",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/gea-arthur/M5Nr6FTR/",
+            "name": "Gea A.",
+            "country": "France",
+            "playerId": "M5Nr6FTR"
+          }
+        ],
+        "playerId": "M5Nr6FTR",
+        "eventParticipantId": "IkXqdMu0"
+      },
+      "winner": "player2",
+      "setsPlayer1": 0,
+      "setsPlayer2": 2,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 3,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 2,
+          "player1": 4,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "3-6 4-6",
+      "note": null,
+      "durationMinutes": 78,
+      "setMinutes": [
+        37,
+        41
+      ],
+      "umpire": "Andrei R.",
+      "elo": {
+        "player1": 2194,
+        "player2": 2150,
+        "player1Surface": 2125,
+        "player2Surface": 2164,
+        "player1WinProbability": 0.5036
+      }
+    },
+    {
+      "matchId": "h41iNZ87",
+      "url": "https://www.flashscore.com/match/h41iNZ87/",
+      "startTime": "2026-09-28T03:10:00.000Z",
+      "endTime": "2026-09-28T06:16:25.000Z",
+      "tour": "atp",
+      "category": "ATP - Singles",
+      "matchType": "singles",
+      "tournament": "Beijing",
+      "templateId": "UirAofN6",
+      "tournamentStage": "Qualification",
+      "round": "Q1",
+      "surface": "hard",
+      "indoor": false,
+      "tournamentCountry": "China",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/hanfmann-yannick/zLJYYbhm/",
+        "name": "Hanfmann Y.",
+        "country": "Germany",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/hanfmann-yannick/zLJYYbhm/",
+            "name": "Hanfmann Y.",
+            "country": "Germany",
+            "playerId": "zLJYYbhm"
+          }
+        ],
+        "playerId": "zLJYYbhm",
+        "eventParticipantId": "p2I8ruIa"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+        "name": "Machac T.",
+        "country": "Czech Republic",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+            "name": "Machac T.",
+            "country": "Czech Republic",
+            "playerId": "S44E7UYr"
+          }
+        ],
+        "playerId": "S44E7UYr",
+        "eventParticipantId": "jaLGtJnC"
+      },
+      "winner": "player2",
+      "setsPlayer1": 1,
+      "setsPlayer2": 2,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 6,
+          "player2": 7,
+          "tiebreak1": 7,
+          "tiebreak2": 9
+        },
+        {
+          "set": 2,
+          "player1": 7,
+          "player2": 6,
+          "tiebreak1": 8,
+          "tiebreak2": 6
+        },
+        {
+          "set": 3,
+          "player1": 4,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "6-7(7) 7-6(6) 4-6",
+      "note": null,
+      "durationMinutes": 185,
+      "setMinutes": [
+        71,
+        69,
+        45
+      ],
+      "umpire": "Lahyani M.",
+      "elo": {
+        "player1": 2167,
+        "player2": 2183,
+        "player1Surface": 2038,
+        "player2Surface": 2115,
+        "player1WinProbability": 0.4335
+      }
+    },
+    {
+      "matchId": "lhp95cCc",
+      "url": "https://www.flashscore.com/match/lhp95cCc/",
+      "startTime": "2026-08-30T19:25:00.000Z",
+      "endTime": "2026-08-30T20:52:09.000Z",
+      "tour": "atp",
+      "category": "ATP - Singles",
+      "matchType": "singles",
+      "tournament": "US Open",
+      "templateId": "65k5lHxU",
+      "tournamentStage": null,
+      "round": "1/64-finals",
+      "surface": "hard",
+      "indoor": false,
+      "tournamentCountry": "USA",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/samuel-toby/rZVojxZe/",
+        "name": "Samuel T.",
+        "country": "United Kingdom",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/samuel-toby/rZVojxZe/",
+            "name": "Samuel T.",
+            "country": "United Kingdom",
+            "playerId": "rZVojxZe"
+          }
+        ],
+        "playerId": "rZVojxZe",
+        "eventParticipantId": "dYLvqJcJ"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+        "name": "Machac T.",
+        "country": "Czech Republic",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/machac-tomas/S44E7UYr/",
+            "name": "Machac T.",
+            "country": "Czech Republic",
+            "playerId": "S44E7UYr"
+          }
+        ],
+        "playerId": "S44E7UYr",
+        "eventParticipantId": "j9ANjVGP"
+      },
+      "winner": "player1",
+      "setsPlayer1": 3,
+      "setsPlayer2": 0,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 6,
+          "player2": 2,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 2,
+          "player1": 6,
+          "player2": 3,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 3,
+          "player1": 6,
+          "player2": 2,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "6-2 6-3 6-2",
+      "note": null,
+      "durationMinutes": 92,
+      "setMinutes": [
+        23,
+        29,
+        40
+      ],
+      "umpire": null,
+      "elo": {
+        "player1": 2142,
+        "player2": 2197,
+        "player1Surface": 2137,
+        "player2Surface": 2128,
+        "player1WinProbability": 0.4669
+      }
+    }
+  ],
+  "cutoff": "2026-10-22T00:00:00Z"
+}

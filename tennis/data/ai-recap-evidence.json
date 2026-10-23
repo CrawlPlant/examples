@@ -1,0 +1,86 @@
+{
+  "matchId": "Sf0bExdB",
+  "facts": [
+    {
+      "id": "result",
+      "text": "Alcaraz C. vs Djokovic N.: 6-2 6-2 7-6(4).",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    },
+    {
+      "id": "set-1-game-1",
+      "text": "Set 1, game 1: Djokovic N. faced 5 break-point opportunities and was broken (score 1–0).",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    },
+    {
+      "id": "set-1-game-5",
+      "text": "Set 1, game 5: Djokovic N. faced 1 break-point opportunity and was broken (score 4–1).",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    },
+    {
+      "id": "set-1-game-6",
+      "text": "Set 1, game 6: Alcaraz C. faced 1 break-point opportunity and held serve (score 5–1).",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    },
+    {
+      "id": "set-2-game-1",
+      "text": "Set 2, game 1: Djokovic N. faced 1 break-point opportunity and was broken (score 1–0).",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    },
+    {
+      "id": "set-2-game-7",
+      "text": "Set 2, game 7: Djokovic N. faced 1 break-point opportunity and was broken (score 5–2).",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    },
+    {
+      "id": "set-3-game-3",
+      "text": "Set 3, game 3: Djokovic N. faced 4 break-point opportunities and held serve (score 1–2).",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    },
+    {
+      "id": "set-3-game-6",
+      "text": "Set 3, game 6: Alcaraz C. faced 1 break-point opportunity and held serve (score 3–3).",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    },
+    {
+      "id": "set-3-game-9",
+      "text": "Set 3, game 9: Djokovic N. faced 2 break-point opportunities and was broken (score 5–4).",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    },
+    {
+      "id": "set-3-game-10",
+      "text": "Set 3, game 10: Alcaraz C. faced 1 break-point opportunity and was broken (score 5–5).",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    },
+    {
+      "id": "set-3-game-13",
+      "text": "Set 3 tiebreak: Alcaraz C. won 7–4.",
+      "sources": [
+        "Sf0bExdB"
+      ]
+    }
+  ],
+  "ordinary_games": 28,
+  "pressure_games": 9,
+  "break_point_opportunities": 17,
+  "tiebreaks": 1
+}

@@ -1,0 +1,278 @@
+{
+  "totals": {
+    "clay": {
+      "wins": 2,
+      "losses": 4
+    },
+    "hard": {
+      "wins": 3,
+      "losses": 6
+    },
+    "grass": {
+      "wins": 2,
+      "losses": 0
+    }
+  },
+  "last": [
+    {
+      "matchId": "6ye8F0kT",
+      "url": "https://www.flashscore.com/match/6ye8F0kT/",
+      "startTime": "2026-04-12T13:10:00.000Z",
+      "endTime": "2026-04-12T15:28:25.000Z",
+      "tour": "atp",
+      "category": "ATP - Singles",
+      "matchType": "singles",
+      "tournament": "Monte Carlo",
+      "templateId": "IsxHSx6l",
+      "tournamentStage": null,
+      "round": "Final",
+      "surface": "clay",
+      "indoor": false,
+      "tournamentCountry": "Monaco",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/alcaraz-garfia-carlos/UkhgIFEq/",
+        "name": "Alcaraz C.",
+        "country": "Spain",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/alcaraz-garfia-carlos/UkhgIFEq/",
+            "name": "Alcaraz C.",
+            "country": "Spain",
+            "playerId": "UkhgIFEq"
+          }
+        ],
+        "playerId": "UkhgIFEq",
+        "eventParticipantId": "jBHBErJr"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+        "name": "Sinner J.",
+        "country": "Italy",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+            "name": "Sinner J.",
+            "country": "Italy",
+            "playerId": "6HdC3z4H"
+          }
+        ],
+        "playerId": "6HdC3z4H",
+        "eventParticipantId": "byLJCMme"
+      },
+      "winner": "player2",
+      "setsPlayer1": 0,
+      "setsPlayer2": 2,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 6,
+          "player2": 7,
+          "tiebreak1": 5,
+          "tiebreak2": 7
+        },
+        {
+          "set": 2,
+          "player1": 3,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "6-7(5) 3-6",
+      "note": null,
+      "durationMinutes": 135,
+      "setMinutes": [
+        74,
+        61
+      ],
+      "umpire": "Lichtenstein R.",
+      "elo": {
+        "player1": 2646,
+        "player2": 2700,
+        "player1Surface": 2522,
+        "player2Surface": 2408,
+        "player1WinProbability": 0.5431
+      }
+    },
+    {
+      "matchId": "SGeB5San",
+      "url": "https://www.flashscore.com/match/SGeB5San/",
+      "startTime": "2025-11-16T17:15:00.000Z",
+      "endTime": "2025-11-16T19:29:45.000Z",
+      "tour": "atp",
+      "category": "ATP - Singles",
+      "matchType": "singles",
+      "tournament": "Finals - Turin",
+      "templateId": "MeRVE9s8",
+      "tournamentStage": "Play Offs",
+      "round": "Final",
+      "surface": "hard",
+      "indoor": true,
+      "tournamentCountry": "World",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/alcaraz-garfia-carlos/UkhgIFEq/",
+        "name": "Alcaraz C.",
+        "country": "Spain",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/alcaraz-garfia-carlos/UkhgIFEq/",
+            "name": "Alcaraz C.",
+            "country": "Spain",
+            "playerId": "UkhgIFEq"
+          }
+        ],
+        "playerId": "UkhgIFEq",
+        "eventParticipantId": "tA5o7UM6"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+        "name": "Sinner J.",
+        "country": "Italy",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+            "name": "Sinner J.",
+            "country": "Italy",
+            "playerId": "6HdC3z4H"
+          }
+        ],
+        "playerId": "6HdC3z4H",
+        "eventParticipantId": "lz9g58iJ"
+      },
+      "winner": "player2",
+      "setsPlayer1": 0,
+      "setsPlayer2": 2,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 6,
+          "player2": 7,
+          "tiebreak1": 4,
+          "tiebreak2": 7
+        },
+        {
+          "set": 2,
+          "player1": 5,
+          "player2": 7,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "6-7(4) 5-7",
+      "note": null,
+      "durationMinutes": 124,
+      "setMinutes": [
+        67,
+        57
+      ],
+      "umpire": "Lichtenstein R.",
+      "elo": {
+        "player1": 2644,
+        "player2": 2684,
+        "player1Surface": 2485,
+        "player2Surface": 2614,
+        "player1WinProbability": 0.3807
+      }
+    },
+    {
+      "matchId": "4EAVYPi5",
+      "url": "https://www.flashscore.com/match/4EAVYPi5/",
+      "startTime": "2025-09-07T18:50:00.000Z",
+      "endTime": "2025-09-07T21:31:16.000Z",
+      "tour": "atp",
+      "category": "ATP - Singles",
+      "matchType": "singles",
+      "tournament": "US Open",
+      "templateId": "65k5lHxU",
+      "tournamentStage": null,
+      "round": "Final",
+      "surface": "hard",
+      "indoor": false,
+      "tournamentCountry": "USA",
+      "status": "finished",
+      "player1": {
+        "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+        "name": "Sinner J.",
+        "country": "Italy",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/sinner-jannik/6HdC3z4H/",
+            "name": "Sinner J.",
+            "country": "Italy",
+            "playerId": "6HdC3z4H"
+          }
+        ],
+        "playerId": "6HdC3z4H",
+        "eventParticipantId": "bNHfuJmI"
+      },
+      "player2": {
+        "url": "https://www.flashscore.com/player/alcaraz-garfia-carlos/UkhgIFEq/",
+        "name": "Alcaraz C.",
+        "country": "Spain",
+        "players": [
+          {
+            "url": "https://www.flashscore.com/player/alcaraz-garfia-carlos/UkhgIFEq/",
+            "name": "Alcaraz C.",
+            "country": "Spain",
+            "playerId": "UkhgIFEq"
+          }
+        ],
+        "playerId": "UkhgIFEq",
+        "eventParticipantId": "4KK2wcIU"
+      },
+      "winner": "player2",
+      "setsPlayer1": 1,
+      "setsPlayer2": 3,
+      "sets": [
+        {
+          "set": 1,
+          "player1": 2,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 2,
+          "player1": 6,
+          "player2": 3,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 3,
+          "player1": 1,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        },
+        {
+          "set": 4,
+          "player1": 4,
+          "player2": 6,
+          "tiebreak1": null,
+          "tiebreak2": null
+        }
+      ],
+      "score": "2-6 6-3 1-6 4-6",
+      "note": null,
+      "durationMinutes": 164,
+      "setMinutes": [
+        38,
+        43,
+        30,
+        53
+      ],
+      "umpire": "Keothavong J.",
+      "elo": {
+        "player1": 2670,
+        "player2": 2642,
+        "player1Surface": 2603,
+        "player2Surface": 2459,
+        "player1WinProbability": 0.6213
+      }
+    }
+  ],
+  "scheduled_context": null
+}

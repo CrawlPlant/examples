@@ -1,0 +1,45 @@
+{
+  "matchId": "Q3fQfAg2",
+  "url": "https://www.flashscore.com/match/Q3fQfAg2/",
+  "score": "5-7 3-6",
+  "player1": "Muchova K.",
+  "player2": "Shnaider D.",
+  "startTime": "2026-10-15T03:05:00.000Z",
+  "cohort": 233,
+  "joined": 116,
+  "recorded_points": 159,
+  "game_entries": 21,
+  "pressure_games": 9,
+  "break_point_opportunities": 13,
+  "first_pressure_game": {
+    "set": 1,
+    "game": 5,
+    "server": "player1",
+    "opportunities": 2,
+    "held": false
+  },
+  "prior": {
+    "028BdVOj": [
+      "pdZ7ljMU",
+      "MaZft72D",
+      "nJpFnddC",
+      "2ggT8k24"
+    ],
+    "Or4Qa1ye": [
+      "0Ww2Emx1",
+      "0O5NGGR0",
+      "furfOFn1",
+      "UZ3iUguh",
+      "tO2ydyRi",
+      "rg052Scl",
+      "foc2PBMj",
+      "Qwq0XOl1",
+      "2cypNIlI",
+      "zqR9rIPj"
+    ]
+  },
+  "limitations": [
+    "Limited history exports; not a complete last-ten record.",
+    "Missing end times excluded; historical reconstruction, not an archived forecast."
+  ]
+}

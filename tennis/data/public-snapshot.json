@@ -1,0 +1,353 @@
+{
+  "updatedAt": "2026-10-23T08:05:07.888Z",
+  "counts": {
+    "matches": 964127,
+    "since": 1990,
+    "players": 31785,
+    "ratedPlayers": 24101,
+    "atpWeeks": 2385,
+    "atpSince": 1973,
+    "wtaWeeks": 1147,
+    "wtaSince": 2001,
+    "withPointByPoint": 421737
+  },
+  "elo": [
+    {
+      "tour": "ATP",
+      "rows": [
+        {
+          "eloRank": 1,
+          "name": "Jannik Sinner",
+          "country": "Italy",
+          "rating": 2721,
+          "peak": 2728,
+          "matches": 534
+        },
+        {
+          "eloRank": 2,
+          "name": "Carlos Alcaraz",
+          "country": "Spain",
+          "rating": 2622,
+          "peak": 2673,
+          "matches": 474
+        },
+        {
+          "eloRank": 3,
+          "name": "Novak Djokovic",
+          "country": "Serbia",
+          "rating": 2502,
+          "peak": 2657,
+          "matches": 1429
+        },
+        {
+          "eloRank": 4,
+          "name": "Alexander Zverev",
+          "country": "Germany",
+          "rating": 2476,
+          "peak": 2488,
+          "matches": 940
+        },
+        {
+          "eloRank": 5,
+          "name": "Arthur Fils",
+          "country": "France",
+          "rating": 2396,
+          "peak": 2431,
+          "matches": 340
+        },
+        {
+          "eloRank": 6,
+          "name": "Rafael Jodar",
+          "country": "Spain",
+          "rating": 2396,
+          "peak": 2430,
+          "matches": 143
+        },
+        {
+          "eloRank": 7,
+          "name": "Alex De Minaur",
+          "country": "Australia",
+          "rating": 2356,
+          "peak": 2421,
+          "matches": 657
+        },
+        {
+          "eloRank": 8,
+          "name": "Daniil Medvedev",
+          "rating": 2355,
+          "peak": 2499,
+          "matches": 769
+        },
+        {
+          "eloRank": 9,
+          "name": "Ben Shelton",
+          "country": "USA",
+          "rating": 2351,
+          "peak": 2407,
+          "matches": 316
+        },
+        {
+          "eloRank": 10,
+          "name": "Jiri Lehecka",
+          "country": "Czech Republic",
+          "rating": 2345,
+          "peak": 2353,
+          "matches": 436
+        }
+      ]
+    },
+    {
+      "tour": "WTA",
+      "rows": [
+        {
+          "eloRank": 1,
+          "name": "Aryna Sabalenka",
+          "rating": 2475,
+          "peak": 2584,
+          "matches": 660
+        },
+        {
+          "eloRank": 2,
+          "name": "Elena Rybakina",
+          "country": "Kazakhstan",
+          "rating": 2471,
+          "peak": 2524,
+          "matches": 515
+        },
+        {
+          "eloRank": 3,
+          "name": "Coco Gauff",
+          "country": "USA",
+          "rating": 2447,
+          "peak": 2472,
+          "matches": 433
+        },
+        {
+          "eloRank": 4,
+          "name": "Jessica Pegula",
+          "country": "USA",
+          "rating": 2420,
+          "peak": 2443,
+          "matches": 687
+        },
+        {
+          "eloRank": 5,
+          "name": "Iga Swiatek",
+          "country": "Poland",
+          "rating": 2417,
+          "peak": 2567,
+          "matches": 510
+        },
+        {
+          "eloRank": 6,
+          "name": "Karolina Muchova",
+          "country": "Czech Republic",
+          "rating": 2396,
+          "peak": 2426,
+          "matches": 362
+        },
+        {
+          "eloRank": 7,
+          "name": "Linda Noskova",
+          "country": "Czech Republic",
+          "rating": 2382,
+          "peak": 2401,
+          "matches": 325
+        },
+        {
+          "eloRank": 8,
+          "name": "Mirra Andreeva",
+          "rating": 2364,
+          "peak": 2454,
+          "matches": 259
+        },
+        {
+          "eloRank": 9,
+          "name": "Elina Svitolina",
+          "country": "Ukraine",
+          "rating": 2354,
+          "peak": 2405,
+          "matches": 799
+        },
+        {
+          "eloRank": 10,
+          "name": "Naomi Osaka",
+          "country": "Japan",
+          "rating": 2346,
+          "peak": 2415,
+          "matches": 497
+        }
+      ]
+    }
+  ],
+  "today": [
+    {
+      "time": "2026-10-23T02:40:00.000Z",
+      "tour": "wta",
+      "tournament": "Osaka",
+      "round": "QF",
+      "surface": "hard",
+      "status": "finished",
+      "player1": "Li",
+      "player2": "Tagger",
+      "elo1": 2201,
+      "elo2": 2124,
+      "favourite": "Li",
+      "favouriteProbability": 0.61,
+      "score": "6-4 3-6 7-6(0)"
+    },
+    {
+      "time": "2026-10-23T05:10:00.000Z",
+      "tour": "wta",
+      "tournament": "Ningbo",
+      "round": "QF",
+      "surface": "hard",
+      "status": "finished",
+      "player1": "Bejlek",
+      "player2": "Bouzkova",
+      "elo1": 2181,
+      "elo2": 2223,
+      "favourite": "Bouzkova",
+      "favouriteProbability": 0.56,
+      "score": "3-6 4-6"
+    },
+    {
+      "time": "2026-10-23T05:10:00.000Z",
+      "tour": "wta",
+      "tournament": "Osaka",
+      "round": "QF",
+      "surface": "hard",
+      "status": "finished",
+      "player1": "Gibson",
+      "player2": "Krueger",
+      "elo1": 2071,
+      "elo2": 2156,
+      "favourite": "Krueger",
+      "favouriteProbability": 0.62,
+      "score": "1-6 3-6"
+    },
+    {
+      "time": "2026-10-23T06:25:00.000Z",
+      "tour": "wta",
+      "tournament": "Osaka",
+      "round": "QF",
+      "surface": "hard",
+      "status": "finished",
+      "player1": "Stoiana",
+      "player2": "Siniakova",
+      "elo1": 2081,
+      "elo2": 2167,
+      "favourite": "Siniakova",
+      "favouriteProbability": 0.62,
+      "score": "1-6 2-6"
+    },
+    {
+      "time": "2026-10-23T06:40:00.000Z",
+      "tour": "atp",
+      "tournament": "Almaty",
+      "round": "QF",
+      "surface": "hard",
+      "status": "finished",
+      "player1": "Basilashvili",
+      "player2": "Mannarino",
+      "elo1": 2055,
+      "elo2": 2084,
+      "favourite": "Mannarino",
+      "favouriteProbability": 0.54,
+      "score": "6-3 6-1"
+    },
+    {
+      "time": "2026-10-23T07:15:00.000Z",
+      "tour": "wta",
+      "tournament": "Ningbo",
+      "round": "QF",
+      "surface": "hard",
+      "status": "live",
+      "player1": "Fernandez",
+      "player2": "Alexandrova",
+      "elo1": 2199,
+      "elo2": 2210,
+      "favourite": "Alexandrova",
+      "favouriteProbability": 0.52,
+      "score": "3-4"
+    },
+    {
+      "time": "2026-10-23T08:00:00.000Z",
+      "tour": "atp",
+      "tournament": "Almaty",
+      "round": "QF",
+      "surface": "hard",
+      "status": "scheduled",
+      "player1": "Tsitsipas",
+      "player2": "Duckworth",
+      "elo1": 2271,
+      "elo2": 2060,
+      "favourite": "Tsitsipas",
+      "favouriteProbability": 0.77
+    },
+    {
+      "time": "2026-10-23T08:05:00.000Z",
+      "tour": "wta",
+      "tournament": "Osaka",
+      "round": "QF",
+      "surface": "hard",
+      "status": "scheduled",
+      "player1": "Boulter",
+      "player2": "Ruzic",
+      "elo1": 2130,
+      "elo2": 2054,
+      "favourite": "Boulter",
+      "favouriteProbability": 0.61
+    }
+  ],
+  "h2h": {
+    "player1": "Jannik Sinner",
+    "player2": "Carlos Alcaraz",
+    "matches": 18,
+    "player1Wins": 7,
+    "player2Wins": 11,
+    "surfaces": [
+      {
+        "surface": "hard",
+        "matches": 10,
+        "player1Wins": 3,
+        "player2Wins": 7
+      },
+      {
+        "surface": "clay",
+        "matches": 6,
+        "player1Wins": 2,
+        "player2Wins": 4
+      },
+      {
+        "surface": "grass",
+        "matches": 2,
+        "player1Wins": 2,
+        "player2Wins": 0
+      }
+    ],
+    "last": [
+      {
+        "date": "2026-04-12",
+        "tournament": "Monte Carlo",
+        "surface": "clay",
+        "winner": "Jannik Sinner",
+        "score": "7-6(5) 6-3"
+      },
+      {
+        "date": "2025-11-16",
+        "tournament": "Finals - Turin",
+        "surface": "hard",
+        "winner": "Jannik Sinner",
+        "score": "7-6(4) 7-5"
+      },
+      {
+        "date": "2025-09-07",
+        "tournament": "US Open",
+        "surface": "hard",
+        "winner": "Carlos Alcaraz",
+        "score": "6-2 3-6 6-1 6-4"
+      }
+    ]
+  }
+}
