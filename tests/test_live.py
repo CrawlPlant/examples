@@ -9,7 +9,7 @@ from contextlib import closing
 from unittest.mock import patch
 
 from jsonschema import Draft7Validator
-from live import ROOT, configure, export_rows, resolve, run_actor
+from live import ROOT, configure, export_rows, resolve, run_actor, select_named_match
 from workflows import one_match, process, select_ids
 
 
@@ -82,6 +82,16 @@ class LiveTests(unittest.TestCase):
         for ids in ([], ['missing'], ['known','known'], [{}]):
             with patch('workflows.ai_json', return_value={'fact_ids':ids}):
                 with self.assertRaises(ValueError):select_ids(evidence,'task')
+
+    def test_named_match_selection_rejects_wrong_pair_and_ambiguity(self):
+        query={'players':['Alcaraz','Djokovic'],'date':'2024-07-14','tournament':'Wimbledon'}
+        good={'player1Name':'Djokovic N.','player2Name':'Alcaraz C.', 'date':'2024-07-14','tournament':'Wimbledon','matchId':'resolved'}
+        wrong={**good,'player1Name':'Sinner J.'}
+        self.assertEqual(select_named_match([wrong,good],query),good)
+        for rows in ([], [wrong], [good,dict(good)], [{**good,'date':'2024-07-15'}]):
+            with self.assertRaises(ValueError): select_named_match(rows,query)
+        stream={'server1':'Alcaraz C.','server2':'Djokovic N.','date':'14 Jul 24','tny_name':'Wimbledon','pbp_id':'resolved'}
+        self.assertEqual(select_named_match([stream],query),stream)
 
     def test_wrong_match_identity(self):
         with self.assertRaises(ValueError):one_match([{'matchId':'wrong'}],'expected')

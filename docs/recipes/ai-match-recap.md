@@ -13,7 +13,7 @@ Results: `output/ai-match-recap/`. Each source has JSON, JSONL, CSV, SQLite and 
 
 ## AI workflow
 
-Select the result and important pressure games for a concise match recap. Cite the event IDs. Avoid emotional or causal claims.
+Explain the result and up to three supported pressure moments in the selected match. Use player names, set and game numbers for readers; retain source URLs and event IDs as receipts. Say when fewer than three moments are supported. Do not infer emotions or causes.
 
 With only `APIFY_TOKEN`, the example writes `evidence.json`, `prompt.md` and a deterministic preview. Attach the first two files to your own assistant. No AI model is called by default.
 
@@ -33,12 +33,26 @@ Edit the recipe JSON to change filters or sample size. `${NAME}` values come fro
 
 ```json
 {
-  "maxItems": 2,
-  "mode": "matchIds",
-  "matchIds": [
-    "${MATCH_ID}"
+  "maxItems": 20,
+  "mode": "matches",
+  "pointByPointFormat": "games",
+  "dateFrom": "${MATCH_DATE}",
+  "dateTo": "${MATCH_DATE}",
+  "players": [
+    "${MATCH_PLAYER}"
   ],
-  "pointByPointFormat": "games"
+  "tournaments": [
+    "${MATCH_TOURNAMENT}"
+  ],
+  "tours": [
+    "atp"
+  ]
 }
 ```
 
+
+## Find the match by name
+
+Search by surname, tournament and date, then require exactly one match for both players. maxItems caps candidate matches, not games or points. Inspect saved candidates if selection fails. The default is Carlos Alcaraz vs Novak Djokovic, Wimbledon final, 14 July 2024.
+
+Edit `MATCH_PLAYER`, `MATCH_OPPONENT`, `MATCH_DATE` and `MATCH_TOURNAMENT` in `.env`. Use surnames because match labels can be abbreviated. The runner saves all candidates, validates the pair/date/tournament, and writes `selected-match.json` with the returned source identifiers. Never invent an ID or silently select the first match.

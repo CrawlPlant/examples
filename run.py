@@ -4,7 +4,7 @@ import json
 import os
 import sys
 from pathlib import Path
-from live import ROOT, configure, resolve, run_actor, write_json
+from live import ROOT, configure, resolve, run_actor, write_json, select_named_match
 
 
 def main():
@@ -36,6 +36,11 @@ def main():
     batches = {}
     for step in recipe['steps']:
         batches[step['name']] = run_actor(step['actor'], step['input'], output/step['name'], reuse=args.reuse)
+    if 'match_selection' in recipe:
+        name = recipe['steps'][0]['name']
+        selected = select_named_match(batches[name], recipe['match_selection'])
+        write_json(output/'selected-match.json', selected)
+        batches[name] = [selected]
     from workflows import process
     process(recipe, batches, output, ai=args.ai, reuse=args.reuse)
     print(f'Done: {output}')

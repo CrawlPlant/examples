@@ -1,4 +1,4 @@
-# Refresh rows by match ID without duplicates
+# Keep a results dataset up to date without duplicates
 
 [Setup](../../docs/LIVE-QUICKSTART.md) · [All recipes](../CATALOG.md)
 

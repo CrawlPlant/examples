@@ -1,20 +1,36 @@
 {
-  "title": "Inspect a match by stable ID",
+  "title": "Find a match by player names, tournament and date",
   "process": "export",
   "steps": [
     {
       "name": "match",
       "actor": "flashscore-tennis",
       "input": {
-        "maxItems": 2,
-        "mode": "matchIds",
-        "matchIds": [
-          "${MATCH_ID}"
-        ],
+        "maxItems": 20,
+        "mode": "matches",
         "includeOdds": false,
-        "includeH2H": false
+        "includeH2H": false,
+        "dateFrom": "${MATCH_DATE}",
+        "dateTo": "${MATCH_DATE}",
+        "players": [
+          "${MATCH_PLAYER}"
+        ],
+        "tournaments": [
+          "${MATCH_TOURNAMENT}"
+        ],
+        "tours": [
+          "atp"
+        ]
       }
     }
   ],
-  "note": ""
+  "note": "Search by surname, tournament and date, then require exactly one match for both players. maxItems caps candidate matches, not games or points. Inspect saved candidates if selection fails.",
+  "match_selection": {
+    "players": [
+      "${MATCH_PLAYER}",
+      "${MATCH_OPPONENT}"
+    ],
+    "date": "${MATCH_DATE}",
+    "tournament": "${MATCH_TOURNAMENT}"
+  }
 }

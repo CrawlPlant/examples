@@ -15,8 +15,9 @@ from apify_client import ApifyClient
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent
-DEFAULTS = dict(PLAYER='Jannik Sinner', OPPONENT='Alcaraz', MATCH_ID='Sf0bExdB',
-                SCOUT_MATCH_ID='Q3fQfAg2',
+DEFAULTS = dict(PLAYER='Jannik Sinner', OPPONENT='Alcaraz',
+                MATCH_PLAYER='Alcaraz', MATCH_OPPONENT='Djokovic', MATCH_DATE='2024-07-14', MATCH_TOURNAMENT='Wimbledon',
+                SCOUT_PLAYER='Muchova', SCOUT_OPPONENT='Shnaider', SCOUT_DATE='2026-10-15', SCOUT_TOURNAMENT='Wuhan',
                 DOMAIN='apify.com', YOUR_DOMAIN='scrapy.org', COMPETITOR='zyte.com',
                 QUERY='milk', POSTCODE='2000', ALDI_POSTCODE='2010', ADVERTISER='nike.com',
                 DATE_FROM='yesterday', DATE_TO='yesterday')
@@ -123,3 +124,26 @@ def run_actor(slug, run_input, folder, *, reuse=False, client=None):
         print('Item cap reached: this is a sample, not a complete export.')
     return rows
 
+
+def select_named_match(rows, selection):
+    """Name filters are OR on Apify; validate the pair before using the result."""
+    def contains(value, part):
+        return bool(part.strip()) and part.casefold() in str(value or '').casefold()
+    found = []
+    for row in rows:
+        names = [row.get('player1Name', row.get('server1')), row.get('player2Name', row.get('server2'))]
+        left, right = selection['players']
+        pair = ((contains(names[0], left) and contains(names[1], right)) or
+                (contains(names[1], left) and contains(names[0], right)))
+        date = str(row.get('date', '')).replace('-', '')
+        if row.get('pbp_id') and not date.isdigit():
+            try:
+                date = datetime.strptime(date, '%d %b %y').strftime('%Y%m%d')
+            except ValueError:
+                continue
+        tournament = row.get('tournament', row.get('tny_name'))
+        if pair and date == selection['date'].replace('-', '') and contains(tournament, selection['tournament']):
+            found.append(row)
+    if len(found) != 1:
+        raise ValueError('Expected one match for the named pair, date and tournament; inspect candidates, refine names/date or raise the candidate cap. Do not guess an ID.')
+    return found[0]

@@ -46,3 +46,5 @@ with closing(sqlite3.connect(folder / 'data.sqlite')) as db:
 
 The live Python runner exports JSON, JSONL, CSV and SQLite for every Actor.
 Use the raw JSON for nested structures; CSV serializes nested arrays and objects as JSON strings.
+
+Both direct match examples search by `MATCH_PLAYER`, `MATCH_OPPONENT`, `MATCH_DATE` and `MATCH_TOURNAMENT` from `.env` (Alcaraz vs Djokovic at Wimbledon on 14 July 2024 by default). They save the candidate export, require one verified pair/date/tournament and save `selected-match.json`. Change `tours` in the input for WTA.

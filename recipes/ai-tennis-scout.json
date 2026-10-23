@@ -6,16 +6,32 @@
       "name": "match",
       "actor": "flashscore-tennis",
       "input": {
-        "maxItems": 2,
-        "mode": "matchIds",
-        "matchIds": [
-          "${SCOUT_MATCH_ID}"
-        ],
+        "maxItems": 20,
+        "mode": "matches",
         "includeOdds": false,
-        "includeH2H": false
+        "includeH2H": false,
+        "dateFrom": "${SCOUT_DATE}",
+        "dateTo": "${SCOUT_DATE}",
+        "players": [
+          "${SCOUT_PLAYER}"
+        ],
+        "tournaments": [
+          "${SCOUT_TOURNAMENT}"
+        ],
+        "tours": [
+          "wta"
+        ]
       }
     }
   ],
-  "note": "",
-  "goal": "Prepare a concise tennis scout using only eligible pre-match ratings and completed prior matches. State history gaps. Do not use the target result."
+  "note": "Search by surname, tournament and date, then require exactly one match for both players. maxItems caps candidate matches, not games or points. Inspect saved candidates if selection fails.",
+  "goal": "Prepare a concise tennis scout using only eligible pre-match ratings and completed prior matches. State history gaps. Do not use the target result.",
+  "match_selection": {
+    "players": [
+      "${SCOUT_PLAYER}",
+      "${SCOUT_OPPONENT}"
+    ],
+    "date": "${SCOUT_DATE}",
+    "tournament": "${SCOUT_TOURNAMENT}"
+  }
 }

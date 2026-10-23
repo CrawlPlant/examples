@@ -6,7 +6,7 @@ Checked 23 October 2026 on Windows with Python 3.13 and Node 22.
 
 - 48 recipe input definitions validated against the public schemas of the 15 deployed Actors.
   Build IDs and public schema URLs are recorded in `tests/schemas/manifest.json`.
-- 11 unit tests cover input schemas, charge/timeout arguments, dataset iteration,
+- 12 unit tests cover input schemas, charge/timeout arguments, dataset iteration,
   JSON/CSV/SQLite exports, CSV formula escaping, reuse identity, failed runs,
   invalid budgets, `.env` precedence, match identity, AI evidence validation,
   scouting and offline report generation.
@@ -59,3 +59,16 @@ quota and structured-output support depend on the user's account.
 The default AI output is explicitly a deterministic evidence preview. It is not
 presented as an actual model response. Historical scouting may have missing eligible
 history; dated snapshots are not archived pre-match predictions.
+
+## Name-based lookup checks
+
+The six live match recipes now use player surnames, tournament and date instead of a
+user-supplied match ID. All six were exercised with live Apify data: match details,
+game format, Sackmann point stream, pressure map, AI recap and the retrospective AI scout.
+The point-stream date (`14 Jul 24`) is normalized before verifying the match.
+Both direct Python and JavaScript examples were also checked live. No model was called.
+
+The current public schemas for Flashscore Tennis, Point-by-Point and Match History
+were checked again and match the stored schema fixtures. These Actors already support
+name/date discovery; no Actor code change was needed. The pair selector tests reversed
+player order, wrong opponents, wrong date, missing results and ambiguous duplicates.

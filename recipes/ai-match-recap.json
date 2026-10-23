@@ -6,15 +6,31 @@
       "name": "points",
       "actor": "tennis-point-by-point",
       "input": {
-        "maxItems": 2,
-        "mode": "matchIds",
-        "matchIds": [
-          "${MATCH_ID}"
+        "maxItems": 20,
+        "mode": "matches",
+        "pointByPointFormat": "games",
+        "dateFrom": "${MATCH_DATE}",
+        "dateTo": "${MATCH_DATE}",
+        "players": [
+          "${MATCH_PLAYER}"
         ],
-        "pointByPointFormat": "games"
+        "tournaments": [
+          "${MATCH_TOURNAMENT}"
+        ],
+        "tours": [
+          "atp"
+        ]
       }
     }
   ],
-  "note": "",
-  "goal": "Select the result and important pressure games for a concise match recap. Cite the event IDs. Avoid emotional or causal claims."
+  "note": "Search by surname, tournament and date, then require exactly one match for both players. maxItems caps candidate matches, not games or points. Inspect saved candidates if selection fails.",
+  "goal": "Explain the result and up to three supported pressure moments in the selected match. Use player names, set and game numbers for readers; retain source URLs and event IDs as receipts. Say when fewer than three moments are supported. Do not infer emotions or causes.",
+  "match_selection": {
+    "players": [
+      "${MATCH_PLAYER}",
+      "${MATCH_OPPONENT}"
+    ],
+    "date": "${MATCH_DATE}",
+    "tournament": "${MATCH_TOURNAMENT}"
+  }
 }

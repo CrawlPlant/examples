@@ -46,8 +46,8 @@ def selected_report(evidence, selected, output, model_used, label=None):
     write_json(output/'selection.json', {'model_used': model_used, 'fact_ids': selected})
 
 
-def one_match(rows, match_id):
-    found = [row for row in rows if row.get('matchId') == match_id]
+def one_match(rows, match_id=None):
+    found = rows if match_id is None else [row for row in rows if row.get('matchId') == match_id]
     if len(found) != 1:
         raise ValueError(f'Expected exactly one record for match {match_id}; inspect exports and coverage.')
     return found[0]
@@ -91,7 +91,7 @@ def process(recipe, batches, output, *, ai=False, reuse=False):
     elif kind in ('scout', 'recap', 'query', 'evidence'):
         goal = recipe['goal']
         if kind == 'scout':
-            target = one_match(batches['match'], recipe['steps'][0]['input']['matchIds'][0])
+            target = one_match(batches['match'], recipe['steps'][0]['input'].get('matchIds', [None])[0])
             history = []
             for side in ('player1', 'player2'):
                 player = target.get(side) or {}
@@ -111,7 +111,7 @@ def process(recipe, batches, output, *, ai=False, reuse=False):
             write_json(output/'selection.json', {**selection, 'model_used':ai})
             return
         if kind == 'recap':
-            match = one_match(rows, recipe['steps'][0]['input']['matchIds'][0])
+            match = one_match(rows, recipe['steps'][0]['input'].get('matchIds', [None])[0])
             evidence = recap_evidence(match)
             evidence['limitations'] = ['Recorded events do not establish player emotions or causes.']
         elif kind == 'query':

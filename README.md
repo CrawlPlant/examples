@@ -60,6 +60,10 @@ The shared renderer builds the collection; the illustrated recap also has its ow
 | [An illustrated match recap](tennis/ai-match-recap/) | tennis-point-by-point |
 | [A prediction model versus Elo](tennis/first-tennis-model/) | tennis-match-dataset |
 
+## Find data using names
+
+Live tennis examples start with player surnames, a tournament and a date, such as Alcaraz vs Djokovic at Wimbledon on 14 July 2024. No match ID is required. They verify both opponents and stop on ambiguous results. See [AI agent instructions](docs/AI-AGENTS.md) and [name/date settings](docs/LIVE-QUICKSTART.md). IDs in the offline snapshots remain fixed provenance references; they are not inputs users need to discover.
+
 ## How the Actors connect
 
 Match Dataset selects a cohort → Match History supplies prior player context →

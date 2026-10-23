@@ -8,8 +8,8 @@ Empty results are valid when a source has no matching data. Caps produce samples
 | [tennis-daily-matches](recipes/tennis-daily-matches.md) | Export yesterday’s completed tennis matches | Code | 1 |
 | [tennis-live-scoreboard](recipes/tennis-live-scoreboard.md) | Capture the current live scoreboard | Code | 1 |
 | [tennis-upcoming](recipes/tennis-upcoming.md) | Fetch the scheduled match list | Code | 1 |
-| [tennis-match-details](recipes/tennis-match-details.md) | Inspect a match by stable ID | Code | 1 |
-| [tennis-player-profile](recipes/tennis-player-profile.md) | Resolve a player profile and stable ID | Code | 1 |
+| [tennis-match-details](recipes/tennis-match-details.md) | Find a match by player names, tournament and date | Code | 1 |
+| [tennis-player-profile](recipes/tennis-player-profile.md) | Find a player profile by name | Code | 1 |
 | [tennis-player-history](recipes/tennis-player-history.md) | Export recent completed player matches | Code | 1 |
 | [tennis-surface-stats](recipes/tennis-surface-stats.md) | Compare a player’s statistics by surface | Code | 1 |
 | [tennis-opponent-bands](recipes/tennis-opponent-bands.md) | Inspect statistics by opponent rank band | Code | 1 |
@@ -18,7 +18,7 @@ Empty results are valid when a source has no matching data. Caps produce samples
 | [tennis-surface-elo](recipes/tennis-surface-elo.md) | Retrieve grass-court Elo ratings | Code | 1 |
 | [tennis-dataset](recipes/tennis-dataset.md) | Export winner/loser rows to JSON, CSV and SQLite | Code | 1 |
 | [tennis-cohort-summary](recipes/tennis-cohort-summary.md) | Count tours, surfaces and missing ranks | Code | 1 |
-| [tennis-refresh-dataset](recipes/tennis-refresh-dataset.md) | Refresh rows by match ID without duplicates | Code | 1 |
+| [tennis-refresh-dataset](recipes/tennis-refresh-dataset.md) | Keep a results dataset up to date without duplicates | Code | 1 |
 | [tennis-point-games](recipes/tennis-point-games.md) | Download game-format point data | Code | 1 |
 | [tennis-point-stream](recipes/tennis-point-stream.md) | Download a Sackmann-format point stream | Code | 1 |
 | [tennis-pressure-games](recipes/tennis-pressure-games.md) | Compute break-point pressure games | Code | 1 |

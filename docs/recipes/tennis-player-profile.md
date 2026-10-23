@@ -1,4 +1,4 @@
-# Resolve a player profile and stable ID
+# Find a player profile by name
 
 [Setup](../../docs/LIVE-QUICKSTART.md) · [All recipes](../CATALOG.md)
 

@@ -1,5 +1,5 @@
 {
-  "title": "Refresh rows by match ID without duplicates",
+  "title": "Keep a results dataset up to date without duplicates",
   "process": "update",
   "steps": [
     {

@@ -19,12 +19,26 @@ Edit the recipe JSON to change filters or sample size. `${NAME}` values come fro
 
 ```json
 {
-  "maxItems": 2,
-  "mode": "matchIds",
-  "matchIds": [
-    "${MATCH_ID}"
+  "maxItems": 20,
+  "mode": "matches",
+  "pointByPointFormat": "sackmann",
+  "dateFrom": "${MATCH_DATE}",
+  "dateTo": "${MATCH_DATE}",
+  "players": [
+    "${MATCH_PLAYER}"
   ],
-  "pointByPointFormat": "sackmann"
+  "tournaments": [
+    "${MATCH_TOURNAMENT}"
+  ],
+  "tours": [
+    "atp"
+  ]
 }
 ```
 
+
+## Find the match by name
+
+Search by surname, tournament and date, then require exactly one match for both players. maxItems caps candidate matches, not games or points. Inspect saved candidates if selection fails. The default is Carlos Alcaraz vs Novak Djokovic, Wimbledon final, 14 July 2024.
+
+Edit `MATCH_PLAYER`, `MATCH_OPPONENT`, `MATCH_DATE` and `MATCH_TOURNAMENT` in `.env`. Use surnames because match labels can be abbreviated. The runner saves all candidates, validates the pair/date/tournament, and writes `selected-match.json` with the returned source identifiers. Never invent an ID or silently select the first match.

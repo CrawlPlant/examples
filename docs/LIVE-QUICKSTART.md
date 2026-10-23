@@ -100,8 +100,14 @@ Edit `.env`, for example:
 ```dotenv
 PLAYER=Iga Swiatek
 OPPONENT=Sabalenka
-MATCH_ID=Sf0bExdB
-SCOUT_MATCH_ID=Q3fQfAg2
+MATCH_PLAYER=Alcaraz
+MATCH_OPPONENT=Djokovic
+MATCH_DATE=2024-07-14
+MATCH_TOURNAMENT=Wimbledon
+SCOUT_PLAYER=Muchova
+SCOUT_OPPONENT=Shnaider
+SCOUT_DATE=2026-10-15
+SCOUT_TOURNAMENT=Wuhan
 QUERY=coffee
 POSTCODE=2000
 ALDI_POSTCODE=2010
@@ -122,8 +128,9 @@ different store catchments, not a same-store or identical-location price compari
 Choose postcodes with stores for each retailer, or edit a recipe to supply explicit
 `storeIds`. Keep store context attached to comparisons.
 Historical scouting uses only eligible earlier history from the bounded export; it may be sparse.
-The scout has its own `SCOUT_MATCH_ID` (a recorded Muchova–Shnaider match); the recap uses
-`MATCH_ID` (the recorded Wimbledon final). Set the scout ID to an upcoming match for prospective use.
+The scout uses the `SCOUT_PLAYER`, `SCOUT_OPPONENT`, `SCOUT_DATE` and `SCOUT_TOURNAMENT` settings (Muchova vs Shnaider, Wuhan, 15 October 2026). The recap uses `MATCH_PLAYER`, `MATCH_OPPONENT`, `MATCH_DATE` and `MATCH_TOURNAMENT` (Alcaraz vs Djokovic, Wimbledon, 14 July 2024). For a prospective scout, choose an upcoming fixture by names and date. The default scout is retrospective and excludes the target result.
+
+Use surname fragments: source labels can be abbreviated. The runner validates both players, date and tournament, refuses zero or multiple matches and saves `selected-match.json`. IDs remain in evidence as source receipts. `maxItems` limits candidate matches, not individual games or points. To change ATP/WTA, also change `tours` in the recipe JSON.
 
 ## AI with just an Apify token
 

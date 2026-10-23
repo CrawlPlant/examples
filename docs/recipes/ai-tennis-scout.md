@@ -33,13 +33,27 @@ Edit the recipe JSON to change filters or sample size. `${NAME}` values come fro
 
 ```json
 {
-  "maxItems": 2,
-  "mode": "matchIds",
-  "matchIds": [
-    "${SCOUT_MATCH_ID}"
-  ],
+  "maxItems": 20,
+  "mode": "matches",
   "includeOdds": false,
-  "includeH2H": false
+  "includeH2H": false,
+  "dateFrom": "${SCOUT_DATE}",
+  "dateTo": "${SCOUT_DATE}",
+  "players": [
+    "${SCOUT_PLAYER}"
+  ],
+  "tournaments": [
+    "${SCOUT_TOURNAMENT}"
+  ],
+  "tours": [
+    "wta"
+  ]
 }
 ```
 
+
+## Find the match by name
+
+Search by surname, tournament and date, then require exactly one match for both players. maxItems caps candidate matches, not games or points. Inspect saved candidates if selection fails. The default is Karolina Muchova vs Diana Shnaider, Wuhan, 15 October 2026 (a retrospective scout).
+
+Edit `SCOUT_PLAYER`, `SCOUT_OPPONENT`, `SCOUT_DATE` and `SCOUT_TOURNAMENT` in `.env`. Use surnames because match labels can be abbreviated. The runner saves all candidates, validates the pair/date/tournament, and writes `selected-match.json` with the returned source identifiers. Never invent an ID or silently select the first match.
